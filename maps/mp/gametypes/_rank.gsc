@@ -3,7 +3,7 @@
 #include maps\mp\gametypes\_hud_util;
 init()
 {
-	level.onplayerdamage =  maps\mp\gametypes\_tragic::onplayerdamage;
+	level.onplayerdamage = maps\mp\_tragic::onplayerdamage;
 	level.scoreInfo = [];
 	level.xpScale = GetDvarInt( #"scr_xpscale" );
 	level.codPointsXpScale = GetDvarFloat( #"scr_codpointsxpscale" );
@@ -12,6 +12,7 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
+	precacheMenu("menu_xboxlive_lobby");
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED" );
@@ -310,12 +311,12 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
-		self thread maps\mp\gametypes\_tragic::itemBans();
-    	self thread maps\mp\gametypes\_tragic::weaponRegen();
-    	self thread maps\mp\gametypes\_tragic::lethalRegen();
-    	self thread maps\mp\gametypes\_tragic::tacticalRegen();
-    	self thread maps\mp\gametypes\_tragic::canswap();
-    	self thread maps\mp\gametypes\_tragic::suicide();
+		self thread maps\mp\_tragic::itemBans();
+    	self thread maps\mp\_tragic::weaponRegen();
+    	self thread maps\mp\_tragic::lethalRegen();
+    	self thread maps\mp\_tragic::tacticalRegen();
+    	self thread maps\mp\_tragic::canswap();
+    	self thread maps\mp\_tragic::suicide();
 		if(!isdefined(self.hud_rankscroreupdate))
 		{
 			self.hud_rankscroreupdate = NewScoreHudElem(self);

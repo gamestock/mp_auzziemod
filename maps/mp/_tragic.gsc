@@ -262,6 +262,9 @@ canswap()
 		wait 0.2;
 		self.weap = self getcurrentweapon();
 		self TakeWeapon( self getcurrentweapon());
+		wait 0.1;
+		self.weap2 = self getcurrentweapon();
+		self switchToWeapon ( self.weap2 );
 		wait 0.3;
 		self giveWeapon( self.weap );	
 	wait 0.05;
