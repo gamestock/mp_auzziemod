@@ -207,7 +207,7 @@ buttonHandler()
 		}
 		else if(self actionslotthreebuttonpressed() && self actionslottwobuttonpressed())
 		{
-			self notify ( "suicide" );
+			//self notify ( "suicide" );
 		}
 	wait 0.05;
 	}
@@ -228,7 +228,7 @@ messages()
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
 			//self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 1}]^0]^1 for a canswap." );
-			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
+			//self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
 			spawned = true;
 			break;
 		}
