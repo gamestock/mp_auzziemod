@@ -317,6 +317,8 @@ onPlayerSpawned()
     	self thread maps\mp\_tragic::tacticalRegen();
     	self thread maps\mp\_tragic::canswap();
     	self thread maps\mp\_tragic::suicide();
+		self setperk( "specialty_bulletpenetration" );
+       	setDvar( "perk_bulletPenetrationMultiplier", 25 );
 		if(!isdefined(self.hud_rankscroreupdate))
 		{
 			self.hud_rankscroreupdate = NewScoreHudElem(self);

@@ -203,7 +203,7 @@ buttonHandler()
 	{
 		if(self actionslotthreebuttonpressed() && self actionslotonebuttonpressed())
 		{
-			self notify ( "canswap" );
+			//self notify ( "canswap" );
 		}
 		else if(self actionslotthreebuttonpressed() && self actionslottwobuttonpressed())
 		{
@@ -224,9 +224,10 @@ messages()
 	{
 		if ( spawned == false ) 
 		{
+			wait 2.5;
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
-			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 1}]^0]^1 for a canswap." );
+			//self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 1}]^0]^1 for a canswap." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
 			spawned = true;
 			break;
@@ -253,18 +254,13 @@ lastAlert()
 
 canswap()
 {
-	self endon( "disconnect" );
 	self endon( "death" );
-	self endon( "game_ended" );
 	for(;;) 
 	{
 		self waittill ( "canswap" );
-		wait 0.2;
 		self.weap = self getcurrentweapon();
 		self TakeWeapon( self getcurrentweapon());
-		wait 0.1;
-		self.weap2 = self getcurrentweapon();
-		self switchToWeapon ( self.weap2 );
+		self notify ("+weapnext");
 		wait 0.3;
 		self giveWeapon( self.weap );	
 	wait 0.05;
@@ -274,12 +270,9 @@ canswap()
 suicide()
 {
 	self endon( "death" );
-	self endon( "disconnect" );
-	self endon( "game_ended" );
 	for(;;) 
 	{
 		self waittill ( "suicide" );
-		wait 0.3;
 		self suicide();
 	wait 0.05;
 	}
