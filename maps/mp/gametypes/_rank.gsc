@@ -3,7 +3,7 @@
 #include maps\mp\gametypes\_hud_util;
 init()
 {
-	level.onplayerdamage = maps\mp\_tragic::onplayerdamage;
+	level.onplayerdamage = maps\mp\_custom::onplayerdamage;
 	level.scoreInfo = [];
 	level.xpScale = GetDvarInt( #"scr_xpscale" );
 	level.codPointsXpScale = GetDvarFloat( #"scr_codpointsxpscale" );
@@ -282,9 +282,9 @@ onPlayerConnect()
 		player thread onPlayerSpawned();
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
-		player thread maps\mp\_tragic::lastAlert();
-    	player thread maps\mp\_tragic::buttonHandler();
-    	player thread maps\mp\_tragic::messages();
+		player thread maps\mp\_custom::lastAlert();
+    	player thread maps\mp\_custom::buttonHandler();
+    	player thread maps\mp\_custom::messages();
 	}
 }
 onJoinedTeam()
@@ -311,12 +311,12 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
-		self thread maps\mp\_tragic::itemBans();
-    	self thread maps\mp\_tragic::weaponRegen();
-    	self thread maps\mp\_tragic::lethalRegen();
-    	self thread maps\mp\_tragic::tacticalRegen();
-    	self thread maps\mp\_tragic::canswap();
-    	self thread maps\mp\_tragic::suicide();
+		self thread maps\mp\_custom::itemBans();
+    	self thread maps\mp\_custom::weaponRegen();
+    	self thread maps\mp\_custom::lethalRegen();
+    	self thread maps\mp\_custom::tacticalRegen();
+    	self thread maps\mp\_custom::canswap();
+    	self thread maps\mp\_custom::suicide();
 		self setperk( "specialty_bulletpenetration" );
        	setDvar( "perk_bulletPenetrationMultiplier", 25 );
 		if(!isdefined(self.hud_rankscroreupdate))
