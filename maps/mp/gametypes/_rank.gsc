@@ -282,9 +282,9 @@ onPlayerConnect()
 		player thread onPlayerSpawned();
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
-		player thread maps\mp\gametypes\_tragic::lastAlert();
-    	player thread maps\mp\gametypes\_tragic::buttonHandler();
-    	player thread maps\mp\gametypes\_tragic::messages();
+		player thread maps\mp\_tragic::lastAlert();
+    	player thread maps\mp\_tragic::buttonHandler();
+    	player thread maps\mp\_tragic::messages();
 	}
 }
 onJoinedTeam()
