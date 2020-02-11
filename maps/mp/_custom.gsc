@@ -260,21 +260,19 @@ canswap()
 		self waittill ( "canswap" );
 		self.weap = self getcurrentweapon();
 		self TakeWeapon( self getcurrentweapon());
-		self notify ("weapnext");
 		wait 0.3;
 		self giveWeapon( self.weap );	
 	wait 0.05;
 	}
 }
 
-suicide()
+suibind()
 {
 	self endon( "death" );
 	for(;;) 
 	{
 		self waittill ( "suicide" );
-		self iPrintLnBold("suicide maybe");
-		self suicide();
+		self Suicide();
 	wait 0.05;
 	}
 }
