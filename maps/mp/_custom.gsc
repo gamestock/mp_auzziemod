@@ -307,13 +307,13 @@ replacepro()
 		self setPerk("specialty_fastweaponswitch");
         self iPrintLn("scout pro given");
 	}
-	if ( self HasPerk ( "specialty_gpsjammer" ) ) // ghost
+	if ( self HasPerk ( "specialty_gpsjammer" ) )
 	{
 		self setPerk("specialty_nottargetedbyai");
 		self setPerk("specialty_noname");
         self iPrintLn("ghost pro given");
 	}
-	if ( self HasPerk ( "specialty_detectexplosive" ) ) // hacker
+	if ( self HasPerk ( "specialty_detectexplosive" ) ) // hacker, likely missing perk
 	{
 		self setPerk("specialty_nomotionsensor");
         self iPrintLn("hacker pro given");
@@ -323,7 +323,7 @@ replacepro()
 		self setPerk("specialty_armorpiercing");
         self iPrintLn("hardened pro given");
 	}
-	if ( self HasPerk ( "specialty_quieter" ) ) // ninja
+	if ( self HasPerk ( "specialty_quieter" ) ) // ninja, likely missing perk
 	{
 		self setPerk("specialty_loudenemies");
         self iPrintLn("ninja pro given");
@@ -348,7 +348,7 @@ replacepro()
 		self setPerk("specialty_unlimitedsprint");
         self iPrintLn("marathon pro given");
 	}
-	if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket
+	if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket, likely missing perk
 	{
 		self setPerk("specialty_pin_back");
 		self setPerk("specialty_fireproof");
