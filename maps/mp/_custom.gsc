@@ -277,3 +277,29 @@ suicide()
 	wait 0.05;
 	}
 }
+
+replacepro()
+{
+	self waittill("spawned_player");
+	self endon("death");
+	if ( self HasPerk ( "specialty_stunprotection" ) )
+	{
+		//self setPerk("");
+        iPrinLn("test");
+	}
+	else if ( self HasPerk ( "specialty_stunprotection" ) )
+	{
+		//self setPerk("");
+        iPrinLn("test2");
+	}
+	else if ( self HasPerk ( "specialty_stunprotection" ) )
+	{
+		//self setPerk("");
+        iPrinLn("test3");
+	}
+	else if ( self HasPerk ( "specialty_stunprotection" ) )
+	{
+		//self setPerk("");
+        iPrinLn("test4");
+	}
+}
