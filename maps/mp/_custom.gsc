@@ -281,25 +281,80 @@ suicide()
 replacepro()
 {
 	self endon("death");
-	if ( self HasPerk ( "specialty_fastreload" ) )
+	if ( self HasPerk ( "specialty_fastreload" ) ) // sleight of hand
 	{
 		self setPerk("specialty_fastads");
         self iPrintLn("sleight of hand pro given");
 	}
-	if ( self HasPerk ( "specialty_movefaster" ) )
+	if ( self HasPerk ( "specialty_movefaster" ) ) // lightweight
 	{
 		self setPerk("specialty_fallheight");
         self iPrintLn("lightweight pro given");
 	}
-	if ( self HasPerk ( "specialty_bulletaccuracy" ) )
+	if ( self HasPerk ( "specialty_bulletaccuracy" ) ) // steady aim
 	{
 		self setPerk("specialty_sprintrecovery");
 		self setPerk("specialty_fastmeleerecovery");
         self iPrintLn("steady aim pro given");
 	}
-	if ( self HasPerk ( "specialty_stunprotection" ) )
+	if ( self HasPerk ( "specialty_gas_mask" ) ) // tactical mask
 	{
-		//self setPerk("");
+		self setPerk("specialty_stunprotection");
         self iPrintLn("tactical mask pro given");
+	}
+	if ( self HasPerk ( "specialty_holdbreath" ) ) // scout
+	{
+		self setPerk("");
+        self iPrintLn("scout pro given");
+	}
+	if ( self HasPerk ( "specialty_gpsjammer" ) ) // ghost
+	{
+		self setPerk("");
+        self iPrintLn("ghost pro given");
+	}
+	if ( self HasPerk ( "specialty_detectexplosive" ) ) // hacker
+	{
+		self setPerk("");
+        self iPrintLn("hacker pro given");
+	}
+	if ( self HasPerk ( "specialty_bulletpenetration" ) ) // hardened
+	{
+		self setPerk("");
+        self iPrintLn("hardened pro given");
+	}
+	if ( self HasPerk ( "specialty_quieter" ) ) // ninja
+	{
+		self setPerk("");
+        self iPrintLn("ninja pro given");
+	}
+	if ( self HasPerk ( "specialty_pistoldeath" ) ) // second chance
+	{
+		self setPerk("");
+        self iPrintLn("second chance pro given");
+	}
+	if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
+	{
+		self setPerk("");
+        self iPrintLn("warlord pro given");
+	}
+	if ( self HasPerk ( "specialty_scavenger" ) ) // scavenger
+	{
+		self setPerk("");
+        self iPrintLn("scavenger pro given");
+	}
+	if ( self HasPerk ( "specialty_longersprint" ) ) // marathon
+	{
+		self setPerk("");
+        self iPrintLn("marathon pro given");
+	}
+	if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket
+	{
+		self setPerk("");
+        self iPrintLn("flak jacket pro given");
+	}
+	if ( self HasPerk ( "specialty_killstreak" ) ) // hardline
+	{
+		self setPerk("");
+        self iPrintLn("hardline pro given");
 	}
 }
