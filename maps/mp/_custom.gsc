@@ -304,57 +304,59 @@ replacepro()
 	}
 	if ( self HasPerk ( "specialty_holdbreath" ) ) // scout
 	{
-		self setPerk("");
+		self setPerk("specialty_fastweaponswitch");
         self iPrintLn("scout pro given");
 	}
 	if ( self HasPerk ( "specialty_gpsjammer" ) ) // ghost
 	{
-		self setPerk("");
+		self setPerk("specialty_nottargetedbyai");
+		self setPerk("specialty_noname");
         self iPrintLn("ghost pro given");
 	}
 	if ( self HasPerk ( "specialty_detectexplosive" ) ) // hacker
 	{
-		self setPerk("");
+		self setPerk("specialty_nomotionsensor");
         self iPrintLn("hacker pro given");
 	}
 	if ( self HasPerk ( "specialty_bulletpenetration" ) ) // hardened
 	{
-		self setPerk("");
+		self setPerk("specialty_armorpiercing");
         self iPrintLn("hardened pro given");
 	}
 	if ( self HasPerk ( "specialty_quieter" ) ) // ninja
 	{
-		self setPerk("");
+		self setPerk("specialty_loudenemies");
         self iPrintLn("ninja pro given");
 	}
 	if ( self HasPerk ( "specialty_pistoldeath" ) ) // second chance
 	{
-		self setPerk("");
+		self setPerk("specialty_finalstand");
         self iPrintLn("second chance pro given");
 	}
 	if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
 	{
-		self setPerk("");
+		self setPerk("specialty_twogrenades");
         self iPrintLn("warlord pro given");
 	}
 	if ( self HasPerk ( "specialty_scavenger" ) ) // scavenger
 	{
-		self setPerk("");
+		self setPerk("specialty_extraammo");
         self iPrintLn("scavenger pro given");
 	}
 	if ( self HasPerk ( "specialty_longersprint" ) ) // marathon
 	{
-		self setPerk("");
+		self setPerk("specialty_unlimitedsprint");
         self iPrintLn("marathon pro given");
 	}
 	if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket
 	{
-		self setPerk("");
+		self setPerk("specialty_pin_back");
+		self setPerk("specialty_fireproof");
         self iPrintLn("flak jacket pro given");
 	}
 	if ( self HasPerk ( "specialty_killstreak" ) ) // hardline
 	{
-		self setPerk("");
+		self setPerk("specialty_gambler");
         self iPrintLn("hardline pro given");
 	}
 }
