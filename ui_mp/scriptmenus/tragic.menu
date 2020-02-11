@@ -13,6 +13,9 @@
 #undef  CHOICE_Y_START
 #define CHOICE_Y_START				-105
 
+#define ON_ESC		\
+	close self;
+
 
 #ifdef PC
 	#define	PC_INGAME //for background in overlaybg.inc
@@ -94,7 +97,12 @@
 		FRAME_DVARSLIDER( 7, "@MENU_MOUSE_SENSITIVITY_CAPS", sensitivity, 5, 1, 10, ; )
 
 		FRAME_DVARSLIDER( 9, "@PLATFORM_FOV_CAPS", cg_fov, 65, 65, 90, ; )
-	}
 
-	NEW_FRAME_BACK_BUTTON_ACTION_PC_VIS( ON_ESC , when( !dvarInt( ui_show_friends_list_bg ) ) )
+		// Back button
+		#ifdef PC
+		NEW_FRAME_BACK_BUTTON_ACTION( 640, 480, ON_ESC )
+		#else //#ifdef PC
+		PREPROC_TEXT_DRAW_VIS( CHOICE_X_START -17 50 17 CHOICE_HORIZONTAL_ALIGN VERTICAL_ALIGN_BOTTOM, 0 0, "@PLATFORM_BACK", TEXTSIZE_DEFAULT, 0, 0, ITEM_ALIGN_BOTTOM_LEFT, 1 1 1 1, 1 )
+		#endif //#ifdef PC
+	}
 }
