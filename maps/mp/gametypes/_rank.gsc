@@ -12,6 +12,8 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
+	game["menu_tragic"] = "tragic";
+	precacheMenu( game["menu_tragic"] );
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED" );

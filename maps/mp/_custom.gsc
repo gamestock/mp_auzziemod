@@ -203,7 +203,7 @@ buttonHandler()
 	{
 		if(self actionslotthreebuttonpressed() && self actionslotonebuttonpressed())
 		{
-			//self notify ( "canswap" );
+			self notify ( "canswap" );
 		}
 		else if(self actionslotthreebuttonpressed() && self actionslottwobuttonpressed())
 		{
@@ -227,7 +227,7 @@ messages()
 			wait 2.5;
 			self iprintln( "^1auzziemod T5 ^0[^3DEV^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
-			//self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 1}]^0]^1 for a canswap." );
+			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 1}]^0]^1 for a canswap." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
 			spawned = true;
 			break;
