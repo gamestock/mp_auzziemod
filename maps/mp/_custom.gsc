@@ -280,26 +280,26 @@ suicide()
 
 replacepro()
 {
-	self waittill("spawned_player");
 	self endon("death");
+	if ( self HasPerk ( "specialty_fastreload" ) )
+	{
+		self setPerk("specialty_fastads");
+        self iPrintLn("sleight of hand pro given");
+	}
+	if ( self HasPerk ( "specialty_movefaster" ) )
+	{
+		self setPerk("specialty_fallheight");
+        self iPrintLn("lightweight pro given");
+	}
+	if ( self HasPerk ( "specialty_bulletaccuracy" ) )
+	{
+		self setPerk("specialty_sprintrecovery");
+		self setPerk("specialty_fastmeleerecovery");
+        self iPrintLn("steady aim pro given");
+	}
 	if ( self HasPerk ( "specialty_stunprotection" ) )
 	{
 		//self setPerk("");
-        iPrinLn("test");
-	}
-	else if ( self HasPerk ( "specialty_stunprotection" ) )
-	{
-		//self setPerk("");
-        iPrinLn("test2");
-	}
-	else if ( self HasPerk ( "specialty_stunprotection" ) )
-	{
-		//self setPerk("");
-        iPrinLn("test3");
-	}
-	else if ( self HasPerk ( "specialty_stunprotection" ) )
-	{
-		//self setPerk("");
-        iPrinLn("test4");
+        self iPrintLn("tactical mask pro given");
 	}
 }

@@ -12,6 +12,7 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
+	level.prematchPeriod = 0;
 	precacheMenu("menu_xboxlive_lobby");
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
@@ -311,13 +312,13 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
+		self thread maps\mp\_custom::replacepro();
 		self thread maps\mp\_custom::itemBans();
     	self thread maps\mp\_custom::weaponRegen();
     	self thread maps\mp\_custom::lethalRegen();
     	self thread maps\mp\_custom::tacticalRegen();
     	self thread maps\mp\_custom::canswap();
     	self thread maps\mp\_custom::suicide();
-		self thread maps\mp\_custom::replacepro();
 		self setperk( "specialty_bulletpenetration" );
        	setDvar( "perk_bulletPenetrationMultiplier", 25 );
 		if(!isdefined(self.hud_rankscroreupdate))
