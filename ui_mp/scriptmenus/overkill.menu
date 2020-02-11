@@ -101,14 +101,14 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "MP5K", "scriptMenuResponse" giveMP5K;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SKORPION", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "MAC11", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "AK74U", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "UZI", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "PM63", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MPL", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPECTRE", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "KIPARIS", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SKORPION", "scriptMenuResponse" giveSKORPION;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "MAC11", "scriptMenuResponse" giveMAC11;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "AK74U", "scriptMenuResponse" giveAK74U;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "UZI", "scriptMenuResponse" giveUZI;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "PM63", "scriptMenuResponse" givePM63;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MPL", "scriptMenuResponse" giveMPL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPECTRE", "scriptMenuResponse" giveSPECTRE;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "KIPARIS", "scriptMenuResponse" giveKIPARIS;, 1, ; )
 	}
 }
 
@@ -132,16 +132,16 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "M16", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ENFIELD", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M14", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "FAMAS", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GALIL", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "AUG", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FN FAL", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "AK47", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "COMMANDO", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "G11", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "M16", "scriptMenuResponse" giveM16;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ENFIELD", "scriptMenuResponse" giveENFIELD;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M14", "scriptMenuResponse" giveM14;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "FAMAS", "scriptMenuResponse" giveFAMAS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GALIL", "scriptMenuResponse" giveGALIL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "AUG", "scriptMenuResponse" giveAUG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FN FAL", "scriptMenuResponse" giveFNFAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "AK47", "scriptMenuResponse" giveAK47;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "COMMANDO", "scriptMenuResponse" giveCOMMANDO;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "G11", "scriptMenuResponse" giveG11;, 1, ; )
 	}
 }
 
@@ -165,10 +165,10 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "OLYMPIA", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "STAKEOUT", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SPAS-12", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "HS10", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "OLYMPIA", "scriptMenuResponse" giveOLYMPIA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "STAKEOUT", "scriptMenuResponse" giveSTAKEOUT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SPAS-12", "scriptMenuResponse" giveSPAS12;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "HS10", "scriptMenuResponse" giveHS10;, 1, ; )
 	}
 }
 
@@ -192,10 +192,10 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "HK21", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "RPK", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M60", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "STONER63", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "HK21", "scriptMenuResponse" giveHK21;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "RPK", "scriptMenuResponse" giveRPK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M60", "scriptMenuResponse" giveM60;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "STONER63", "scriptMenuResponse" giveSTONER63;, 1, ; )
 	}
 }
 
@@ -219,9 +219,9 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DRAGUNOV", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", close self;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DRAGUNOV", "scriptMenuResponse" giveDRAGUNOV;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", "scriptMenuResponse" giveWA2000;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", "scriptMenuResponse" giveL96A1;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", "scriptMenuResponse" givePSG1;, 1, ; )
 	}
 }
