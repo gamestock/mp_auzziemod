@@ -283,79 +283,80 @@ replacepro()
 	if ( self HasPerk ( "specialty_fastreload" ) ) // sleight of hand
 	{
 		self setPerk("specialty_fastads");
-        self iPrintLn("sleight of hand pro given");
+        //self iPrintLn("sleight of hand pro given");
 	}
 	if ( self HasPerk ( "specialty_movefaster" ) ) // lightweight
 	{
 		self setPerk("specialty_fallheight");
-        self iPrintLn("lightweight pro given");
+        //self iPrintLn("lightweight pro given");
 	}
 	if ( self HasPerk ( "specialty_bulletaccuracy" ) ) // steady aim
 	{
 		self setPerk("specialty_sprintrecovery");
 		self setPerk("specialty_fastmeleerecovery");
-        self iPrintLn("steady aim pro given");
+        //self iPrintLn("steady aim pro given");
 	}
 	if ( self HasPerk ( "specialty_gas_mask" ) ) // tactical mask
 	{
 		self setPerk("specialty_stunprotection");
-        self iPrintLn("tactical mask pro given");
+        //self iPrintLn("tactical mask pro given");
 	}
 	if ( self HasPerk ( "specialty_holdbreath" ) ) // scout
 	{
 		self setPerk("specialty_fastweaponswitch");
-        self iPrintLn("scout pro given");
+        //self iPrintLn("scout pro given");
 	}
 	if ( self HasPerk ( "specialty_gpsjammer" ) )
 	{
 		self setPerk("specialty_nottargetedbyai");
 		self setPerk("specialty_noname");
-        self iPrintLn("ghost pro given");
+        //self iPrintLn("ghost pro given");
 	}
 	if ( self HasPerk ( "specialty_detectexplosive" ) ) // hacker, likely missing perk
 	{
 		self setPerk("specialty_nomotionsensor");
-        self iPrintLn("hacker pro given");
+        //self iPrintLn("hacker pro given");
 	}
 	if ( self HasPerk ( "specialty_bulletpenetration" ) ) // hardened
 	{
 		self setPerk("specialty_armorpiercing");
-        self iPrintLn("hardened pro given");
+        //self iPrintLn("hardened pro given");
 	}
 	if ( self HasPerk ( "specialty_quieter" ) ) // ninja, likely missing perk
 	{
 		self setPerk("specialty_loudenemies");
-        self iPrintLn("ninja pro given");
+        //self iPrintLn("ninja pro given");
 	}
 	if ( self HasPerk ( "specialty_pistoldeath" ) ) // second chance
 	{
-		self setPerk("specialty_finalstand");
-        self iPrintLn("second chance pro given");
+		self unsetPerk("specicalty_pistoldeath");
+		self unsetPerk("specialty_finalstand");
+        self iPrintLnBold("stop using second chance ya nerd");
 	}
 	if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
 	{
 		self setPerk("specialty_twogrenades");
-        self iPrintLn("warlord pro given");
+        //self iPrintLn("warlord pro given");
 	}
 	if ( self HasPerk ( "specialty_scavenger" ) ) // scavenger
 	{
 		self setPerk("specialty_extraammo");
-        self iPrintLn("scavenger pro given");
+        //self iPrintLn("scavenger pro given");
 	}
 	if ( self HasPerk ( "specialty_longersprint" ) ) // marathon
 	{
 		self setPerk("specialty_unlimitedsprint");
-        self iPrintLn("marathon pro given");
+        //self iPrintLn("marathon pro given");
 	}
 	if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket, likely missing perk
 	{
 		self setPerk("specialty_pin_back");
 		self setPerk("specialty_fireproof");
-        self iPrintLn("flak jacket pro given");
+        //self iPrintLn("flak jacket pro given");
 	}
 	if ( self HasPerk ( "specialty_killstreak" ) ) // hardline
 	{
 		self setPerk("specialty_gambler");
-        self iPrintLn("hardline pro given");
+        //self iPrintLn("hardline pro given");
 	}
 }

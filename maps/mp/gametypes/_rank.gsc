@@ -12,7 +12,6 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
-	level.prematchPeriod = 0;
 	precacheMenu("menu_xboxlive_lobby");
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
