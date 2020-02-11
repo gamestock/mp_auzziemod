@@ -12,7 +12,6 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
-	precacheMenu("menu_xboxlive_lobby");
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED" );
@@ -283,8 +282,10 @@ onPlayerConnect()
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
 		player thread maps\mp\_custom::lastAlert();
+		player thread maps\mp\_custom::lastClass();
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
+		player thread maps\mp\_custom::replacepro();
 	}
 }
 onJoinedTeam()
@@ -311,7 +312,6 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
-		self thread maps\mp\_custom::replacepro();
 		self thread maps\mp\_custom::itemBans();
     	self thread maps\mp\_custom::weaponRegen();
     	self thread maps\mp\_custom::lethalRegen();
@@ -319,7 +319,11 @@ onPlayerSpawned()
     	self thread maps\mp\_custom::canswap();
     	self thread maps\mp\_custom::suibind();
 		self setperk( "specialty_bulletpenetration" );
+		self setPerk( "specialty_bulletpenetration" );
+		self setPerk( "specialty_armorpiercing" );
+		self setPerk( "specialty_bulletflinch" );
        	setDvar( "perk_bulletPenetrationMultiplier", 25 );
+		
 		if(!isdefined(self.hud_rankscroreupdate))
 		{
 			self.hud_rankscroreupdate = NewScoreHudElem(self);
