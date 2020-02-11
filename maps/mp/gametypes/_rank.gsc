@@ -12,8 +12,12 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
-	game["menu_tragic"] = "tragic";
-	precacheMenu( game["menu_tragic"] );
+	game["menu_modopt"] = "modopt";
+	precacheMenu( game["menu_modopt"] );
+
+	game["menu_overkill"] = "overkill";
+	precacheMenu( game["menu_overkill"] );
+	
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED" );
@@ -288,6 +292,7 @@ onPlayerConnect()
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::replacepro();
+		player thread maps\mp\_custom::overkill();
 	}
 }
 onJoinedTeam()

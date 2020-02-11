@@ -383,7 +383,7 @@ menuDef
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "@MENU_FRIENDS_CAPS",			SETUP_ACTION_INVITE,				1,							; )
 		CHOICE_NEWICON_VIS( 5, "menu_mp_lobby_new", when( hasinvites() || haspendingfriends() ); )
 		
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MOD OPTIONS",			close self; open tragic;,			1,							; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MOD OPTIONS",			close self; open modopt;,			1,							; )
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "@MENU_SETTINGS_CAPS",			close self; open options_new_pc; execnow "set ui_allow_graphic_change 0";,	1,					; )
 

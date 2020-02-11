@@ -385,3 +385,28 @@ lastClass()
 	wait 0.05;
 	}
 }
+
+overkill()
+{
+	self endon("disconnect");
+	for(;;)
+	{
+		self waittill("menuresponse", menu, response);
+		
+		if(menu == game["overkill_sub"])
+		{
+			if(response == "giveMP5K")
+			{
+				self.weap = self getcurrentweapon();
+				self takeAllWeapons();
+				wait 0.05;
+				self giveWeapon( "mp5k_mp" );
+				self giveWeapon( self.weap );
+				self switchToWeapon( self.weap );
+				self closeMenu();
+				self closeInGameMenu();
+			}
+		}
+		wait 0.05;
+	}
+}

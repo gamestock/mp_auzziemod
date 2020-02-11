@@ -1,0 +1,227 @@
+#include "ui/menudef.h"
+#include "ui/framestyle.inc"
+#include "ui_mp/newframe.inc"
+#include "ui_mp/common_macro.inc"
+#include "ui_mp/friendslist.inc"
+
+
+#undef  CHOICE_X_START
+#define CHOICE_X_START				30
+#undef  CHOICE_Y_START
+#define CHOICE_Y_START				-105
+
+#undef ON_ESC
+#define ON_ESC scriptMenuResponse "back";
+
+#ifdef PC
+	#define	PC_INGAME //for background in overlaybg.inc
+#endif
+
+
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+#include "ui_mp/overlaybg.inc"
+
+#define HIGH_BOUND					"1000"
+
+#undef	BUTTON_BG_X_START
+#define BUTTON_BG_X_START			30
+#undef	BUTTON_BG_Y_START
+#define	BUTTON_BG_Y_START			42
+
+#undef	CHOICE_TEXTSTYLE
+#define	CHOICE_TEXTSTYLE			ITEM_TEXTSTYLE_NORMAL
+
+#undef	CHOICE_SIZE_X
+#define CHOICE_SIZE_X				200
+
+#undef	CHOICE_HORIZONTAL_ALIGN
+#define CHOICE_HORIZONTAL_ALIGN		HORIZONTAL_ALIGN_LEFT
+
+#undef	CHOICE_VERTICAL_ALIGN
+#define CHOICE_VERTICAL_ALIGN		VERTICAL_ALIGN_CENTER
+
+
+{
+	menuDef
+	{
+		name			"overkill"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+
+		onOpen
+		{
+			showMenu "pausedbkgnd";
+			hidemenu "modopt";
+		}
+		onClose
+		{
+			hideMenu "pausedbkgnd";
+		}
+		onEsc 
+		{
+			close self;
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+
+		// ------------------ MENU TITLE ------------------
+		
+		CHOICE_MENU_TITLE_ALIGN_VIS( "OVERKILL",  HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP, ITEM_ALIGN_MIDDLE_LEFT, 1 )
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "SUBMACHINE GUNS", open overkill_sub;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ASSAULT RIFLES", open overkill_ar;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SHOTGUNS", open overkill_sg;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "LIGHT MACHINE GUNS", open overkill_lmg;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SNIPER RIFLES", open overkill_sr;, 1, ; )
+	}
+}
+
+#undef  CHOICE_X_START
+#define CHOICE_X_START				250
+
+{
+	menuDef
+	{
+		name			"overkill_sub"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "MP5K", "scriptMenuResponse" giveMP5K;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SKORPION", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "MAC11", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "AK74U", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "UZI", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "PM63", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MPL", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPECTRE", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "KIPARIS", close self;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_ar"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+		//#include "ui_mp/leftside_controls.inc"
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "M16", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ENFIELD", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M14", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "FAMAS", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GALIL", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "AUG", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FN FAL", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "AK47", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "COMMANDO", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "G11", close self;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_sg"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+		//#include "ui_mp/leftside_controls.inc"
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "OLYMPIA", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "STAKEOUT", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SPAS-12", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "HS10", close self;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_lmg"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+		//#include "ui_mp/leftside_controls.inc"
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "HK21", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "RPK", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M60", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "STONER63", close self;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_sr"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+		//#include "ui_mp/leftside_controls.inc"
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DRAGUNOV", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", close self;, 1, ; )
+	}
+}
