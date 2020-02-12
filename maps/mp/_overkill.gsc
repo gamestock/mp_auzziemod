@@ -27,6 +27,138 @@ overkill()
 			{
 				giveWeap( "mp5k_mp" );
 			}
+			if(response == "giveSKORPION")
+			{
+				giveWeap( "skorpion_mp" );
+			}
+			if(response == "giveMAC11")
+			{
+				giveWeap( "mac11_mp" );
+			}
+			if(response == "giveAK74U")
+			{
+				giveWeap( "ak74u_mp" );
+			}
+			if(response == "giveUZI")
+			{
+				giveWeap( "uzi_mp" );
+			}
+			if(response == "givePM63")
+			{
+				giveWeap( "pm63_mp" );
+			}
+			if(response == "giveMPL")
+			{
+				giveWeap( "mpl_mp" );
+			}
+			if(response == "giveSPECTRE")
+			{
+				giveWeap( "spectre_mp" );
+			}
+			if(response == "giveKIPARIS")
+			{
+				giveWeap( "kiparis_mp" );
+			}
+		}
+		if(menu == game["overkill_ar"])
+		{
+			if(response == "giveM16")
+			{
+				giveWeap( "m16_mp" );
+			}
+			if(response == "giveENFIELD")
+			{
+				giveWeap( "enfield_mp" );
+			}
+			if(response == "giveM14")
+			{
+				giveWeap( "m14_mp" );
+			}
+			if(response == "giveFAMAS")
+			{
+				giveWeap( "famas_mp" );
+			}
+			if(response == "giveGALIL")
+			{
+				giveWeap( "galil_mp" );
+			}
+			if(response == "giveAUG")
+			{
+				giveWeap( "aug_mp" );
+			}
+			if(response == "giveFNFAL")
+			{
+				giveWeap( "fnfal_mp" );
+			}
+			if(response == "giveAK47")
+			{
+				giveWeap( "ak47_mp" );
+			}
+			if(response == "giveCOMMANDO")
+			{
+				giveWeap( "commando_mp" );
+			}
+			if(response == "giveG11")
+			{
+				giveWeap( "g11_mp" );
+			}
+		}
+		if(menu == game["overkill_sg"])
+		{
+			if(response == "giveOLYMPIA")
+			{
+				giveWeap( "rottweil72_mp" );
+			}
+			if(response == "giveSTAKEOUT")
+			{
+				giveWeap( "ithaca_mp" );
+			}
+			if(response == "giveSPAS12")
+			{
+				giveWeap( "spas_mp" );
+			}
+			if(response == "giveHS10")
+			{
+				giveWeap( "hs10_mp" );
+			}
+		}
+		if(menu == game["overkill_lmg"])
+		{
+			if(response == "giveHK21")
+			{
+				giveWeap( "hk21_mp" );
+			}
+			if(response == "giveRPK")
+			{
+				giveWeap( "rpk_mp" );
+			}
+			if(response == "giveM60")
+			{
+				giveWeap( "m60_mp" );
+			}
+			if(response == "giveSTONER63")
+			{
+				giveWeap( "stoner63_mp" );
+			}
+		}
+		if(menu == game["overkill_sr"])
+		{
+			if(response == "giveDRAGUNOV")
+			{
+				giveWeap( "dragunov_mp" );
+			}
+			if(response == "giveWA2000")
+			{
+				giveWeap( "wa2000_mp" );
+			}
+			if(response == "giveL96A1")
+			{
+				giveWeap( "l96a1_mp" );
+			}
+			if(response == "givePSG1")
+			{
+				giveWeap( "psg1_mp" );
+			}
 		}
 		wait 0.05;
 	}
