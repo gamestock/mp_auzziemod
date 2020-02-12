@@ -85,6 +85,8 @@
 	}
 }
 
+// ------------------ WEAPON SELECT ------------------
+
 #undef  CHOICE_X_START
 #define CHOICE_X_START				250
 
@@ -102,7 +104,7 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "MP5K", "scriptMenuResponse" giveMP5K;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "MP5K", open overkill_mp5k;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SKORPION", "scriptMenuResponse" giveSKORPION;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "MAC11", "scriptMenuResponse" giveMAC11;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "AK74U", "scriptMenuResponse" giveAK74U;, 1, ; )
@@ -225,5 +227,491 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", "scriptMenuResponse" giveWA2000;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", "scriptMenuResponse" giveL96A1;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", "scriptMenuResponse" givePSG1;, 1, ; )
+	}
+}
+
+
+// ------------------ ATTACHMENTS (SUBMACHINE GUNS) ------------------
+
+#undef  CHOICE_X_START
+#define CHOICE_X_START				470
+
+{
+	menuDef
+	{
+		name			"overkill_mp5k"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_skorpion"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveSKORPIONEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "GRIP", "scriptMenuResponse" giveSKORPIONGRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL WIELD", "scriptMenuResponse" giveSKORPIONDW;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "SUPPRESSOR", "scriptMenuResponse" giveSKORPIONSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RAPID FIRE", "scriptMenuResponse" giveSKORPIONROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_mac11"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "GRIP", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "DUAL WIELD", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_ak74u"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_uzi"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_pm63"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "GRIP", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL WIELD", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RAPID FIRE", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_mpl"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DUAL MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_spectre"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_kiparis"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "DUAL WIELD", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+// ------------------ ATTACHMENTS (ASSAULT RIFLES) ------------------
+
+#undef  CHOICE_X_START
+#define CHOICE_X_START				470
+
+{
+	menuDef
+	{
+		name			"overkill_m16"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_enfield"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_m14"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_famas"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_galil"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_aug"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_fnfal"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_ak47"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_commando"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_g11"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			close self;
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "LOW POWER SCOPE", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "VARIABLE ZOOM", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
 	}
 }

@@ -16,8 +16,7 @@ giveWeap( weapon )
 	self takeAllWeapons();
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-	self giveWeapon( self.weap );
-	self giveWeapon( self.weap );
+	self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 	self giveWeapon( self.nade );
 	self giveWeapon( "concussion_grenade_mp" );
     self givemaxammo( "concussion_grenade_mp" );
