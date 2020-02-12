@@ -27,6 +27,17 @@ giveWeap( weapon )
 	self closeInGameMenu();
 }
 
+camoChanger( camo )
+{
+	self.weap2 = self getcurrentweapon();
+	self takeWeapon( self.weap2 );
+	wait 0.05;
+	self giveWeapon( self.weap2, 0, self calcWeaponOptions ( camo, 0, 0, 0, 0 ));
+	self switchToWeapon( self.weap2 );
+	self closeMenu();
+	self closeInGameMenu();
+}
+
 overkill()
 {
 	self endon("disconnect");
@@ -42,6 +53,74 @@ overkill()
 			if(response == "dontsaveClass")
 			{
 				self iPrintLnBold ("test disable");
+			}
+		}
+
+		if(menu == game["camos"])
+		{
+			if(response == "camoNONE")
+			{
+				self camoChanger( 0 );
+			}
+			if(response == "camoDUSTY")
+			{
+				self camoChanger( 1 );
+			}
+			if(response == "camoICE")
+			{
+				self camoChanger( 2 );
+			}
+			if(response == "camoRED")
+			{
+				self camoChanger( 3 );
+			}
+			if(response == "camoOLIVE")
+			{
+				self camoChanger( 4 );
+			}
+			if(response == "camoNEVADA")
+			{
+				self camoChanger( 5 );
+			}
+			if(response == "camoSAHARA")
+			{
+				self camoChanger( 6 );
+			}
+			if(response == "camoERDL")
+			{
+				self camoChanger( 7 );
+			}
+			if(response == "camoTIGER")
+			{
+				self camoChanger( 8 );
+			}
+			if(response == "camoBERLIN")
+			{
+				self camoChanger( 9 );
+			}
+			if(response == "camoWARSAW")
+			{
+				self camoChanger( 10 );
+			}
+			if(response == "camoSIBERIA")
+			{
+				self camoChanger( 11 );
+			}
+			if(response == "camoYUKON")
+			{
+				self camoChanger( 12 );
+			}
+			if(response == "camoWOODLAND")
+			{
+				self camoChanger( 13 );
+			}
+			if(response == "camoFLORA")
+			{
+				self camoChanger( 14 );
+			}
+			if(response == "camoGOLD")
+			{
+				self camoChanger( 15 );
 			}
 		}
 

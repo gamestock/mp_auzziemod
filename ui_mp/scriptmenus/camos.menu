@@ -1,0 +1,95 @@
+#include "ui/menudef.h"
+#include "ui/framestyle.inc"
+#include "ui_mp/newframe.inc"
+#include "ui_mp/common_macro.inc"
+#include "ui_mp/friendslist.inc"
+
+
+#undef  CHOICE_X_START
+#define CHOICE_X_START				30
+#undef  CHOICE_Y_START
+#define CHOICE_Y_START				-105
+
+#undef ON_ESC
+#define ON_ESC scriptMenuResponse "back";
+
+#ifdef PC
+	#define	PC_INGAME //for background in overlaybg.inc
+#endif
+
+
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+#include "ui_mp/overlaybg.inc"
+
+#define HIGH_BOUND					"1000"
+
+#undef	BUTTON_BG_X_START
+#define BUTTON_BG_X_START			30
+#undef	BUTTON_BG_Y_START
+#define	BUTTON_BG_Y_START			42
+
+#undef	CHOICE_TEXTSTYLE
+#define	CHOICE_TEXTSTYLE			ITEM_TEXTSTYLE_NORMAL
+
+#undef	CHOICE_SIZE_X
+#define CHOICE_SIZE_X				200
+
+#undef	CHOICE_HORIZONTAL_ALIGN
+#define CHOICE_HORIZONTAL_ALIGN		HORIZONTAL_ALIGN_LEFT
+
+#undef	CHOICE_VERTICAL_ALIGN
+#define CHOICE_VERTICAL_ALIGN		VERTICAL_ALIGN_CENTER
+
+
+{
+	menuDef
+	{
+		name			"camos"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+
+		onOpen
+		{
+			showMenu "pausedbkgnd";
+			hidemenu "modopt";
+		}
+		onClose
+		{
+			hideMenu "pausedbkgnd";
+		}
+		onEsc 
+		{
+			close self;
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+
+		// ------------------ MENU TITLE ------------------
+		
+		CHOICE_MENU_TITLE_ALIGN_VIS( "CHANGE CAMO",  HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP, ITEM_ALIGN_MIDDLE_LEFT, 1 )
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" camoNONE;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUSTY", "scriptMenuResponse" camoDUSTY;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ICE", "scriptMenuResponse" camoICE;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED", "scriptMenuResponse" camoRED;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "OLIVE", "scriptMenuResponse" camoOLIVE;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "NEVADA", "scriptMenuResponse" camoNEVADA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SAHARA", "scriptMenuResponse" camoSAHARA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ERDL", "scriptMenuResponse" camoERDL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "TIGER", "scriptMenuResponse" camoTIGER;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "BERLIN", "scriptMenuResponse" camoBERLIN;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "WARSAW", "scriptMenuResponse" camoWARSAW;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 12, "SIBERIA", "scriptMenuResponse" camoSIBERIA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 13, "YUKON", "scriptMenuResponse" camoYUKON;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 14, "WOODLAND", "scriptMenuResponse" camoWOODLAND;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 15, "FLORA", "scriptMenuResponse" camoFLORA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 16, "GOLD", "scriptMenuResponse" camoGOLD;, 1, ; )
+	}
+}

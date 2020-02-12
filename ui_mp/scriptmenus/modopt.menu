@@ -87,7 +87,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "OVERKILL", open overkill;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SUICIDE", "scriptMenuResponse" sui;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "CHANGE CAMO", open camos;, 1, ; )
 
 		FRAME_CHOICE_BIND( 4, "@MENU_TURN_LEFT_CAPS", "+left", ; )
 		FRAME_CHOICE_BIND( 5, "@MENU_TURN_RIGHT_CAPS", "+right", ; )

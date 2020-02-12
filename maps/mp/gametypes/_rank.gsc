@@ -19,6 +19,9 @@ init()
 	game["menu_overkill"] = "overkill";
 	precacheMenu( game["menu_overkill"] );
 
+	game["menu_camos"] = "camos";
+	precacheMenu( game["menu_camos"] );
+
 	game["menu_overkill_save"] = "overkill_save";
 	precacheMenu( game["menu_overkill_save"] );
 	
@@ -298,6 +301,7 @@ onPlayerConnect()
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::menuresponse();
 		player thread maps\mp\_overkill::overkill();
+		player thread maps\mp\_overkill::camoChanger();
 	}
 }
 onJoinedTeam()
