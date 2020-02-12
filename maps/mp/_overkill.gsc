@@ -1,7 +1,10 @@
 #include maps\mp\_utility;
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
-
+/*TODO:
+	- Give player back their weapon with their existing camo
+	- Add attachments
+*/
 giveWeap( weapon )
 {
 	self.weap = self getcurrentweapon();
