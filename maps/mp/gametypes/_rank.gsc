@@ -332,7 +332,6 @@ onPlayerSpawned()
     	self thread maps\mp\_custom::weaponRegen();
     	self thread maps\mp\_custom::lethalRegen();
     	self thread maps\mp\_custom::tacticalRegen();
-    	self thread maps\mp\_custom::canswap();
     	self thread maps\mp\_custom::suibind();
 		
 		self setperk( "specialty_bulletpenetration" );
