@@ -4,6 +4,7 @@
 /*TODO:
 	- Give player back their weapon with their existing camo
 	- Add attachments
+	- Add get overkill class on spawn switch
 */
 giveWeap( weapon )
 {
@@ -15,7 +16,7 @@ giveWeap( weapon )
 	self giveWeapon( self.weap );
 	self switchToWeapon( self.weap );
 	self giveWeapon( self.nade );
-	self giveweapon( "concussion_grenade_mp" );
+	self giveWeapon( "concussion_grenade_mp" );
     self givemaxammo( "concussion_grenade_mp" );
 	self closeMenu();
 	self closeInGameMenu();
