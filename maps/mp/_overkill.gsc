@@ -7,7 +7,7 @@
 
 	TODO:
 	- Give player back their weapon with their existing camo
-	- Add get overkill class on spawn switch
+	- Add overkill weapon on spawn switch
 
 */
 
