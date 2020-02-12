@@ -4,8 +4,8 @@ maps\mp\_overkill.gsc
 maps\mp\gametypes\_rank.gsc
 missingasset.csv
 mod.csv
+ui_mp\scriptmenus\camos.menu
 ui_mp\scriptmenus\class.menu
 ui_mp\scriptmenus\modopt.menu
-ui_mp\scriptmenus\camos.menu
 ui_mp\scriptmenus\overkill.menu
 ui_mp\scriptmenus\overkill_save.menu

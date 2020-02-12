@@ -294,14 +294,13 @@ onPlayerConnect()
 		player thread onPlayerSpawned();
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
-		
+		player thread maps\mp\_overkill::overkill();
+		player thread maps\mp\_overkill::camoChanger();
 		player thread maps\mp\_custom::lastAlert();
 		player thread maps\mp\_custom::lastClass();
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::menuresponse();
-		player thread maps\mp\_overkill::overkill();
-		player thread maps\mp\_overkill::camoChanger();
 	}
 }
 onJoinedTeam()
@@ -335,6 +334,7 @@ onPlayerSpawned()
     	self thread maps\mp\_custom::tacticalRegen();
     	self thread maps\mp\_custom::canswap();
     	self thread maps\mp\_custom::suibind();
+		
 		self setperk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_armorpiercing" );

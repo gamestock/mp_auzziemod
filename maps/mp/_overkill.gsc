@@ -34,8 +34,6 @@ camoChanger( camo )
 	wait 0.05;
 	self giveWeapon( self.weap2, 0, self calcWeaponOptions ( camo, 0, 0, 0, 0 ));
 	self switchToWeapon( self.weap2 );
-	self closeMenu();
-	self closeInGameMenu();
 }
 
 overkill()
@@ -56,6 +54,7 @@ overkill()
 			}
 		}
 
+	/*camo changer*/
 		if(menu == game["camos"])
 		{
 			if(response == "camoNONE")

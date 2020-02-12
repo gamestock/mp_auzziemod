@@ -244,6 +244,7 @@ menuDef
 				hide selection_right;
 				setDvar showMap 1;
 			}
+			execnow exec tragic;
 			showMenu "pausedbkgnd"
 		}
 		onClose

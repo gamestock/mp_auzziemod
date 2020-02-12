@@ -35,6 +35,9 @@
 #undef	CHOICE_SIZE_X
 #define CHOICE_SIZE_X				200
 
+#define SINGLE_PLAYER	1
+#include "ui_mp/ingamebg.inc"
+
 #undef	CHOICE_HORIZONTAL_ALIGN
 #define CHOICE_HORIZONTAL_ALIGN		HORIZONTAL_ALIGN_LEFT
 
@@ -61,7 +64,7 @@
 		}
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		#ifndef PC // background overlay
@@ -72,6 +75,11 @@
 		// ------------------ MENU TITLE ------------------
 		
 		CHOICE_MENU_TITLE_ALIGN_VIS( "OVERKILL",  HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP, ITEM_ALIGN_MIDDLE_LEFT, 1 )
+
+		PREPROC_TEXT_DRAW_VIS_EX(	BUTTON_BG_X_START (BUTTON_BG_Y_START+35) 230 60 HORIZONTAL_ALIGN_LEFT VERTICAL_ALIGN_TOP, 0 0,
+									( "Use a primary weapon as a secondary. This isn't saved to your class." ),
+									TEXTSIZE_SMALL, 0, 0, ITEM_ALIGN_TOP_LEFT, 1 1 1 1,
+									1, autowrapped )
 
 		// ------------------ MENU BUTTONS ------------------
 
@@ -99,7 +107,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -125,7 +133,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		#ifndef PC // background overlay
@@ -158,7 +166,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		#ifndef PC // background overlay
@@ -185,7 +193,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		#ifndef PC // background overlay
@@ -212,7 +220,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		#ifndef PC // background overlay
@@ -247,7 +255,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -271,7 +279,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -294,7 +302,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -319,7 +327,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -346,7 +354,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -371,7 +379,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -393,7 +401,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -418,7 +426,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -443,7 +451,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -471,7 +479,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -499,7 +507,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -527,7 +535,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -555,7 +563,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -583,7 +591,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -611,7 +619,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -639,7 +647,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -667,7 +675,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -695,7 +703,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -723,7 +731,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -745,7 +753,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -763,7 +771,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -782,7 +790,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -801,7 +809,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -822,7 +830,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -845,7 +853,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -869,7 +877,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -893,7 +901,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -918,7 +926,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -941,7 +949,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -964,7 +972,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -987,7 +995,7 @@
 		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
 		onEsc 
 		{
-			close self;
+			scriptMenuResponse "back";
 		}
 
 		// ------------------ MENU BUTTONS ------------------
@@ -1000,3 +1008,10 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" givePSG1VAR;, 1, ; )
 	}
 }
+
+		#ifdef PC
+	NEW_FRAME_BACK_BUTTON_ACTION_PC_VIS( ON_ESC , when( !dvarInt( ui_show_friends_list_bg ) ) )
+#else
+	// Back button
+	PREPROC_TEXT_DRAW_VIS(	CHOICE_X_START -17 50 17 CHOICE_HORIZONTAL_ALIGN VERTICAL_ALIGN_BOTTOM,		0 0,	"@PLATFORM_BACK",			TEXTSIZE_DEFAULT, 0, 0, ITEM_ALIGN_BOTTOM_LEFT, 1 1 1 1, when( !dvarInt( ui_show_friends_list_bg ) ) )
+#endif // PC
