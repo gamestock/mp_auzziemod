@@ -46,6 +46,310 @@ overkill()
 		}
 
 
+	/*submachine guns*/
+		if(menu == game["overkill_mp5k"])
+		{
+			if(response == "giveMP5K")
+			{
+				giveWeap( "mp5k_mp" );
+			}
+			if(response == "giveMP5KEXT")
+			{
+				giveWeap( "mp5k_extclip_mp");
+			}
+			if(response == "giveMP5KACOG")
+			{
+				giveWeap( "mp5k_acog_mp");
+			}
+			if(response == "giveMP5KRDS")
+			{
+				giveWeap( "mp5k_elbit_mp");
+			}
+			if(response == "giveMP5KRFLX")
+			{
+				giveWeap( "mp5k_reflex_mp");
+			}
+			if(response == "giveMP5KSUP")
+			{
+				giveWeap( "mp5k_silencer_mp");
+			}
+			if(response == "giveMP5KRF")
+			{
+				giveWeap( "mp5k_rf_mp");
+			}
+		}
+		if(menu == game["overkill_skorpion"])
+		{
+			if(response == "giveSKORPION")
+			{
+				giveWeap( "skorpion_mp" );
+			}
+			if(response == "giveSKORPIONEXT")
+			{
+				giveWeap( "skorpion_extclip_mp");
+			}
+			if(response == "giveSKORPIONGRIP")
+			{
+				giveWeap( "skorpion_grip_mp");
+			}
+			if(response == "giveSKORPIONDW")
+			{
+				giveWeap( "skorpiondw_mp");
+			}
+			if(response == "giveSKORPIONSUP")
+			{
+				giveWeap( "skorpion_silencer_mp");
+			}
+			if(response == "giveSKORPIONRF")
+			{
+				giveWeap( "skorpion_rf_mp");
+			}
+		}
+		if(menu == game["overkill_mac11"])
+		{
+			if(response == "giveMAC11")
+			{
+				giveWeap( "mac11_mp" );
+			}
+			if(response == "giveMAC11EXT")
+			{
+				giveWeap( "mac11_extclip_mp");
+			}
+			if(response == "giveMAC11RDS")
+			{
+				giveWeap( "mac11_elbit_mp");
+			}
+			if(response == "giveMAC11RFLX")
+			{
+				giveWeap( "mac11_reflex_mp");
+			}
+			if(response == "giveMAC11GRIP")
+			{
+				giveWeap( "mac11_grip_mp");
+			}
+			if(response == "giveMAC11DW")
+			{
+				giveWeap( "mac11dw_mp");
+			}
+			if(response == "giveMAC11SUP")
+			{
+				giveWeap( "mac11_silencer_mp");
+			}
+			if(response == "giveMAC11RF")
+			{
+				giveWeap( "mac11_rf_mp");
+			}
+		}
+		if(menu == game["overkill_ak74u"])
+		{
+			if(response == "giveAK74U")
+			{
+				giveWeap( "ak74u_mp" );
+			}
+			if(response == "giveAK74UEXT")
+			{
+				giveWeap( "ak74u_extclip_mp");
+			}
+			if(response == "giveAK74UDUAL")
+			{
+				giveWeap( "ak74u_dualclip_mp");
+			}
+			if(response == "giveAK74UACOG")
+			{
+				giveWeap( "ak74u_acog_mp");
+			}
+			if(response == "giveAK74URDS")
+			{
+				giveWeap( "ak74u_elbit_mp");
+			}
+			if(response == "giveAK74URFLX")
+			{
+				giveWeap( "ak74u_reflex_mp");
+			}
+			if(response == "giveAK74UGRIP")
+			{
+				giveWeap( "ak74u_grip_mp");
+			}
+			if(response == "giveAK74USUP")
+			{
+				giveWeap( "ak74u_silencer_mp");
+			}
+			if(response == "giveAK74UGL")
+			{
+				giveWeap( "ak74u_gl_mp");
+			}
+			if(response == "giveAK74URF")
+			{
+				giveWeap( "ak74u_rf_mp");
+			}
+		}
+		if(menu == game["overkill_uzi"])
+		{
+			if(response == "giveUZI")
+			{
+				giveWeap( "uzi_mp" );
+			}
+			if(response == "giveUZIEXT")
+			{
+				giveWeap( "uzi_extclip_mp");
+			}
+			if(response == "giveUZIACOG")
+			{
+				giveWeap( "uzi_acog_mp");
+			}
+			if(response == "giveUZIRDS")
+			{
+				giveWeap( "uzi_elbit_mp");
+			}
+			if(response == "giveUZIRFLX")
+			{
+				giveWeap( "uzi_reflex_mp");
+			}
+			if(response == "giveUZIGRIP")
+			{
+				giveWeap( "uzi_grip_mp");
+			}
+			if(response == "giveUZISUP")
+			{
+				giveWeap( "uzi_silencer_mp");
+			}
+			if(response == "giveUZIRF")
+			{
+				giveWeap( "uzi_rf_mp");
+			}
+		}
+		if(menu == game["overkill_pm63"])
+		{
+			if(response == "givePM63")
+			{
+				giveWeap( "pm63_mp" );
+			}
+			if(response == "givePM63EXT")
+			{
+				giveWeap( "pm63_extclip_mp");
+			}
+			if(response == "givePM63GRIP")
+			{
+				giveWeap( "pm63_grip_mp");
+			}
+			if(response == "givePM63DW")
+			{
+				giveWeap( "pm63dw_mp");
+			}
+			if(response == "givePM63RF")
+			{
+				giveWeap( "pm63_rf_mp");
+			}
+		}
+		if(menu == game["overkill_mpl"])
+		{
+			if(response == "giveMPL")
+			{
+				giveWeap( "mpl_mp" );
+			}
+			if(response == "giveMPLDUAL")
+			{
+				giveWeap( "mpl_dualclip_mp");
+			}
+			if(response == "giveMPLACOG")
+			{
+				giveWeap( "mpl_acog_mp");
+			}
+			if(response == "giveMPLRDS")
+			{
+				giveWeap( "mpl_elbit_mp");
+			}
+			if(response == "giveMPLRFLX")
+			{
+				giveWeap( "mpl_reflex_mp");
+			}
+			if(response == "giveMPLGRIP")
+			{
+				giveWeap( "mpl_grip_mp");
+			}
+			if(response == "giveMPLSUP")
+			{
+				giveWeap( "mpl_silencer_mp");
+			}
+			if(response == "giveMPLRF")
+			{
+				giveWeap( "mpl_rf_mp");
+			}
+		}
+		if(menu == game["overkill_spectre"])
+		{
+			if(response == "giveSPECTRE")
+			{
+				giveWeap( "spectre_mp" );
+			}
+			if(response == "giveSPECTREEXT")
+			{
+				giveWeap( "spectre_extclip_mp");
+			}
+			if(response == "giveSPECTREACOG")
+			{
+				giveWeap( "spectre_acog_mp");
+			}
+			if(response == "giveSPECTRERDS")
+			{
+				giveWeap( "spectre_elbit_mp");
+			}
+			if(response == "giveSPECTRERFLX")
+			{
+				giveWeap( "spectre_reflex_mp");
+			}
+			if(response == "giveSPECTREGRIP")
+			{
+				giveWeap( "spectre_grip_mp");
+			}
+			if(response == "giveSPECTRESUP")
+			{
+				giveWeap( "spectre_silencer_mp");
+			}
+			if(response == "giveSPECTRERF")
+			{
+				giveWeap( "spectre_rf_mp");
+			}
+		}
+		if(menu == game["overkill_kiparis"])
+		{
+			if(response == "giveKIPARIS")
+			{
+				giveWeap( "kiparis_mp" );
+			}
+			if(response == "giveKIPARISEXT")
+			{
+				giveWeap( "kiparis_extclip_mp");
+			}
+			if(response == "giveKIPARISACOG")
+			{
+				giveWeap( "kiparis_acog_mp");
+			}
+			if(response == "giveKIPARISRDS")
+			{
+				giveWeap( "kiparis_elbit_mp");
+			}
+			if(response == "giveKIPARISRFLX")
+			{
+				giveWeap( "kiparis_reflex_mp");
+			}
+			if(response == "giveKIPARISGRIP")
+			{
+				giveWeap( "kiparis_grip_mp");
+			}
+			if(response == "giveKIPARISDW")
+			{
+				giveWeap( "kiparisdw_mp");
+			}
+			if(response == "giveKIPARISSUP")
+			{
+				giveWeap( "kiparis_silencer_mp");
+			}
+			if(response == "giveKIPARISRF")
+			{
+				giveWeap( "kiparis_rf_mp");
+			}
+		}
 	/*assault rifles*/
 		if(menu == game["overkill_m16"])
 		{
