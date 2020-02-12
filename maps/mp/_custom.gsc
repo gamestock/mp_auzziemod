@@ -2,6 +2,7 @@
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
 
+
 onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime )
 {
 	if(isSubStr(sweapon, "l96a1_") || isSubStr(sweapon, "wa2000_") || isSubStr(sweapon, "psg1_") || isSubStr(sweapon, "dragunov_") || isSubStr(sweapon, "hatchet_"))
@@ -383,30 +384,5 @@ lastClass()
 			wait .5;
 		}
 	wait 0.05;
-	}
-}
-
-overkill()
-{
-	self endon("disconnect");
-	for(;;)
-	{
-		self waittill("menuresponse", menu, response);
-		
-		if(menu == game["overkill_sub"])
-		{
-			if(response == "giveMP5K")
-			{
-				self.weap = self getcurrentweapon();
-				self takeAllWeapons();
-				wait 0.05;
-				self giveWeapon( "mp5k_mp" );
-				self giveWeapon( self.weap );
-				self switchToWeapon( self.weap );
-				self closeMenu();
-				self closeInGameMenu();
-			}
-		}
-		wait 0.05;
 	}
 }

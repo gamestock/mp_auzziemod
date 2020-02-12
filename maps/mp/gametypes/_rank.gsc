@@ -292,7 +292,7 @@ onPlayerConnect()
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::replacepro();
-		player thread maps\mp\_custom::overkill();
+		player thread maps\mp\_overkill::overkill();
 	}
 }
 onJoinedTeam()
