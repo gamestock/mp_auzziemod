@@ -227,6 +227,8 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", open overkill_WA2000;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", open overkill_L96A1;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", open overkill_PSG1;, 1, ; )
+		//FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3;, 1, ; )
+		//FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700;, 1, ; )
 	}
 }
 
