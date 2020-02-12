@@ -429,7 +429,7 @@ newDefaults()
 		// give nades
 		self giveWeapon( "hatchet_mp" );
 		self giveWeapon( "concussion_grenade_mp" );
-		self giveMaxAmmo( "concussion_grenade_mp ");
+		self giveMaxAmmo( "concussion_grenade_mp" );
 
 		// give perks
 		self clearPerks();
