@@ -460,9 +460,9 @@ menuresponse()
 		
 		if(menu == game["modopt"])
 		{
-			if(response == "sui")
+			if(response == "dropWeap")
 			{
-				self Suicide();
+				self maps\mp\gametypes\_weapons::dropWeaponToGround();
 			}
 		}
 		wait 0.05;

@@ -66,6 +66,8 @@
 		onOpen
 		{
 			showMenu "pausedbkgnd";
+			execnow "+actionslot 1"; 
+			"scriptMenuResponse" getAS1;
 		}
 		onClose
 		{
@@ -97,7 +99,7 @@
 		FRAME_CHOICE_BIND( 4, "@MENU_TURN_LEFT_CAPS", "+left", ; )
 		FRAME_CHOICE_BIND( 5, "@MENU_TURN_RIGHT_CAPS", "+right", ; )
 		FRAME_DVARSLIDER( 6, "YAWSPEED", cl_yawspeed, 140, 140, 1500, ; )
-
+		
 		FRAME_DVARSLIDER( 8, "@MENU_MOUSE_SENSITIVITY_CAPS", sensitivity, 5, 1, 10, ; )
 		FRAME_DVARSLIDER( 9, "@PLATFORM_FOV_CAPS", cg_fov, 65, 65, 90, ; )
 

@@ -12,7 +12,7 @@
 
 */
 
-oldgiveWeap( weapon )
+giveWeap( weapon )
 {
 	self.weap = self getcurrentweapon();
 	self.nade = self getcurrentoffhand();
@@ -30,17 +30,6 @@ oldgiveWeap( weapon )
 	self closeInGameMenu();
 }
 
-giveWeap( weapon )
-{
-	self.weap = self getcurrentweapon();
-	self takeWeapon( self.weap );
-	wait 0.05;
-	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-	self switchToWeapon( weapon );
-	self closeMenu();
-	self closeInGameMenu();
-}
-
 
 camoChanger( camo )
 {
@@ -51,12 +40,26 @@ camoChanger( camo )
 	self switchToWeapon( self.weap2 );
 }
 
+getAS1()
+{
+	self.as1 = self getcurrentweapon();
+	//self iPrintLnBold( self.as1 );
+}
+
 overkill()
 {
 	self endon("disconnect");
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
+		if(menu == game["class"])
+		{
+			if(response == "getAS1")
+			{
+				wait 1.025;
+				self getAS1();
+			}
+		}
 		if(menu == game["overkill_save"])
 		{
 			if(response == "saveClass")
