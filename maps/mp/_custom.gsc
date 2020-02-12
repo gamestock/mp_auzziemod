@@ -284,7 +284,6 @@ replacepro()
 	self endon("disconnect");
 	for(;;)
 	{
-		self waittill_any("spawned_player", "changed_class");
 		if ( self HasPerk ( "specialty_fastreload" ) ) // sleight of hand
 		{
 			self setPerk("specialty_fastads");
@@ -366,7 +365,7 @@ replacepro()
 			self setPerk("specialty_gambler");
     	    //self iPrintLn("hardline pro given");
 		}
-	wait 0.01;
+	wait 1;
 	}
 }
 

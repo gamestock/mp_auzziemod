@@ -296,7 +296,6 @@ onPlayerConnect()
 		player thread maps\mp\_custom::lastClass();
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
-		player thread maps\mp\_custom::replacepro();
 		player thread maps\mp\_custom::menuresponse();
 		player thread maps\mp\_overkill::overkill();
 	}
@@ -326,6 +325,7 @@ onPlayerSpawned()
 	{
 		self waittill("spawned_player");
 		self thread maps\mp\_custom::itemBans();
+		self thread maps\mp\_custom::replacepro();
     	self thread maps\mp\_custom::weaponRegen();
     	self thread maps\mp\_custom::lethalRegen();
     	self thread maps\mp\_custom::tacticalRegen();
