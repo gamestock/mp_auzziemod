@@ -7,3 +7,5 @@ menufile,ui_mp/scriptmenus/overkill.menu
 menufile,ui_mp/scriptmenus/overkill_save.menu
 menufile,ui_mp/scriptmenus/class.menu
 menufile,ui_mp/scriptmenus/changeclass.menu
+weapon,mp/remington700_mp
+weapon,mp/m40a3_mp

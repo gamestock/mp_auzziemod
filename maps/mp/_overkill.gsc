@@ -8,10 +8,11 @@
 	TODO:
 	- Give player back their weapon with their existing camo
 	- Add overkill weapon on spawn switch
+	- Give player their existing equipment back
 
 */
 
-giveWeap( weapon )
+oldgiveWeap( weapon )
 {
 	self.weap = self getcurrentweapon();
 	self.nade = self getcurrentoffhand();
@@ -19,13 +20,27 @@ giveWeap( weapon )
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 	self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+	self giveWeapon( self.as1 );
 	self giveWeapon( self.nade );
+	self giveWeapon( "knife_mp" );
 	self giveWeapon( "concussion_grenade_mp" );
     self givemaxammo( "concussion_grenade_mp" );
 	self switchToWeapon( self.weap );
 	self closeMenu();
 	self closeInGameMenu();
 }
+
+giveWeap( weapon )
+{
+	self.weap = self getcurrentweapon();
+	self takeWeapon( self.weap );
+	wait 0.05;
+	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+	self switchToWeapon( self.weap );
+	self closeMenu();
+	self closeInGameMenu();
+}
+
 
 camoChanger( camo )
 {

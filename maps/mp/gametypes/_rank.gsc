@@ -23,9 +23,11 @@ init()
 	precacheMenu( game["menu_camos"] );
 
 	game["menu_overkill_save"] = "overkill_save";
-	precacheMenu( game["overkill_save"] );
+	precacheMenu( game["menu_overkill_save"] );
 
-	
+	precacheItem("remington700_mp");
+	precacheItem("m40a3_mp");
+
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED" );
@@ -296,7 +298,6 @@ onPlayerConnect()
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
 		player thread maps\mp\_overkill::overkill();
-		player thread maps\mp\_overkill::camoChanger();
 		player thread maps\mp\_custom::lastAlert();
 		player thread maps\mp\_custom::lastClass();
     	player thread maps\mp\_custom::buttonHandler();
