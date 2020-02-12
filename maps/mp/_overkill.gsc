@@ -182,6 +182,15 @@ overkill()
 				self iPrintLnBold ("test");
 			}
 		}
+
+		/*attachments*/
+		if(menu == game["overkill_wa2000"])
+		{
+			if(response == "giveWA2000ACOG")
+			{
+				giveWeap( "wa2000_acog_mp");
+			}
+		}
 		wait 0.05;
 	}
 }

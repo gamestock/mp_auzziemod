@@ -229,7 +229,7 @@ messages()
 			self iprintlnBold( "^1auzziemod T5 ^0[^3DEV^0] ^7- ^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 1}]^0]^1 for a canswap." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
-			self iPrintLn(" - ^1More options available in ^0[^3Mod Options^0] in the pause menu.");
+			self iPrintLn(" - ^1More options available in ^0[^3Mod Options^0]^1 in the pause menu.");
 			spawned = true;
 			break;
 		}

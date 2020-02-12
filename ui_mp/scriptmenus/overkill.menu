@@ -298,13 +298,13 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveMAC11;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "DUAL WIELD", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMAC11EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "RED DOT SIGHT", "scriptMenuResponse" giveMAC11RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "REFLEX SIGHT", "scriptMenuResponse" giveMAC11RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GRIP", "scriptMenuResponse" giveMAC11GRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "DUAL WIELD", "scriptMenuResponse" giveMAC11DW;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMAC11SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMAC11ROF;, 1, ; )
 	}
 }
 
@@ -323,15 +323,15 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveAK74u;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "GRIP", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveAK74UEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveAK74UDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveAK74UACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveAK74URDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveAK74URFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "GRIP", "scriptMenuResponse" giveAK74UGRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SUPPRESSOR", "scriptMenuResponse" giveAK74USUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "GRENADE LAUNCHER", "scriptMenuResponse" giveAK74UGL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "RAPID FIRE", "scriptMenuResponse" giveAK74UROF;, 1, ; )
 	}
 }
 
@@ -350,13 +350,13 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveUZI;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveUZIEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveUZIACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveUZIRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveUZIRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveUZIGRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveUZISUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveUZIROF;, 1, ; )
 	}
 }
 
@@ -375,10 +375,10 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePM63;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "GRIP", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "DUAL WIELD", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RAPID FIRE", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" givePM63EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "GRIP", "scriptMenuResponse" givePM63GRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "DUAL WIELD", "scriptMenuResponse" givePM63DW;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RAPID FIRE", "scriptMenuResponse" givePM63ROF;, 1, ; )
 	}
 }
 
@@ -397,13 +397,13 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveMPL;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL MAG", "scriptMenuResponse" giveMPLDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMPLACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMPLRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMPLRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMPLGRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMPLSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMPLROF;, 1, ; )
 	}
 }
 
@@ -422,13 +422,13 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveSPECTRE;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveSPECTREEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveSPECTREACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveSPECTRERDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveSPECTRERFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveSPECTREGRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SUPPRESSOR", "scriptMenuResponse" giveSPECTRESUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "RAPID FIRE", "scriptMenuResponse" giveSPECTREROF;, 1, ; )
 	}
 }
 
@@ -447,14 +447,14 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveKIPARIS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "DUAL WIELD", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "RAPID FIRE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveKIPARISEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveKIPARISACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveKIPARISRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveKIPARISRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveKIPARISGRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "DUAL WIELD", "scriptMenuResponse" giveKIPARISDW;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SUPPRESSOR", "scriptMenuResponse" giveKIPARISSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "RAPID FIRE", "scriptMenuResponse" giveKIPARISROF;, 1, ; )
 	}
 }
 
@@ -475,16 +475,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM16;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveM16EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveM16DUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveM16ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveM16RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveM16RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveM16MK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveM16FL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveM16IR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveM16SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveM16GL;, 1, ; )
 	}
 }
 
@@ -503,16 +503,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveENFIELD;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveENFIELDEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveENFIELDDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveENFIELDACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveENFIELDRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveENFIELDRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveENFIELDMK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveENFIELDFL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveENFIELDIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveENFIELDSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveENFIELDGL;, 1, ; )
 	}
 }
 
@@ -531,16 +531,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM14;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveM14EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveM14ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveM14RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveM14RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveM14GRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveM14MK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveM14FL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveM14IR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveM14SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveM14GL;, 1, ; )
 	}
 }
 
@@ -559,16 +559,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveFAMAS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveFAMASEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveFAMASDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveFAMASACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveFAMASRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveFAMASRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveFAMASMK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveFAMASFL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveFAMASIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveFAMASSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveFAMASGL;, 1, ; )
 	}
 }
 
@@ -587,16 +587,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveGALIL;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveGALILEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveGALILDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveGALILACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveGALILRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveGALILRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveGALILMK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveGALILFL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveGALILIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveGALILSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveGALILGL;, 1, ; )
 	}
 }
 
@@ -615,16 +615,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveAUG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveAUGEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveAUGDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveAUGACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveAUGRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveAUGRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveAUGMK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveAUGFL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveAUGIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveAUGSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveAUGGL;, 1, ; )
 	}
 }
 
@@ -643,16 +643,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveFNFAL;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveFNFALEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveFNFALDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveFNFALACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveFNFALRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveFNFALRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveFNFALMK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveFNFALFL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveFNFALIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveFNFALSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveFNFALGL;, 1, ; )
 	}
 }
 
@@ -671,16 +671,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveAK47;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveAK47EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveAK47DUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveAK47ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveAK47RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveAK47RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveAK47MK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveAK47FL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveAK47IR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveAK47SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveAK47GL;, 1, ; )
 	}
 }
 
@@ -699,16 +699,16 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveCOMMANDO;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveMP5KROF;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveCOMMANDOEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveCOMMANDODUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveCOMMANDOACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveCOMMANDORDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveCOMMANDORFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MASTERKEY", "scriptMenuResponse" giveCOMMANDOMK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "FLAMETHROWER", "scriptMenuResponse" giveCOMMANDOFL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "INFRARED SCOPE", "scriptMenuResponse" giveCOMMANDOIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "SUPPRESSOR", "scriptMenuResponse" giveCOMMANDOSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "GRENADE LAUNCHER", "scriptMenuResponse" giveCOMMANDOGL;, 1, ; )
 	}
 }
 
@@ -727,8 +727,8 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveG11;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "LOW POWER SCOPE", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "VARIABLE ZOOM", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "LOW POWER SCOPE", "scriptMenuResponse" giveG11LOW;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "VARIABLE ZOOM", "scriptMenuResponse" giveG11VAR;, 1, ; )
 	}
 }
 
@@ -767,7 +767,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveSTAKEOUT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "GRIP", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "GRIP", "scriptMenuResponse" giveSTAKEOUTGRIP;, 1, ; )
 	}
 }
 
@@ -786,7 +786,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveSPAS12;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SUPPRESSOR", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SUPPRESSOR", "scriptMenuResponse" giveSPAS12SUP;, 1, ; )
 	}
 }
 
@@ -805,7 +805,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveHS10;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL WIELD", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "DUAL WIELD", "scriptMenuResponse" giveHS10DW;, 1, ; )
 	}
 }
 
@@ -826,11 +826,11 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveHK21;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveHK21EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveHK21ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveHK21RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveHK21RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "INFRARED SCOPE", "scriptMenuResponse" giveHK21IR;, 1, ; )
 	}
 }
 
@@ -849,12 +849,12 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveRPK;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveRPKEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "DUAL MAG", "scriptMenuResponse" giveRPKDUAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "ACOG SIGHT", "scriptMenuResponse" giveRPKACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "RED DOT SIGHT", "scriptMenuResponse" giveRPKRDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "REFLEX SIGHT", "scriptMenuResponse" giveRPKRFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "INFRARED SCOPE", "scriptMenuResponse" giveRPKIR;, 1, ; )
 	}
 }
 
@@ -873,12 +873,12 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM60;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KROF;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveM60EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveM60ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveM60RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveM60RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "GRIP", "scriptMenuResponse" giveM60GRIP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "INFRARED SCOPE", "scriptMenuResponse" giveM60IR;, 1, ; )
 	}
 }
 
@@ -897,11 +897,11 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveSTONER63;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveSTONER63EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveSTONER63ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "RED DOT SIGHT", "scriptMenuResponse" giveSTONER63RDS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "REFLEX SIGHT", "scriptMenuResponse" giveSTONER63RFLX;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "INFRARED SCOPE", "scriptMenuResponse" giveSTONER63IR;, 1, ; )
 	}
 }
 
@@ -922,11 +922,11 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveDRAGUNOV;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveDRAGUNOVEXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveDRAGUNOVACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveDRAGUNOVIR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveDRAGUNOVSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveDRAGUNOVVAR;, 1, ; )
 	}
 }
 
@@ -945,11 +945,11 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveWA2000;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveWA2000EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveWA2000ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveWA2000IR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveWA2000SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveWA2000VAR;, 1, ; )
 	}
 }
 
@@ -968,11 +968,11 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveL96A1;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveL96A1EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveL96A1ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveL96A1IR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveL96A1SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveL96A1VAR;, 1, ; )
 	}
 }
 
@@ -991,10 +991,10 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePSG1;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" giveMP5KEXT;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" giveMP5KACOG;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" giveMP5KRDS;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" giveMP5KRFLX;, 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" giveMP5KSUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "EXTENDED MAG", "scriptMenuResponse" givePSG1EXT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "ACOG SIGHT", "scriptMenuResponse" givePSG1ACOG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" givePSG1IR;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" givePSG1SUP;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" givePSG1VAR;, 1, ; )
 	}
 }
