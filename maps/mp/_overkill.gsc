@@ -5,11 +5,15 @@
 giveWeap( weapon )
 {
 	self.weap = self getcurrentweapon();
+	self.nade = self getcurrentoffhand();
 	self takeAllWeapons();
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 	self giveWeapon( self.weap );
 	self switchToWeapon( self.weap );
+	self giveWeapon( self.nade );
+	self giveweapon( "concussion_grenade_mp" );
+    self givemaxammo( "concussion_grenade_mp" );
 	self closeMenu();
 	self closeInGameMenu();
 }
