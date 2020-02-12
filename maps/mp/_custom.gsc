@@ -366,6 +366,85 @@ lastClass()
 	}
 }
 
+newDefaults()
+{
+	self_class = self.pers["class"];
+
+	if (isSubStr( self_class, "CLASS_SMG" ) 
+	|| isSubStr( self_class, "CLASS_CQB" ) 
+	|| isSubStr( self_class, "CLASS_ASSAULT" ) 
+	|| isSubStr( self_class, "CLASS_LMG" ) 
+	|| isSubStr( self_class, "CLASS_SNIPER" ))
+	{
+		// give weapons
+		self takeAllWeapons();
+		pri = randomIntRange( 1, 6 );
+		switch(pri)
+		{
+			case 1:
+				self giveWeapon( "l96a1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			break;
+			case 2:
+				self giveWeapon( "l96a1_vzoom_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			break;
+			case 3:
+				self giveWeapon( "l96a1_ir_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			break;
+			case 4:
+				self giveWeapon( "psg1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			break;
+			case 5:
+				self giveWeapon( "psg1_vzoom_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			break;
+			case 6:
+				self giveWeapon( "psg1_ir_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			break;
+		}
+		sec = randomIntRange( 1, 7 );
+		switch(sec)
+		{
+			case 1:
+				self giveWeapon( "asp_mp" );
+			break;
+			case 2:
+				self giveWeapon( "m1911_mp" );
+			break;
+			case 3:
+				self giveWeapon( "makarov_mp" );
+			break;
+			case 4:
+				self giveWeapon( "asp_mp" );
+			break;
+			case 5:
+				self giveWeapon( "python_mp" );
+			break;
+			case 6:
+				self giveWeapon( "cz75_mp" );
+			break;
+			case 7:
+				self giveWeapon( "knife_ballistic_mp" );
+			break;
+		}
+
+		// give nades
+		self giveWeapon( "hatchet_mp" );
+		self giveWeapon( "concussion_grenade_mp" );
+		self giveMaxAmmo( "concussion_grenade_mp ");
+
+		// give perks
+		self clearPerks();
+		self setPerk( "specialty_movefaster"); // lightweight pro
+		self setPerk( "specialty_fallheight" );
+		self setPerk( "specialty_fastreload" ); // sleight of hand pro
+		self setPerk( "specialty_fastads" );
+		self setPerk( "specialty_longersprint" ); // marathon pro
+		self setPerk( "specialty_unlimitedsprint" );
+		self setPerk( "specialty_bulletpenetration" ); // hardened pro
+		self setPerk( "specialty_armorpiercing" );
+		self setPerk( "specialty_bulletflinch" );
+	}
+}
+
 menuresponse()
 {
 	self endon("disconnect");
