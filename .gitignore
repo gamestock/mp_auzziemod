@@ -6,3 +6,5 @@ logs/console_mp.log.*
 bots.txt
 missingasset.csv
 
+*.ff
+*.iwd

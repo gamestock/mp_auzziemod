@@ -89,7 +89,7 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "LIGHT MACHINE GUNS", open overkill_lmg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SNIPER RIFLES", open overkill_sr;, 1, ; )
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SPAWN WITH OVERKILL", open overkill_save;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SPAWN SETTINGS", open overkill_save;, 1, ; )
 	}
 }
 
@@ -235,8 +235,8 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", open overkill_WA2000;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", open overkill_L96A1;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", open overkill_PSG1;, 1, ; )
-		//FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3;, 1, ; )
-		//FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700;, 1, ; )
 	}
 }
 
@@ -1006,6 +1006,42 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "INFRARED SCOPE", "scriptMenuResponse" givePSG1IR;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SUPPRESSOR", "scriptMenuResponse" givePSG1SUP;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 6, "VARIABLE ZOOM", "scriptMenuResponse" givePSG1VAR;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_m40a3"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM40A3;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_r700"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveR700;, 1, ; )
 	}
 }
 

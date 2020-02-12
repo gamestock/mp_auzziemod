@@ -23,7 +23,8 @@ init()
 	precacheMenu( game["menu_camos"] );
 
 	game["menu_overkill_save"] = "overkill_save";
-	precacheMenu( game["menu_overkill_save"] );
+	precacheMenu( game["overkill_save"] );
+
 	
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );

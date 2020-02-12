@@ -131,13 +131,13 @@ itemBans()
 	for(;;)
 	{
 		currentweapon = self getCurrentWeapon();
-		if(isSubStr(currentweapon, "as50_mp+acog"))
+		if(isSubStr(currentweapon, "psg1_acog_mp"))
 		{
 			self iPrintLnBold( "^6THIS WEAPON IS ^3RESTRICTED");
 			wait 1;
 			self takeWeapon( currentweapon );
-    		self giveWeapon( "knife_held_mp" );
-    		self switchToWeapon( "knife_held_mp" );
+    		self giveWeapon( "l96a1_mp" );
+    		self switchToWeapon( "l96a1_mp" );
 		}
 	wait 0.05;
 	}
@@ -222,7 +222,8 @@ messages()
 		if ( spawned == false ) 
 		{
 			wait 2.5;
-			self iprintlnBold( "^1auzziemod T5 ^0[^3DEV^0] ^7- ^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
+			self iprintln( "^1auzziemod T5 ^0[^3DEV^0]" );
+			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
 			self iPrintLn(" - ^1More options available in ^0[^3Mod Options^0]^1 in the pause menu.");
 			spawned = true;
@@ -426,6 +427,8 @@ newDefaults()
 			break;
 		}
 
+		
+
 		// give nades
 		self giveWeapon( "hatchet_mp" );
 		self giveWeapon( "concussion_grenade_mp" );
@@ -435,10 +438,13 @@ newDefaults()
 		self clearPerks();
 		self setPerk( "specialty_movefaster"); // lightweight pro
 		self setPerk( "specialty_fallheight" );
+
 		self setPerk( "specialty_fastreload" ); // sleight of hand pro
 		self setPerk( "specialty_fastads" );
+
 		self setPerk( "specialty_longersprint" ); // marathon pro
 		self setPerk( "specialty_unlimitedsprint" );
+
 		self setPerk( "specialty_bulletpenetration" ); // hardened pro
 		self setPerk( "specialty_armorpiercing" );
 		self setPerk( "specialty_bulletflinch" );
@@ -461,4 +467,74 @@ menuresponse()
 		}
 		wait 0.05;
 	}
+}
+
+randomWeapons( class )
+{
+    level.weapons["SMG"][0] = "mp5k_mp";
+	level.weapons["SMG"][1] = "skorpion_mp";
+	level.weapons["SMG"][2] = "mac11_mp";
+	level.weapons["SMG"][3] = "ak74u_mp";
+	level.weapons["SMG"][4] = "uzi_mp";
+	level.weapons["SMG"][5] = "pm63_mp";
+	level.weapons["SMG"][6] = "mpl_mp";
+	level.weapons["SMG"][7] = "spectre_mp";
+	level.weapons["SMG"][8] = "kiparis_mp";
+
+	level.weapons["RIFLE"][0] = "m16_mp";
+	level.weapons["RIFLE"][1] = "enfield_mp";
+	level.weapons["RIFLE"][2] = "m14_mp";
+	level.weapons["RIFLE"][3] = "famas_mp";
+	level.weapons["RIFLE"][4] = "galil_mp";
+	level.weapons["RIFLE"][5] = "aug_mp";
+	level.weapons["RIFLE"][6] = "fnfal_mp";
+	level.weapons["RIFLE"][7] = "ak47_mp";
+	level.weapons["RIFLE"][8] = "commando_mp";
+	level.weapons["RIFLE"][9] = "g11_mp";
+
+	level.weapons["SHOTGUN"][0] = "rottweil72_mp";
+	level.weapons["SHOTGUN"][1] = "ithaca_mp";
+	level.weapons["SHOTGUN"][2] = "spas_mp";
+	level.weapons["SHOTGUN"][3] = "hs10_mp";
+
+	level.weapons["SNIPER"][0] = "dragunov_mp";
+	level.weapons["SNIPER"][1] = "wa2000_mp";
+	level.weapons["SNIPER"][2] = "l96a1_mp";
+	level.weapons["SNIPER"][3] = "psg1_mp";
+	level.weapons["SNIPER"][4] = "m40a3_mp";
+	level.weapons["SNIPER"][5] = "remington700_mp";
+
+	level.weapons["PISTOL"][0] = "asp_mp";
+	level.weapons["PISTOL"][1] = "m1911_mp";
+	level.weapons["PISTOL"][2] = "makarov_mp";
+	level.weapons["PISTOL"][3] = "python_mp";
+	level.weapons["PISTOL"][4] = "cz75_mp";
+	
+	level.weapons["SPECIAL"][0] = "m72_law_mp";
+	level.weapons["SPECIAL"][1] = "rpg_mp";
+	level.weapons["SPECIAL"][2] = "strela_mp";
+	level.weapons["SPECIAL"][3] = "china_lake_mp";
+	level.weapons["SPECIAL"][4] = "crossbow_mp";
+	level.weapons["SPECIAL"][5] = "knife_ballistic_mp";
+
+	if (class == "SMG")
+        return level.weapons["SMG"];
+
+	else if (class == "RIFLE")
+        return level.weapons["RIFLE"];
+
+	else if (class == "SHOTGUN")
+        return level.weapons["SHOTGUN"];
+
+	else if (class == "LMG")
+        return level.weapons["LMG"];
+
+	else if (class == "SNIPER")
+        return level.weapons["SNIPER"];
+
+	else if (class == "PISTOL")
+        return level.weapons["PISTOL"];
+
+	else if (class == "SPECIAL")
+        return level.weapons["SPECIAL"];
 }

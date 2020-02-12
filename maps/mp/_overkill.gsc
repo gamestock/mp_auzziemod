@@ -1134,6 +1134,20 @@ overkill()
 				giveWeap( "psg1_vzoom_mp");
 			}
 		}
+		if(menu == game["overkill_m40a3"])
+		{
+			if(response == "giveM40A3")
+			{
+				giveWeap( "m40a3_mp" );
+			}
+		}
+		if(menu == game["overkill_r700"])
+		{
+			if(response == "giveR700")
+			{
+				giveWeap( "remington700_mp" );
+			}
+		}
 		wait 0.05;
 	}
 }
