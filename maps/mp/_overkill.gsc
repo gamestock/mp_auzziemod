@@ -1,11 +1,14 @@
 #include maps\mp\_utility;
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
+#include maps\mp\gametypes\_class;
+
 /*TODO:
 	- Give player back their weapon with their existing camo
 	- Add attachments
 	- Add get overkill class on spawn switch
 */
+
 giveWeap( weapon )
 {
 	self.weap = self getcurrentweapon();
@@ -14,10 +17,11 @@ giveWeap( weapon )
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 	self giveWeapon( self.weap );
-	self switchToWeapon( self.weap );
+	self giveWeapon( self.weap );
 	self giveWeapon( self.nade );
 	self giveWeapon( "concussion_grenade_mp" );
     self givemaxammo( "concussion_grenade_mp" );
+	self switchToWeapon( self.weap );
 	self closeMenu();
 	self closeInGameMenu();
 }
@@ -166,6 +170,17 @@ overkill()
 			if(response == "givePSG1")
 			{
 				giveWeap( "psg1_mp" );
+			}
+		}
+		if(menu == game["overkill_save"])
+		{
+			if(response == "saveClass")
+			{
+				self iPrintLnBold ("test");
+			}
+			if(response == "dontsaveClass")
+			{
+				self iPrintLnBold ("test");
 			}
 		}
 		wait 0.05;

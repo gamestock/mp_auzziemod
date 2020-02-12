@@ -12,11 +12,15 @@ init()
 	level.rankXpCap = GetDvarInt( #"scr_rankXpCap" );
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
+
 	game["menu_modopt"] = "modopt";
 	precacheMenu( game["menu_modopt"] );
 
 	game["menu_overkill"] = "overkill";
 	precacheMenu( game["menu_overkill"] );
+
+	game["menu_overkill_save"] = "overkill_save";
+	precacheMenu( game["menu_overkill_save"] );
 	
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );

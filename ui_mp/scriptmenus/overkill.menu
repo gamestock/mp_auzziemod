@@ -80,6 +80,8 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SHOTGUNS", open overkill_sg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "LIGHT MACHINE GUNS", open overkill_lmg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SNIPER RIFLES", open overkill_sr;, 1, ; )
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SPAWN WITH OVERKILL", open overkill_save;, 1, ; )
 	}
 }
 

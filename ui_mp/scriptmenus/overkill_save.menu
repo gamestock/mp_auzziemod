@@ -1,0 +1,26 @@
+#include "ui/menudef.h"
+#include "ui_mp/common_macro.inc"
+
+#define CHOICE_SEP_OFFSET_Y		-2
+
+#define CHOICE_SEP_1			3
+
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+#include "ui_mp/popupstyle.inc"
+#include "ui/choices_setup_popmenu.menu"
+
+{
+
+
+	menuDef
+	{
+		name			"overkill_save"
+		SYSTEM_POPUP_SETUP_VIS( overkill_save, setfocus save_class, ;, 1 )
+		SYSTEM_POPUP_TITLE_VIS( "Do you want to spawn with your overkill weapon?", 1 )
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "Enable",	"scriptMenuResponse" saveClass; close self;,	1, name saveclass						)
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "Disable",	"scriptMenuResponse" dontsaveClass; close self;,				1, ;						)
+    }
+}	
