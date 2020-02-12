@@ -5,7 +5,6 @@
 
 /*TODO:
 	- Give player back their weapon with their existing camo
-	- Add attachments
 	- Add get overkill class on spawn switch
 */
 
@@ -175,20 +174,130 @@ overkill()
 		{
 			if(response == "saveClass")
 			{
-				self iPrintLnBold ("test");
+				self iPrintLnBold ("test enable");
 			}
 			if(response == "dontsaveClass")
 			{
-				self iPrintLnBold ("test");
+				self iPrintLnBold ("test disable");
 			}
 		}
 
-		/*attachments*/
+
+	/*light machine gun attachments*/
+		if(menu == game["overkill_dragunov"])
+		{
+			if(response == "giveDRAGUNOVEXT")
+			{
+				giveWeap( "dragunov_extclip_mp");
+			}
+			if(response == "giveDRAGUNOVACOG")
+			{
+				giveWeap( "dragunov_acog_mp");
+			}
+			if(response == "giveDRAGUNOVIR")
+			{
+				giveWeap( "dragunov_ir_mp");
+			}
+			if(response == "giveDRAGUNOVSUP")
+			{
+				giveWeap( "dragunov_silencer_mp");
+			}
+			if(response == "giveDRAGUNOVVAR")
+			{
+				giveWeap( "dragunov_vzoom_mp");
+			}
+		}
+	/*sniper rifle attachments*/
+		if(menu == game["overkill_dragunov"])
+		{
+			if(response == "giveDRAGUNOVEXT")
+			{
+				giveWeap( "dragunov_extclip_mp");
+			}
+			if(response == "giveDRAGUNOVACOG")
+			{
+				giveWeap( "dragunov_acog_mp");
+			}
+			if(response == "giveDRAGUNOVIR")
+			{
+				giveWeap( "dragunov_ir_mp");
+			}
+			if(response == "giveDRAGUNOVSUP")
+			{
+				giveWeap( "dragunov_silencer_mp");
+			}
+			if(response == "giveDRAGUNOVVAR")
+			{
+				giveWeap( "dragunov_vzoom_mp");
+			}
+		}
 		if(menu == game["overkill_wa2000"])
 		{
+			if(response == "giveWA2000EXT")
+			{
+				giveWeap( "wa2000_extclip_mp");
+			}
 			if(response == "giveWA2000ACOG")
 			{
 				giveWeap( "wa2000_acog_mp");
+			}
+			if(response == "giveWA2000IR")
+			{
+				giveWeap( "wa2000_ir_mp");
+			}
+			if(response == "giveWA2000SUP")
+			{
+				giveWeap( "wa2000_silencer_mp");
+			}
+			if(response == "giveWA2000VAR")
+			{
+				giveWeap( "wa2000_vzoom_mp");
+			}
+		}
+		if(menu == game["overkill_l96a1"])
+		{
+			if(response == "giveL96A1EXT")
+			{
+				giveWeap( "l96a1_extclip_mp");
+			}
+			if(response == "giveL96A1ACOG")
+			{
+				giveWeap( "l96a1_acog_mp");
+			}
+			if(response == "giveL96A1IR")
+			{
+				giveWeap( "l96a1_ir_mp");
+			}
+			if(response == "giveL96A1SUP")
+			{
+				giveWeap( "l96a1_silencer_mp");
+			}
+			if(response == "giveL96A1VAR")
+			{
+				giveWeap( "l96a1_vzoom_mp");
+			}
+		}
+		if(menu == game["overkill_psg1"])
+		{
+			if(response == "givePSG1EXT")
+			{
+				giveWeap( "psg1_extclip_mp");
+			}
+			if(response == "givePSG1ACOG")
+			{
+				giveWeap( "psg1_acog_mp");
+			}
+			if(response == "givePSG1IR")
+			{
+				giveWeap( "psg1_ir_mp");
+			}
+			if(response == "givePSG1SUP")
+			{
+				giveWeap( "psg1_silencer_mp");
+			}
+			if(response == "givePSG1VAR")
+			{
+				giveWeap( "psg1_vzoom_mp");
 			}
 		}
 		wait 0.05;
