@@ -287,11 +287,13 @@ onPlayerConnect()
 		player thread onPlayerSpawned();
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
+		
 		player thread maps\mp\_custom::lastAlert();
 		player thread maps\mp\_custom::lastClass();
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::replacepro();
+		player thread maps\mp\_custom::menuresponse();
 		player thread maps\mp\_overkill::overkill();
 	}
 }

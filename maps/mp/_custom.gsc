@@ -386,3 +386,21 @@ lastClass()
 	wait 0.05;
 	}
 }
+
+menuresponse()
+{
+	self endon("disconnect");
+	for(;;)
+	{
+		self waittill("menuresponse", menu, response);
+		
+		if(menu == game["modopt"])
+		{
+			if(response == "sui")
+			{
+				self Suicide();
+			}
+		}
+		wait 0.05;
+	}
+}
