@@ -47,6 +47,100 @@ overkill()
 
 
 	/*assault rifles*/
+		if(menu == game["overkill_m16"])
+		{
+			if(response == "giveM16")
+			{
+				giveWeap( "m16_mp" );
+			}
+			if(response == "giveM16EXT")
+			{
+				giveWeap( "m16_extclip_mp");
+			}
+			if(response == "giveM16DUAL")
+			{
+				giveWeap( "m16_dualclip_mp");
+			}
+			if(response == "giveM16ACOG")
+			{
+				giveWeap( "m16_acog_mp");
+			}
+			if(response == "giveM16RDS")
+			{
+				giveWeap( "m16_elbit_mp");
+			}
+			if(response == "giveM16RFLX")
+			{
+				giveWeap( "m16_reflex_mp");
+			}
+			if(response == "giveM16MK")
+			{
+				giveWeap( "m16_mk_mp");
+			}
+			if(response == "giveM16FT")
+			{
+				giveWeap( "m16_ft_mp");
+			}
+			if(response == "giveM16IR")
+			{
+				giveWeap( "m16_ir_mp");
+			}
+			if(response == "giveM16SUP")
+			{
+				giveWeap( "m16_silencer_mp");
+			}
+			if(response == "giveM16GL")
+			{
+				giveWeap( "m16_gl_mp");
+			}
+		}
+		if(menu == game["overkill_enfield"])
+		{
+			if(response == "giveENFIELD")
+			{
+				giveWeap( "enfield_mp" );
+			}
+			if(response == "giveENFIELDEXT")
+			{
+				giveWeap( "enfield_extclip_mp");
+			}
+			if(response == "giveENFIELDDUAL")
+			{
+				giveWeap( "enfield_dualclip_mp");
+			}
+			if(response == "giveENFIELDACOG")
+			{
+				giveWeap( "enfield_acog_mp");
+			}
+			if(response == "giveENFIELDRDS")
+			{
+				giveWeap( "enfield_elbit_mp");
+			}
+			if(response == "giveENFIELDRFLX")
+			{
+				giveWeap( "enfield_reflex_mp");
+			}
+			if(response == "giveENFIELDMK")
+			{
+				giveWeap( "enfield_mk_mp");
+			}
+			if(response == "giveENFIELDFT")
+			{
+				giveWeap( "enfield_ft_mp");
+			}
+			if(response == "giveENFIELDIR")
+			{
+				giveWeap( "enfield_ir_mp");
+			}
+			if(response == "giveENFIELDSUP")
+			{
+				giveWeap( "enfield_silencer_mp");
+			}
+			if(response == "giveENFIELDGL")
+			{
+				giveWeap( "enfield_gl_mp");
+			}
+		}
 		if(menu == game["overkill_m14"])
 		{
 			if(response == "giveM14")
