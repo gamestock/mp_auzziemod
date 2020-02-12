@@ -36,7 +36,7 @@ giveWeap( weapon )
 	self takeWeapon( self.weap );
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-	self switchToWeapon( self.weap );
+	self switchToWeapon( weapon );
 	self closeMenu();
 	self closeInGameMenu();
 }

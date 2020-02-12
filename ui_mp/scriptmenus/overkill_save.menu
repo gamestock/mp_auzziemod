@@ -16,7 +16,7 @@
 	menuDef
 	{
 		name			"overkill_save"
-		SYSTEM_POPUP_SETUP_VIS( overkill_save, setfocus save_class, ;, 1 )
+		SYSTEM_POPUP_SETUP_VIS( overkill_save, setfocus saveclass, ;, 1 )
 		SYSTEM_POPUP_TITLE_VIS( "Do you want to spawn with your overkill weapon?", 1 )
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "Enable",	"scriptMenuResponse" saveClass; close self;,	1, name saveclass						)
