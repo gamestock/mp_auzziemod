@@ -46,6 +46,351 @@ overkill()
 		}
 
 
+	/*assault rifles*/
+		if(menu == game["overkill_m14"])
+		{
+			if(response == "giveM14")
+			{
+				giveWeap( "m14_mp" );
+			}
+			if(response == "giveM14EXT")
+			{
+				giveWeap( "m14_extclip_mp");
+			}
+			if(response == "giveM14ACOG")
+			{
+				giveWeap( "m14_acog_mp");
+			}
+			if(response == "giveM14RDS")
+			{
+				giveWeap( "m14_elbit_mp");
+			}
+			if(response == "giveM14RFLX")
+			{
+				giveWeap( "m14_reflex_mp");
+			}
+			if(response == "giveM14GRIP")
+			{
+				giveWeap( "m14_grip_mp");
+			}
+			if(response == "giveM14MK")
+			{
+				giveWeap( "m14_mk_mp");
+			}
+			if(response == "giveM14FT")
+			{
+				giveWeap( "m14_ft_mp");
+			}
+			if(response == "giveM14IR")
+			{
+				giveWeap( "m14_ir_mp");
+			}
+			if(response == "giveM14SUP")
+			{
+				giveWeap( "m14_silencer_mp");
+			}
+			if(response == "giveM14GL")
+			{
+				giveWeap( "m14_gl_mp");
+			}
+		}
+		if(menu == game["overkill_famas"])
+		{
+			if(response == "giveFAMAS")
+			{
+				giveWeap( "famas_mp" );
+			}
+			if(response == "giveFAMASEXT")
+			{
+				giveWeap( "famas_extclip_mp");
+			}
+			if(response == "giveFAMASDUAL")
+			{
+				giveWeap( "famas_dualclip_mp");
+			}
+			if(response == "giveFAMASACOG")
+			{
+				giveWeap( "famas_acog_mp");
+			}
+			if(response == "giveFAMASRDS")
+			{
+				giveWeap( "famas_elbit_mp");
+			}
+			if(response == "giveFAMASRFLX")
+			{
+				giveWeap( "famas_reflex_mp");
+			}
+			if(response == "giveFAMASMK")
+			{
+				giveWeap( "famas_mk_mp");
+			}
+			if(response == "giveFAMASFT")
+			{
+				giveWeap( "famas_ft_mp");
+			}
+			if(response == "giveFAMASIR")
+			{
+				giveWeap( "famas_ir_mp");
+			}
+			if(response == "giveFAMASSUP")
+			{
+				giveWeap( "famas_silencer_mp");
+			}
+			if(response == "giveFAMASGL")
+			{
+				giveWeap( "famas_gl_mp");
+			}
+		}
+		if(menu == game["overkill_galil"])
+		{
+			if(response == "giveGALIL")
+			{
+				giveWeap( "galil_mp" );
+			}
+			if(response == "giveGALILEXT")
+			{
+				giveWeap( "galil_extclip_mp");
+			}
+			if(response == "giveGALILDUAL")
+			{
+				giveWeap( "galil_dualclip_mp");
+			}
+			if(response == "giveGALILACOG")
+			{
+				giveWeap( "galil_acog_mp");
+			}
+			if(response == "giveGALILRDS")
+			{
+				giveWeap( "galil_elbit_mp");
+			}
+			if(response == "giveGALILRFLX")
+			{
+				giveWeap( "galil_reflex_mp");
+			}
+			if(response == "giveGALILMK")
+			{
+				giveWeap( "galil_mk_mp");
+			}
+			if(response == "giveGALILFT")
+			{
+				giveWeap( "galil_ft_mp");
+			}
+			if(response == "giveGALILIR")
+			{
+				giveWeap( "galil_ir_mp");
+			}
+			if(response == "giveGALILSUP")
+			{
+				giveWeap( "galil_silencer_mp");
+			}
+			if(response == "giveGALILGL")
+			{
+				giveWeap( "galil_gl_mp");
+			}
+		}
+		if(menu == game["overkill_aug"])
+		{
+			if(response == "giveAUG")
+			{
+				giveWeap( "aug_mp" );
+			}
+			if(response == "giveAUGEXT")
+			{
+				giveWeap( "aug_extclip_mp");
+			}
+			if(response == "giveAUGDUAL")
+			{
+				giveWeap( "aug_dualclip_mp");
+			}
+			if(response == "giveAUGACOG")
+			{
+				giveWeap( "aug_acog_mp");
+			}
+			if(response == "giveAUGRDS")
+			{
+				giveWeap( "aug_elbit_mp");
+			}
+			if(response == "giveAUGRFLX")
+			{
+				giveWeap( "aug_reflex_mp");
+			}
+			if(response == "giveAUGMK")
+			{
+				giveWeap( "aug_mk_mp");
+			}
+			if(response == "giveAUGFT")
+			{
+				giveWeap( "aug_ft_mp");
+			}
+			if(response == "giveAUGIR")
+			{
+				giveWeap( "aug_ir_mp");
+			}
+			if(response == "giveAUGSUP")
+			{
+				giveWeap( "aug_silencer_mp");
+			}
+			if(response == "giveAUGGL")
+			{
+				giveWeap( "aug_gl_mp");
+			}
+		}
+		if(menu == game["overkill_fnfal"])
+		{
+			if(response == "giveFNFAL")
+			{
+				giveWeap( "fnfal_mp" );
+			}
+			if(response == "giveFNFALEXT")
+			{
+				giveWeap( "fnfal_extclip_mp");
+			}
+			if(response == "giveFNFALDUAL")
+			{
+				giveWeap( "fnfal_dualclip_mp");
+			}
+			if(response == "giveFNFALACOG")
+			{
+				giveWeap( "fnfal_acog_mp");
+			}
+			if(response == "giveFNFALRDS")
+			{
+				giveWeap( "fnfal_elbit_mp");
+			}
+			if(response == "giveFNFALRFLX")
+			{
+				giveWeap( "fnfal_reflex_mp");
+			}
+			if(response == "giveFNFALMK")
+			{
+				giveWeap( "fnfal_mk_mp");
+			}
+			if(response == "giveFNFALFT")
+			{
+				giveWeap( "fnfal_ft_mp");
+			}
+			if(response == "giveFNFALIR")
+			{
+				giveWeap( "fnfal_ir_mp");
+			}
+			if(response == "giveFNFALSUP")
+			{
+				giveWeap( "fnfal_silencer_mp");
+			}
+			if(response == "giveFNFALGL")
+			{
+				giveWeap( "fnfal_gl_mp");
+			}
+		}
+		if(menu == game["overkill_ak47"])
+		{
+			if(response == "giveAK47")
+			{
+				giveWeap( "ak47_mp" );
+			}
+			if(response == "giveAK47EXT")
+			{
+				giveWeap( "ak47_extclip_mp");
+			}
+			if(response == "giveAK47DUAL")
+			{
+				giveWeap( "ak47_dualclip_mp");
+			}
+			if(response == "giveAK47ACOG")
+			{
+				giveWeap( "ak47_acog_mp");
+			}
+			if(response == "giveAK47RDS")
+			{
+				giveWeap( "ak47_elbit_mp");
+			}
+			if(response == "giveAK47RFLX")
+			{
+				giveWeap( "ak47_reflex_mp");
+			}
+			if(response == "giveAK47MK")
+			{
+				giveWeap( "ak47_mk_mp");
+			}
+			if(response == "giveAK47FT")
+			{
+				giveWeap( "ak47_ft_mp");
+			}
+			if(response == "giveAK47IR")
+			{
+				giveWeap( "ak47_ir_mp");
+			}
+			if(response == "giveAK47SUP")
+			{
+				giveWeap( "ak47_silencer_mp");
+			}
+			if(response == "giveAK47GL")
+			{
+				giveWeap( "ak47_gl_mp");
+			}
+		}
+		if(menu == game["overkill_commando"])
+		{
+			if(response == "giveCOMMANDO")
+			{
+				giveWeap( "commando_mp" );
+			}
+			if(response == "giveCOMMANDOEXT")
+			{
+				giveWeap( "commando_extclip_mp");
+			}
+			if(response == "giveCOMMANDODUAL")
+			{
+				giveWeap( "commando_dualclip_mp");
+			}
+			if(response == "giveCOMMANDOACOG")
+			{
+				giveWeap( "commando_acog_mp");
+			}
+			if(response == "giveCOMMANDORDS")
+			{
+				giveWeap( "commando_elbit_mp");
+			}
+			if(response == "giveCOMMANDORFLX")
+			{
+				giveWeap( "commando_reflex_mp");
+			}
+			if(response == "giveCOMMANDOMK")
+			{
+				giveWeap( "commando_mk_mp");
+			}
+			if(response == "giveCOMMANDOFT")
+			{
+				giveWeap( "commando_ft_mp");
+			}
+			if(response == "giveCOMMANDOIR")
+			{
+				giveWeap( "commando_ir_mp");
+			}
+			if(response == "giveCOMMANDOSUP")
+			{
+				giveWeap( "commando_silencer_mp");
+			}
+			if(response == "giveCOMMANDOGL")
+			{
+				giveWeap( "commando_gl_mp");
+			}
+		}
+		if(menu == game["overkill_g11"])
+		{
+			if(response == "giveG11")
+			{
+				giveWeap( "g11_mp" );
+			}
+			if(response == "giveG11LOW")
+			{
+				giveWeap( "g11_lps_mp");
+			}
+			if(response == "giveG11VAR")
+			{
+				giveWeap( "g11_vzoom_mp");
+			}
+		}
 	/*shotguns*/
 		if(menu == game["overkill_olympia"])
 		{
