@@ -65,7 +65,11 @@ setSpawnClass()
     		self givemaxammo( "concussion_grenade_mp" );
 			self switchToWeapon( self.weap );
 		}
-		else {}
+		else 
+		{
+			self waittill( "spawned_player" );
+			self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
+		}
 	wait 0.01;
 	}
 }
