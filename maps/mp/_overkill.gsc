@@ -40,7 +40,7 @@ spawntoggle()
 	}
 	else
 	{
-		self notify( "disable overkill" );
+		self notify( "disableoverkill" );
 		//self iPrintLn( "no longer spawning with overkill class" );
 		self.overspawn = false;
 	}
@@ -48,6 +48,7 @@ spawntoggle()
 
 setSpawnClass()
 {
+	self endon( "disableoverkill" );
 	for(;;)
 	{
 		if (self.overspawn == true)
