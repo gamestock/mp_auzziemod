@@ -8,12 +8,12 @@
 	TODO:
 	- Give player back their weapon with their existing camo
 	- Add overkill weapon on spawn switch
-	- Give player their existing equipment back
 
 */
 
 giveWeap( weapon )
 {
+	self.overweap = weapon;
 	self.weap = self getcurrentweapon();
 	self.nade = self getcurrentoffhand();
 	self takeAllWeapons();
@@ -28,6 +28,45 @@ giveWeap( weapon )
 	self switchToWeapon( self.weap );
 	self closeMenu();
 	self closeInGameMenu();
+}
+
+spawntoggle()
+{
+	if(self.overspawn == false)
+	{
+		self thread setSpawnClass();
+		//self iPrintLn( "now spawning with overkill class" );
+		self.overspawn = true;
+	}
+	else
+	{
+		self notify( "disable overkill" );
+		//self iPrintLn( "no longer spawning with overkill class" );
+		self.overspawn = false;
+	}
+}
+
+setSpawnClass()
+{
+	for(;;)
+	{
+		if (self.overspawn == true)
+		{
+			self waittill("spawned_player");
+			self takeAllWeapons();
+			wait 0.05;
+			self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+			self giveWeapon( self.nade );
+			self giveWeapon( self.as1 );
+			self giveWeapon( "knife_mp" );
+			self giveWeapon( "concussion_grenade_mp" );
+    		self givemaxammo( "concussion_grenade_mp" );
+			self switchToWeapon( self.weap );
+		}
+		else {}
+	wait 0.01;
+	}
 }
 
 
@@ -64,11 +103,11 @@ overkill()
 		{
 			if(response == "saveClass")
 			{
-				self iPrintLnBold ("test enable");
+				self.overspawn = true;
 			}
 			if(response == "dontsaveClass")
 			{
-				self iPrintLnBold ("test disable");
+				self.overspawn = false;
 			}
 		}
 

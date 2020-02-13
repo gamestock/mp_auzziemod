@@ -166,12 +166,12 @@ lethalRegen()
 	self waittill( "grenade_fire" );
 	for(;;)
 	{
-		lethal = self getcurrentoffhand();
-		self.pers["equ"] = lethal;
-    	if( self getweaponammoclip( lethal ) == 0 )
+		lethalnade = self getcurrentoffhand();
+		self.pers["equ"] = lethalnade;
+    	if( self getweaponammoclip( lethalnade ) == 0 )
 		{
 			wait 8;
-			self setweaponammoclip( lethal, 1 );
+			self setweaponammoclip( lethalnade, 1 );
 		}
     wait 0.05;
     }
@@ -185,12 +185,12 @@ tacticalRegen()
 	self waittill( "grenade_fire" );
 	for(;;)
 	{
-		tactical = self getcurrentoffhand();
-		self.pers["equSpec"] = tactical;
-    	if( self getweaponammoclip( tactical ) == 0 )
+		tacticalnade = self getcurrentoffhand();
+		self.pers["equSpec"] = tacticalnade;
+    	if( self getweaponammoclip( tacticalnade ) == 0 )
 		{
 			wait 8;
-			self setweaponammoclip( tactical, 1 );
+			self setweaponammoclip( tacticalnade, 1 );
 		}
     wait 0.05;
     }
@@ -254,6 +254,8 @@ suibind()
 	for(;;) 
 	{
 		self waittill ( "suicide" );
+		//weaponprinty = self getCurrentWeapon();
+		//self iPrintLnBold( weaponprinty );
 		self Suicide();
 	wait 0.05;
 	}
