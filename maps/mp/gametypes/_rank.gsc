@@ -303,6 +303,7 @@ onPlayerConnect()
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::menuresponse();
+		
 	}
 }
 onJoinedTeam()
@@ -330,13 +331,14 @@ onPlayerSpawned()
 	{
 		self waittill("spawned_player");
 		self thread maps\mp\_custom::itemBans();
-		self thread maps\mp\_overkill::setSpawnClass();
 		self thread maps\mp\_custom::replacepro();
     	self thread maps\mp\_custom::weaponRegen();
     	self thread maps\mp\_custom::lethalRegen();
     	self thread maps\mp\_custom::tacticalRegen();
     	self thread maps\mp\_custom::suibind();
 		self thread maps\mp\_custom::newDefaults();
+		self thread maps\mp\_overkill::spawntoggle();
+		
 		
 		self setPerk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_armorpiercing" );
