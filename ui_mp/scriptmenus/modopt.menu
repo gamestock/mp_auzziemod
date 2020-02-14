@@ -86,6 +86,7 @@
 									( "Welcome to auzziemod T5. Join our Discord at ^5discord.io/aupluto^7." ),
 									TEXTSIZE_SMALL, 0, 0, ITEM_ALIGN_TOP_LEFT, 1 1 1 1,
 									1, autowrapped )
+						
 
 		// ------------------ MENU TITLE ------------------
 		

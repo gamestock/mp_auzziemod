@@ -476,6 +476,7 @@ overkill()
 			{
 				giveWeap( "kiparis_rf_mp");
 			}
+		}
 		if(menu == game["overkill_MP40"])
 		{
 			if(response == "giveMP40")

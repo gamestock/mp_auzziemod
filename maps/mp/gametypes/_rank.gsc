@@ -117,6 +117,7 @@ init()
 	buildStatsMilestoneInfo();
 	
 	level thread onPlayerConnect();
+	level thread maps\mp\_custom::barriers();
 }
 getRankXPCapped( inRankXp )
 {

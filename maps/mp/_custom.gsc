@@ -127,9 +127,32 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 	return idamage;
 }
 
+moveBarrier( map, value )
+{
+	hurt_triggers = getEntArray( "trigger_hurt", "classname" );
+	for( i = 0; i < hurt_triggers.size; i++ )
+	{
+		if (getDvar( "mapname" ) == map )
+		{
+			hurt_triggers[i].origin -= ( 0, 0, value );
+		}
+	}
+}
+
+barriers()
+{
+	level moveBarrier( "mp_array", 12625 );
+	level moveBarrier( "mp_cosmodrome", 12950 );
+	level moveBarrier( "mp_discovery", 0 );
+	level moveBarrier( "mp_golfcouse", 0 );
+	level moveBarrier( "mp_hotel", 0 );
+	level moveBarrier( "mp_kowloon", 0 );
+	level moveBarrier( "mp_mountain", 0 );
+}
+
 itemBans()
 {
-	self endon ( "death" );
+	self endon( "death" );
 	self endon( "game_ended" );
 	self endon( "disconnect" );
 	for(;;)
@@ -140,8 +163,8 @@ itemBans()
 			self iPrintLnBold( "^6THIS WEAPON IS ^3RESTRICTED");
 			wait 1;
 			self takeWeapon( currentweapon );
-    		self giveWeapon( "l96a1_mp" );
-    		self switchToWeapon( "l96a1_mp" );
+    		self giveWeapon( "psg1_extclip_mp" );
+    		self switchToWeapon( "psg1_extclip_mp" );
 		}
 	wait 0.05;
 	}
@@ -226,10 +249,10 @@ messages()
 		if ( spawned == false ) 
 		{
 			wait 2.5;
-			self iprintln( "^1auzziemod T5 ^0[^3DEV^0]" );
+			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
-			self iPrintLn(" - ^1More options available in ^0[^3Mod Options^0]^1 in the pause menu.");
+			self iPrintLn( "- ^1More options available in ^0[^3Mod Options^0]^1 in the pause menu.");
 			spawned = true;
 			break;
 		}
@@ -245,7 +268,7 @@ lastAlert()
     {
     	if (self.pers["kills"] == 29 )
     	{
-			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT OR BE KICKED." );
+			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT LAST." );
 			break;
 		}
 	wait 0.05;
@@ -274,51 +297,42 @@ replacepro()
 		if ( self HasPerk ( "specialty_fastreload" ) ) // sleight of hand
 		{
 			self setPerk("specialty_fastads");
-    	    //self iPrintLn("sleight of hand pro given");
 		}
 		if ( self HasPerk ( "specialty_movefaster" ) ) // lightweight
 		{
 			self setPerk("specialty_fallheight");
-    	    //self iPrintLn("lightweight pro given");
 		}
 		if ( self HasPerk ( "specialty_bulletaccuracy" ) ) // steady aim
 		{
 			self setPerk("specialty_sprintrecovery");
 			self setPerk("specialty_fastmeleerecovery");
-    	    //self iPrintLn("steady aim pro given");
 		}
 		if ( self HasPerk ( "specialty_gas_mask" ) ) // tactical mask
 		{
 			self setPerk("specialty_stunprotection");
 			self setPerk("specialty_shades");
-    	    //self iPrintLn("tactical mask pro given");
 		}
 		if ( self HasPerk ( "specialty_holdbreath" ) ) // scout
 		{
 			self setPerk("specialty_fastweaponswitch");
-    	    //self iPrintLn("scout pro given");
 		}
 		if ( self HasPerk ( "specialty_gpsjammer" ) ) // ghost
 		{
 			self setPerk("specialty_nottargetedbyai");
 			self setPerk("specialty_noname");
-    	    //self iPrintLn("ghost pro given");
 		}
 		if( self hasPerk( "specialty_detectexplosive" ) && self hasPerk( "specialty_showenemyequipment" ) ) // hacker
 		{
 			self setPerk("specialty_nomotionsensor");
 			self setPerk( "specialty_disarmexplosive" );
-    	    //self iPrintLn("hacker pro given");
 		}
 		if ( self HasPerk ( "specialty_bulletpenetration" ) ) // hardened
 		{
 			self setPerk("specialty_armorpiercing");
-    	    //self iPrintLn("hardened pro given");
 		}
-		if ( self HasPerk ( "specialty_quieter" ) ) // ninja, likely missing perk
+		if ( self HasPerk ( "specialty_quieter" ) ) // ninja, likely missing extra specialty
 		{
 			self setPerk("specialty_loudenemies");
-    	    //self iPrintLn("ninja pro given");
 		}
 		if ( self HasPerk ( "specialty_pistoldeath" ) ) // second chance
 		{
@@ -329,29 +343,27 @@ replacepro()
 		if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
 		{
 			self setPerk("specialty_twogrenades");
-    	    //self iPrintLn("warlord pro given");
 		}
 		if ( self HasPerk ( "specialty_scavenger" ) ) // scavenger
 		{
 			self setPerk("specialty_extraammo");
-    	    //self iPrintLn("scavenger pro given");
 		}
 		if ( self HasPerk ( "specialty_longersprint" ) ) // marathon
 		{
 			self setPerk("specialty_unlimitedsprint");
-    	    //self iPrintLn("marathon pro given");
 		}
-		if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket, likely missing perk
+		if ( self HasPerk ( "specialty_flakjacket" ) ) // flak jacket, likely missing extra specialty
 		{
 			self setPerk("specialty_pin_back");
 			self setPerk("specialty_fireproof");
-    	    //self iPrintLn("flak jacket pro given");
 		}
 		if ( self HasPerk ( "specialty_killstreak" ) ) // hardline
 		{
 			self setPerk("specialty_gambler");
-    	    //self iPrintLn("hardline pro given");
 		}
+		self setPerk("specialty_armorpiercing");
+		self setPerk("specialty_bulletpenetration");
+		self setPerk( "specialty_bulletflinch" );
 	wait 1;
 	}
 }
@@ -395,7 +407,7 @@ newDefaults()
 				self giveWeapon( "l96a1_vzoom_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 3:
-				self giveWeapon( "l96a1_ir_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+				self giveWeapon( "m40a3_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 4:
 				self giveWeapon( "psg1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
@@ -404,7 +416,7 @@ newDefaults()
 				self giveWeapon( "psg1_vzoom_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 6:
-				self giveWeapon( "psg1_ir_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+				self giveWeapon( "remington700_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 		}
 		sec = randomIntRange( 1, 7 );
@@ -432,8 +444,6 @@ newDefaults()
 				self giveWeapon( "knife_ballistic_mp" );
 			break;
 		}
-
-		
 
 		// give nades
 		self giveWeapon( "hatchet_mp" );
