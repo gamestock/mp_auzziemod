@@ -303,6 +303,8 @@ onPlayerConnect()
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
 		player thread maps\mp\_custom::menuresponse();
+		player thread maps\mp\_overkill::spawntoggle();
+		player thread maps\mp\_custom::playerVars();
 		
 	}
 }
@@ -337,7 +339,7 @@ onPlayerSpawned()
     	self thread maps\mp\_custom::tacticalRegen();
     	self thread maps\mp\_custom::suibind();
 		self thread maps\mp\_custom::newDefaults();
-		self thread maps\mp\_overkill::spawntoggle();
+		
 		
 		
 		self setPerk( "specialty_bulletpenetration" );

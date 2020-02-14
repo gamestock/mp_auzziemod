@@ -181,6 +181,7 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 2, "STAKEOUT", open overkill_STAKEOUT; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SPAS-12", open overkill_SPAS12; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "HS10", open overkill_HS10; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M1897 TRENCH GUN", open overkill_M1897; execnow "weapnext", 1, ; )
 	}
 }
 
@@ -237,6 +238,9 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", open overkill_PSG1; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "PTRS-41", open overkill_PTRS; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "ARISAKA", open overkill_ARISAKA; execnow "weapnext", 1, ; )
 	}
 }
 

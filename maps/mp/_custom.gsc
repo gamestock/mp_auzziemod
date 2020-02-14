@@ -2,6 +2,10 @@
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
 
+playerVars()
+{
+	self.overspawn = false;
+}
 
 onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime )
 {
@@ -145,7 +149,7 @@ itemBans()
 
 weaponRegen()
 {
-	self endon ("death");
+	self endon( "death" );
 	self endon( "game_ended" );
 	self endon( "disconnect" );
     self waittill( "weapon_fired" );

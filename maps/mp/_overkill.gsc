@@ -35,12 +35,11 @@ spawntoggle()
 	if(self.overspawn == false)
 	{
 		self thread setSpawnClass();
-		//self iPrintLn( "now spawning with overkill class" );
 		self.overspawn = true;
 	}
 	else
 	{
-		//self iPrintLn( "no longer spawning with overkill class" );
+		self notify( "disableoverspawn" );
 		self.overspawn = false;
 	}
 }
@@ -52,6 +51,7 @@ setSpawnClass()
 	{
 		if (self.overspawn == true)
 		{
+			self endon( "disableoverspawn" );
 			self takeAllWeapons();
 			wait 0.05;
 			self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
@@ -62,14 +62,14 @@ setSpawnClass()
 			self giveWeapon( "concussion_grenade_mp" );
     		self givemaxammo( "concussion_grenade_mp" );
 			self switchToWeapon( self.weap );
+			self thread maps\mp\_custom::replacepro();
 			self iPrintLn( "now spawning with overkill class" );
-			self.overspawn = true;
 		}
-		else
+		else if (self.overspawn == false)
 		{
 			self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
+			self thread maps\mp\_custom::replacepro();
 			self iPrintLn( "no longer spawning with overkill class" );
-			self.overspawn = false;
 		}
 	wait 0.01;
 	}
