@@ -968,7 +968,7 @@ overkill()
 		{
 			if(response == "giveM1897")
 			{
-				giveWeap( "shotgun_mp" );
+				giveWeap( "trenchgun_mp" );
 			}
 		}
 	/*light machine guns*/
@@ -1203,12 +1203,20 @@ overkill()
 			{
 				giveWeap( "m40a3_mp" );
 			}
+			if(response == "giveM40A3ACOG")
+			{
+				giveWeap( "m40a3_acog_mp" );
+			}
 		}
 		if(menu == game["overkill_r700"])
 		{
 			if(response == "giveR700")
 			{
 				giveWeap( "remington700_mp" );
+			}
+			if(response == "giveR700ACOG")
+			{
+				giveWeap( "remington700_acog_mp" );
 			}
 		}
 		if(menu == game["overkill_KAR98"])
@@ -1219,25 +1227,25 @@ overkill()
 			}
 			if(response == "giveKAR98S")
 			{
-				giveWeap( "kar98_mp" );
+				giveWeap( "kar98_scoped_mp" );
 			}
 		}
 		if(menu == game["overkill_ARISAKA"])
 		{
 			if(response == "giveARISAKA")
 			{
-				giveWeap( "kar98_mp" );
+				giveWeap( "type99_mp" );
 			}
 			if(response == "giveARISAKAS")
 			{
-				giveWeap( "kar98_mp" );
+				giveWeap( "type99_scoped_mp" );
 			}
 		}
 		if(menu == game["overkill_PTRS"])
 		{
 			if(response == "givePTRS")
 			{
-				giveWeap( "remington700_mp" );
+				giveWeap( "ptrs41_mp" );
 			}
 		}
 		wait 0.05;

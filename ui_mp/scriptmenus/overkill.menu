@@ -1065,6 +1065,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM40A3;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveM40A3ACOG;, 1, ; )
 	}
 }
 
@@ -1083,6 +1084,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveR700;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveR700ACOG;, 1, ; )
 	}
 }
 

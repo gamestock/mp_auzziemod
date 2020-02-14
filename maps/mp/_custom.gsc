@@ -129,12 +129,12 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 
 moveBarrier( map, value )
 {
-	hurt_triggers = getEntArray( "trigger_hurt", "classname" );
-	for( i = 0; i < hurt_triggers.size; i++ )
+	barrier = getEntArray( "trigger_hurt", "classname" );
+	for( i = 0; i < barrier.size; i++ )
 	{
 		if (getDvar( "mapname" ) == map )
 		{
-			hurt_triggers[i].origin -= ( 0, 0, value );
+			barrier[i].origin -= ( 0, 0, value );
 		}
 	}
 }
@@ -143,11 +143,11 @@ barriers()
 {
 	level moveBarrier( "mp_array", 12625 );
 	level moveBarrier( "mp_cosmodrome", 12950 );
-	level moveBarrier( "mp_discovery", 0 );
-	level moveBarrier( "mp_golfcouse", 0 );
-	level moveBarrier( "mp_hotel", 0 );
-	level moveBarrier( "mp_kowloon", 0 );
-	level moveBarrier( "mp_mountain", 0 );
+	level moveBarrier( "mp_discovery", 400 );
+	level moveBarrier( "mp_golfcourse", 13000 );
+	level moveBarrier( "mp_hotel", 11275 );
+	level moveBarrier( "mp_kowloon", 7525 );
+	level moveBarrier( "mp_mountain", 26975 );
 }
 
 itemBans()
@@ -248,7 +248,7 @@ messages()
 	{
 		if ( spawned == false ) 
 		{
-			wait 2.5;
+			wait 4;
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );

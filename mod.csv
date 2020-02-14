@@ -1,11 +1,19 @@
+// gsc
 rawfile,maps/mp/gametypes/_rank.gsc
 rawfile,maps/mp/_custom.gsc
 rawfile,maps/mp/_overkill.gsc
+
+// maps
+rawfile,maps/mp/mp_discovery.gsc
+
+// menus
 menufile,ui_mp/scriptmenus/modopt.menu
 menufile,ui_mp/scriptmenus/camos.menu
 menufile,ui_mp/scriptmenus/overkill.menu
 menufile,ui_mp/scriptmenus/overkill_save.menu
 menufile,ui_mp/scriptmenus/class.menu
 menufile,ui_mp/scriptmenus/changeclass.menu
+
+// weapons
 weapon,mp/remington700_mp
 weapon,mp/m40a3_mp
