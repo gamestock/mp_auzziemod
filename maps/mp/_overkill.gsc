@@ -46,7 +46,7 @@ setSpawnClass()
 		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.nade );
-		self giveWeapon( self.as1 );
+		self giveWeapon( self.equip );
 		self giveWeapon( "knife_mp" );
 		self giveWeapon( "concussion_grenade_mp" );
     	self givemaxammo( "concussion_grenade_mp" );
@@ -68,6 +68,12 @@ camoChanger( camo )
 	wait 0.05;
 	self giveWeapon( self.weap2, 0, self calcWeaponOptions ( camo, 0, 0, 0, 0 ));
 	self switchToWeapon( self.weap2 );
+}
+
+equChanger( equ )
+{
+	self giveWeapon( equ );
+	self.equip = equ;
 }
 
 getAS1()
@@ -100,6 +106,34 @@ overkill()
 			{
 				self.overspawn = false;
 				self iPrintLn( "- ^1Now spawning with ^0[^3CUSTOM^0]^1 class." );				
+			}
+		}
+	/*equipment changer*/
+		if(menu == game["overkill_equ"])
+		{
+			if(response == "giveCAMERA")
+			{
+				self equChanger( camera_spike_mp );
+			}
+			if(response == "giveC4")
+			{
+				self equChanger( satchel_charge_mp );
+			}
+			if(response == "giveTACINSERT")
+			{
+				self equChanger( tactical_insertion_mp );
+			}
+			if(response == "giveJAMMER")
+			{
+				self equChanger( scrambler_mp );
+			}
+			if(response == "giveMOTION")
+			{
+				self equChanger( acoustic_sensor_mp );
+			}
+			if(response == "giveCLAYMORE")
+			{
+				self equChanger( claymore_mp );
 			}
 		}
 

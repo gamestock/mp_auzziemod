@@ -145,7 +145,7 @@ barriers()
 	level moveBarrier( "mp_cosmodrome", 12950 );
 	level moveBarrier( "mp_discovery", 400 );
 	level moveBarrier( "mp_golfcourse", 13000 );
-	level moveBarrier( "mp_hotel", 11275 );
+	level moveBarrier( "mp_hotel", 11625 );
 	level moveBarrier( "mp_kowloon", 7525 );
 	level moveBarrier( "mp_mountain", 26975 );
 }

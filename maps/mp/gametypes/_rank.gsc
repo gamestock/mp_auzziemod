@@ -13,20 +13,32 @@ init()
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
 
+	// Custom Menus
 	game["menu_modopt"] = "modopt";
 	precacheMenu( game["menu_modopt"] );
-
 	game["menu_overkill"] = "overkill";
 	precacheMenu( game["menu_overkill"] );
-
 	game["menu_camos"] = "camos";
 	precacheMenu( game["menu_camos"] );
-
+	game["menu_equ"] = "equ";
+	precacheMenu( game["menu_equ"] );
 	game["menu_overkill_save"] = "overkill_save";
 	precacheMenu( game["menu_overkill_save"] );
 
-	precacheItem("remington700_mp");
+	// Custom Weapons
 	precacheItem("m40a3_mp");
+	precacheItem("m40a3_acog_mp");
+	precacheItem("remington700_mp");
+	precacheItem("remington700_acog_mp");
+	precacheItem("kar98_mp");
+	precacheItem("kar98_scoped_mp");
+	precacheItem("type99_mp");
+	precacheItem("type99_scoped_mp");
+	precacheItem("ptrs41_mp");
+	precacheItem("trenchgun_mp");
+	precacheItem("mp40_mp");
+	precacheItem("l96a1_mp");
+	
 
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
