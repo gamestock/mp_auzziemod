@@ -7,7 +7,7 @@
 
 	TODO:
 	- Give player back their weapon with their existing camo
-	- Add overkill weapon on spawn switch
+	- Fix overkill weapon on spawn switch
 
 */
 
@@ -74,7 +74,6 @@ setSpawnClass()
 	wait 0.01;
 	}
 }
-
 
 camoChanger( camo )
 {

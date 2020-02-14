@@ -340,8 +340,6 @@ onPlayerSpawned()
     	self thread maps\mp\_custom::suibind();
 		self thread maps\mp\_custom::newDefaults();
 		
-		
-		
 		self setPerk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_armorpiercing" );
 		self setPerk( "specialty_bulletflinch" );

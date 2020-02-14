@@ -823,6 +823,24 @@
 	}
 }
 
+{
+	menuDef
+	{
+		name			"overkill_M1897"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM1897;, 1, ; )
+	}
+}
+
 // ------------------ ATTACHMENTS (LIGHT MACHINE GUNS) ------------------
 
 {
@@ -1046,6 +1064,62 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveR700;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_KAR98"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveKAR98;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SNIPER SCOPE", "scriptMenuResponse" giveKAR98S;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_PTRS"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePTRS;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_ARISAKA"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveARISAKA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SNIPER SCOPE", "scriptMenuResponse" giveARISAKAS;, 1, ; )
 	}
 }
 
