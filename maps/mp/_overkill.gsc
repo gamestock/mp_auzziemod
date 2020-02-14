@@ -3,13 +3,6 @@
 #include maps\mp\gametypes\_hud_util;
 #include maps\mp\gametypes\_class;
 
-/*
-
-	TODO:
-	- Give player back their weapon with their existing camo
-
-*/
-
 giveWeap( weapon )
 {
 	self.overweap = weapon;
@@ -59,13 +52,11 @@ setSpawnClass()
     	self givemaxammo( "concussion_grenade_mp" );
 		self switchToWeapon( self.weap );
 		self thread maps\mp\_custom::replacepro();
-		self iPrintLn( "now spawning with overkill class" );
 	}
 	else if (self.overspawn == false)
 	{
 		self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
 		self thread maps\mp\_custom::replacepro();
-		self iPrintLn( "no longer spawning with overkill class" );
 	}
 	wait 0.01;
 }
@@ -82,7 +73,6 @@ camoChanger( camo )
 getAS1()
 {
 	self.as1 = self getcurrentweapon();
-	//self iPrintLnBold( self.as1 );
 }
 
 overkill()
@@ -104,10 +94,12 @@ overkill()
 			if(response == "saveClass")
 			{
 				self.overspawn = true;
+				self iPrintLn( "- ^1Now spawning with ^0[^3OVERKILL^0]^1 class." );
 			}
 			if(response == "dontsaveClass")
 			{
 				self.overspawn = false;
+				self iPrintLn( "- ^1Now spawning with ^0[^3CUSTOM^0]^1 class." );				
 			}
 		}
 
@@ -483,6 +475,12 @@ overkill()
 			if(response == "giveKIPARISRF")
 			{
 				giveWeap( "kiparis_rf_mp");
+			}
+		if(menu == game["overkill_MP40"])
+		{
+			if(response == "giveMP40")
+			{
+				giveWeap( "mp40_mp" );
 			}
 		}
 	/*assault rifles*/
@@ -965,6 +963,13 @@ overkill()
 				giveWeap( "hs10dw_mp");
 			}
 		}
+		if(menu == game["overkill_M1897"])
+		{
+			if(response == "giveM1897")
+			{
+				giveWeap( "shotgun_mp" );
+			}
+		}
 	/*light machine guns*/
 		if(menu == game["overkill_hk21"])
 		{
@@ -1201,6 +1206,35 @@ overkill()
 		if(menu == game["overkill_r700"])
 		{
 			if(response == "giveR700")
+			{
+				giveWeap( "remington700_mp" );
+			}
+		}
+		if(menu == game["overkill_KAR98"])
+		{
+			if(response == "giveKAR98")
+			{
+				giveWeap( "kar98_mp" );
+			}
+			if(response == "giveKAR98S")
+			{
+				giveWeap( "kar98_mp" );
+			}
+		}
+		if(menu == game["overkill_ARISAKA"])
+		{
+			if(response == "giveARISAKA")
+			{
+				giveWeap( "kar98_mp" );
+			}
+			if(response == "giveARISAKAS")
+			{
+				giveWeap( "kar98_mp" );
+			}
+		}
+		if(menu == game["overkill_PTRS"])
+		{
+			if(response == "givePTRS")
 			{
 				giveWeap( "remington700_mp" );
 			}

@@ -121,6 +121,7 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MPL", open overkill_mpl; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPECTRE", open overkill_spectre; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 9, "KIPARIS", open overkill_kiparis; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "MP40", open overkill_MP40; execnow "weapnext", 1, ; )
 	}
 }
 
@@ -239,8 +240,8 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "PTRS-41", open overkill_PTRS; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "ARISAKA", open overkill_ARISAKA; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ARISAKA", open overkill_ARISAKA; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "PTRS-41", open overkill_PTRS; execnow "weapnext", 1, ; )	
 	}
 }
 
@@ -469,6 +470,24 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "DUAL WIELD", "scriptMenuResponse" giveKIPARISDW;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SUPPRESSOR", "scriptMenuResponse" giveKIPARISSUP;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 9, "RAPID FIRE", "scriptMenuResponse" giveKIPARISRF;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_MP40"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveMP40;, 1, ; )
 	}
 }
 
@@ -1089,24 +1108,6 @@
 {
 	menuDef
 	{
-		name			"overkill_PTRS"
-		focuscolor		COLOR_FOCUSED
-		style			WINDOW_STYLE_EMPTY
-		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
-		onEsc 
-		{
-			scriptMenuResponse "back";
-		}
-
-		// ------------------ MENU BUTTONS ------------------
-
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePTRS;, 1, ; )
-	}
-}
-
-{
-	menuDef
-	{
 		name			"overkill_ARISAKA"
 		focuscolor		COLOR_FOCUSED
 		style			WINDOW_STYLE_EMPTY
@@ -1120,6 +1121,24 @@
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveARISAKA;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SNIPER SCOPE", "scriptMenuResponse" giveARISAKAS;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_PTRS"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePTRS;, 1, ; )
 	}
 }
 
