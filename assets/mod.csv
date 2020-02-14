@@ -1,0 +1,20 @@
+// imported guns
+weapon,mp/m40a3
+weapon,mp/m40a3_mp
+weapon,mp/m40a3_acog_mp
+weapon,mp/remington700
+weapon,mp/remington700_mp
+weapon,mp/remington700_acog_mp
+weapon,mp/kar98
+weapon,mp/kar98_mp
+weapon,mp/kar98_scoped_mp
+weapon,mp/ptrs41
+weapon,mp/ptrs41_mp
+weapon,mp/type99
+weapon,mp/type99_mp
+weapon,mp/type99_scoped_mp
+weapon,mp/trenchgun
+weapon,mp/trenchgun_mp
+// default guns
+weapon,mp/mp40_mp
+weapon,mp/l96a1_mp
