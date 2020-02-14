@@ -88,6 +88,7 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SHOTGUNS", open overkill_sg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "LIGHT MACHINE GUNS", open overkill_lmg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SNIPER RIFLES", open overkill_sr;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "MISC.", open overkill_misc;, 1, ; )
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SPAWN SETTINGS", open overkill_save;, 1, ; )
 	}
@@ -242,6 +243,30 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ARISAKA", open overkill_ARISAKA; execnow "weapnext", 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 9, "PTRS-41", open overkill_PTRS; execnow "weapnext", 1, ; )	
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_misc"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+		//#include "ui_mp/leftside_controls.inc"
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DEFAULT_WEAPON_MP", "scriptMenuResponse" giveDEFWEAPON;, 1, ; )
 	}
 }
 

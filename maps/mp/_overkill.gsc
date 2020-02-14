@@ -46,12 +46,19 @@ setSpawnClass()
 		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.nade );
-		self giveWeapon( self.equip );
 		self giveWeapon( "knife_mp" );
 		self giveWeapon( "concussion_grenade_mp" );
     	self givemaxammo( "concussion_grenade_mp" );
 		self switchToWeapon( self.weap );
 		self thread maps\mp\_custom::replacepro();
+		if (self.changedequ == true)
+		{
+			self giveWeapon( self.equ );
+		}
+		else if (self.changedequ == false)
+		{
+			self giveWeapon( self.as1 );
+		}
 	}
 	else if (self.overspawn == false)
 	{
@@ -73,6 +80,7 @@ camoChanger( camo )
 equChanger( equ )
 {
 	self giveWeapon( equ );
+	self.changedequ = true;
 	self.equip = equ;
 }
 
@@ -113,27 +121,27 @@ overkill()
 		{
 			if(response == "giveCAMERA")
 			{
-				self equChanger( camera_spike_mp );
+				self equChanger( "camera_spike_mp" );
 			}
 			if(response == "giveC4")
 			{
-				self equChanger( satchel_charge_mp );
+				self equChanger( "satchel_charge_mp" );
 			}
 			if(response == "giveTACINSERT")
 			{
-				self equChanger( tactical_insertion_mp );
+				self equChanger( "tactical_insertion_mp" );
 			}
 			if(response == "giveJAMMER")
 			{
-				self equChanger( scrambler_mp );
+				self equChanger( "scrambler_mp" );
 			}
 			if(response == "giveMOTION")
 			{
-				self equChanger( acoustic_sensor_mp );
+				self equChanger( "acoustic_sensor_mp" );
 			}
 			if(response == "giveCLAYMORE")
 			{
-				self equChanger( claymore_mp );
+				self equChanger( "claymore_mp" );
 			}
 		}
 
@@ -1280,6 +1288,14 @@ overkill()
 			if(response == "givePTRS")
 			{
 				giveWeap( "ptrs41_mp" );
+			}
+		}
+	/*misc weapons*/
+		if(menu == game["overkill_misc"])
+		{
+			if(response == "giveDEFWEAPON")
+			{
+				giveWeap( "defaultweapon_mp" );
 			}
 		}
 		wait 0.05;
