@@ -7,7 +7,6 @@
 
 	TODO:
 	- Give player back their weapon with their existing camo
-	- Fix overkill weapon on spawn switch
 
 */
 
@@ -46,33 +45,29 @@ spawntoggle()
 
 setSpawnClass()
 {
-	self waittill("spawned_player");
-	for(;;)
+	if (self.overspawn == true)
 	{
-		if (self.overspawn == true)
-		{
-			self endon( "disableoverspawn" );
-			self takeAllWeapons();
-			wait 0.05;
-			self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			self giveWeapon( self.nade );
-			self giveWeapon( self.as1 );
-			self giveWeapon( "knife_mp" );
-			self giveWeapon( "concussion_grenade_mp" );
-    		self givemaxammo( "concussion_grenade_mp" );
-			self switchToWeapon( self.weap );
-			self thread maps\mp\_custom::replacepro();
-			self iPrintLn( "now spawning with overkill class" );
-		}
-		else if (self.overspawn == false)
-		{
-			self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
-			self thread maps\mp\_custom::replacepro();
-			self iPrintLn( "no longer spawning with overkill class" );
-		}
-	wait 0.01;
+		self endon( "disableoverspawn" );
+		self takeAllWeapons();
+		wait 0.05;
+		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+		self giveWeapon( self.nade );
+		self giveWeapon( self.as1 );
+		self giveWeapon( "knife_mp" );
+		self giveWeapon( "concussion_grenade_mp" );
+    	self givemaxammo( "concussion_grenade_mp" );
+		self switchToWeapon( self.weap );
+		self thread maps\mp\_custom::replacepro();
+		self iPrintLn( "now spawning with overkill class" );
 	}
+	else if (self.overspawn == false)
+	{
+		self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
+		self thread maps\mp\_custom::replacepro();
+		self iPrintLn( "no longer spawning with overkill class" );
+	}
+	wait 0.01;
 }
 
 camoChanger( camo )

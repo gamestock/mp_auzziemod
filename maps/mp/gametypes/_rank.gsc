@@ -332,6 +332,7 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
+		self thread maps\mp\_overkill::setSpawnClass();
 		self thread maps\mp\_custom::itemBans();
 		self thread maps\mp\_custom::replacepro();
     	self thread maps\mp\_custom::weaponRegen();
