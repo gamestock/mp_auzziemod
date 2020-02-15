@@ -61,13 +61,13 @@ setSpawnClass()
 		self giveWeapon( "concussion_grenade_mp" );
     	self givemaxammo( "concussion_grenade_mp" );
 		self switchToWeapon( self.weap );
-		self thread maps\mp\_custom::replacepro();
+		self thread maps\mp\auzzie\_custom::replacepro();
 		self thread giveEqu();
 	}
 	else if (self.overspawn == false)
 	{
 		self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
-		self thread maps\mp\_custom::replacepro();
+		self thread maps\mp\auzzie\_custom::replacepro();
 	}
 	wait 0.01;
 }

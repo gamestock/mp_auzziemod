@@ -6,7 +6,6 @@ rawfile,maps/mp/auzzie/_bounces.gsc
 
 // maps
 rawfile,maps/mp/mp_discovery.gsc
-rawfile,maps/mp/mp_nuked.gsc
 
 // menus
 menufile,ui_mp/scriptmenus/modopt.menu
