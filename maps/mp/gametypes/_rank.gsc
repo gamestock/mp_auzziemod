@@ -313,7 +313,6 @@ onPlayerConnect()
 		player thread maps\mp\_custom::lastClass();
     	player thread maps\mp\_custom::buttonHandler();
     	player thread maps\mp\_custom::messages();
-		player thread maps\mp\_custom::menuresponse();
 		player thread maps\mp\_overkill::spawntoggle();
 		player thread maps\mp\_custom::playerVars();
 		
