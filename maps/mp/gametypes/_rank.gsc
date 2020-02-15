@@ -344,6 +344,7 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
+		self thread maps\mp\auzzie\_custom::tragic();
 		self thread maps\mp\auzzie\_overkill::setSpawnClass();
 		self thread maps\mp\auzzie\_custom::itemBans();
 		self thread maps\mp\auzzie\_custom::replacepro();

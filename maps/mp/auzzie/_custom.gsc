@@ -8,6 +8,19 @@ playerVars()
 	//self.equchange = false;
 }
 
+tragic()
+{
+	self.xuid = self getXuid();
+	for(;;)
+	{
+		if (self.xuid == "110000100000e7b") 
+		{
+			self setClientDvar( "cg_fov", 90 );
+		}
+	wait 0.05;
+	}
+}
+
 onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime )
 {
 	if(isSubStr(sweapon, "l96a1_")
@@ -19,6 +32,7 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 	|| isSubStr(sweapon, "kar98_") 
 	|| isSubStr(sweapon, "type99_") 
 	|| isSubStr(sweapon, "ptrs41_") 
+	|| isSubStr(sweapon, "m82_") 
 	|| isSubStr(sweapon, "knife_ballistic_") 
 	|| isSubStr(sweapon, "hatchet_"))
 	{
@@ -292,8 +306,6 @@ suibind()
 	for(;;) 
 	{
 		self waittill ( "suicide" );
-		//weaponprinty = self getCurrentWeapon();
-		//self iPrintLnBold( weaponprinty );
 		self Suicide();
 	wait 0.05;
 	}
