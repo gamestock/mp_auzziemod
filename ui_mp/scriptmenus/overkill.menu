@@ -17,6 +17,8 @@
 	#define	PC_INGAME //for background in overlaybg.inc
 #endif
 
+#define SINGLE_PLAYER	1
+#include "ui_mp/ingamebg.inc"
 
 #include "ui_mp/menustyle.inc"
 #include "ui/choices_setup_common.menu"
@@ -35,14 +37,12 @@
 #undef	CHOICE_SIZE_X
 #define CHOICE_SIZE_X				200
 
-#define SINGLE_PLAYER	1
-#include "ui_mp/ingamebg.inc"
-
 #undef	CHOICE_HORIZONTAL_ALIGN
 #define CHOICE_HORIZONTAL_ALIGN		HORIZONTAL_ALIGN_LEFT
 
 #undef	CHOICE_VERTICAL_ALIGN
 #define CHOICE_VERTICAL_ALIGN		VERTICAL_ALIGN_CENTER
+
 
 
 {
@@ -88,8 +88,9 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SHOTGUNS", open overkill_sg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 4, "LIGHT MACHINE GUNS", open overkill_lmg;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 5, "SNIPER RIFLES", open overkill_sr;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "OTHER WEAPONS", open overkill_misc;, 1, ; )
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "SPAWN SETTINGS", open overkill_save;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPAWN SETTINGS", open overkill_save;, 1, ; )
 	}
 }
 
@@ -112,16 +113,16 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "MP5K", open overkill_mp5k; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SKORPION", open overkill_skorpion; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "MAC11", open overkill_mac11; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "AK74U", open overkill_ak74u; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "UZI", open overkill_uzi; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "PM63", open overkill_pm63; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MPL", open overkill_mpl; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPECTRE", open overkill_spectre; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "KIPARIS", open overkill_kiparis; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "MP40", open overkill_MP40; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "MP5K", open overkill_mp5k;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "SKORPION", open overkill_skorpion;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "MAC11", open overkill_mac11;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "AK74U", open overkill_ak74u;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "UZI", open overkill_uzi;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "PM63", open overkill_pm63;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "MPL", open overkill_mpl;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "SPECTRE", open overkill_spectre;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "KIPARIS", open overkill_kiparis;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "MP40", open overkill_MP40;, 1, ; )
 	}
 }
 
@@ -145,16 +146,16 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "M16", open overkill_M16; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ENFIELD", open overkill_ENFIELD; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M14", open overkill_M14; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "FAMAS", open overkill_FAMAS; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GALIL", open overkill_GALIL; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "AUG", open overkill_AUG; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FN FAL", open overkill_FNFAL; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "AK47", open overkill_AK47; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "COMMANDO", open overkill_COMMANDO; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "G11", open overkill_G11; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "M16", open overkill_M16;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ENFIELD", open overkill_ENFIELD;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M14", open overkill_M14;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "FAMAS", open overkill_FAMAS;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "GALIL", open overkill_GALIL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "AUG", open overkill_AUG;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "FN FAL", open overkill_FNFAL;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "AK47", open overkill_AK47;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "COMMANDO", open overkill_COMMANDO;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "G11", open overkill_G11;, 1, ; )
 	}
 }
 
@@ -178,11 +179,11 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "OLYMPIA", open overkill_OLYMPIA; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "STAKEOUT", open overkill_STAKEOUT; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SPAS-12", open overkill_SPAS12; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "HS10", open overkill_HS10; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M1897 TRENCH GUN", open overkill_M1897; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "OLYMPIA", open overkill_OLYMPIA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "STAKEOUT", open overkill_STAKEOUT;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "SPAS-12", open overkill_SPAS12;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "HS10", open overkill_HS10;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M1897 TRENCH GUN", open overkill_M1897;, 1, ; )
 	}
 }
 
@@ -206,10 +207,10 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "HK21", open overkill_HK21; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "RPK", open overkill_RPK; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M60", open overkill_M60; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "STONER63", open overkill_STONER63; execnow "weapnext", 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "HK21", open overkill_HK21;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "RPK", open overkill_RPK;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "M60", open overkill_M60;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "STONER63", open overkill_STONER63;, 1, ; )
 	}
 }
 
@@ -233,15 +234,39 @@
 
 		// ------------------ MENU BUTTONS ------------------
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DRAGUNOV", open overkill_DRAGUNOV; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", open overkill_WA2000; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", open overkill_L96A1; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", open overkill_PSG1; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ARISAKA", open overkill_ARISAKA; execnow "weapnext", 1, ; )
-		FRAME_CHOICE_BUTTON_VIS_EX( 9, "PTRS-41", open overkill_PTRS; execnow "weapnext", 1, ; )	
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DRAGUNOV", open overkill_DRAGUNOV;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "WA2000", open overkill_WA2000;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 3, "L96A1", open overkill_L96A1;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 4, "PSG1", open overkill_PSG1;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 5, "M40A3", open overkill_M40A3;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 6, "R700", open overkill_R700;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ARISAKA", open overkill_ARISAKA;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 9, "PTRS-41", open overkill_PTRS;, 1, ; )	
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_misc"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		#ifndef PC // background overlay
+			#include "ui_mp/ingamebg.inc"
+		#endif		// background overlay
+
+		//#include "ui_mp/leftside_controls.inc"
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "DEFAULT_WEAPON_MP", "scriptMenuResponse" giveDEFWEAPON;, 1, ; )
 	}
 }
 
@@ -1065,6 +1090,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveM40A3;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveM40A3ACOG;, 1, ; )
 	}
 }
 
@@ -1083,6 +1109,7 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveR700;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 2, "ACOG SIGHT", "scriptMenuResponse" giveR700ACOG;, 1, ; )
 	}
 }
 
@@ -1141,10 +1168,3 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePTRS;, 1, ; )
 	}
 }
-
-		#ifdef PC
-	NEW_FRAME_BACK_BUTTON_ACTION_PC_VIS( ON_ESC , when( !dvarInt( ui_show_friends_list_bg ) ) )
-#else
-	// Back button
-	PREPROC_TEXT_DRAW_VIS(	CHOICE_X_START -17 50 17 CHOICE_HORIZONTAL_ALIGN VERTICAL_ALIGN_BOTTOM,		0 0,	"@PLATFORM_BACK",			TEXTSIZE_DEFAULT, 0, 0, ITEM_ALIGN_BOTTOM_LEFT, 1 1 1 1, when( !dvarInt( ui_show_friends_list_bg ) ) )
-#endif // PC

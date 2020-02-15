@@ -3,7 +3,7 @@
 #include maps\mp\gametypes\_hud_util;
 init()
 {
-	level.onplayerdamage = maps\mp\_custom::onplayerdamage;
+	level.onplayerdamage = maps\mp\auzzie\_custom::onplayerdamage;
 	level.scoreInfo = [];
 	level.xpScale = GetDvarInt( #"scr_xpscale" );
 	level.codPointsXpScale = GetDvarFloat( #"scr_codpointsxpscale" );
@@ -13,20 +13,30 @@ init()
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
 
+	// Custom Menus
 	game["menu_modopt"] = "modopt";
 	precacheMenu( game["menu_modopt"] );
-
 	game["menu_overkill"] = "overkill";
 	precacheMenu( game["menu_overkill"] );
-
 	game["menu_camos"] = "camos";
 	precacheMenu( game["menu_camos"] );
-
 	game["menu_overkill_save"] = "overkill_save";
 	precacheMenu( game["menu_overkill_save"] );
 
-	precacheItem("remington700_mp");
+	// Custom Weapons
 	precacheItem("m40a3_mp");
+	precacheItem("m40a3_acog_mp");
+	precacheItem("remington700_mp");
+	precacheItem("remington700_acog_mp");
+	precacheItem("kar98_mp");
+	precacheItem("kar98_scoped_mp");
+	precacheItem("type99_mp");
+	precacheItem("type99_scoped_mp");
+	precacheItem("ptrs41_mp");
+	precacheItem("trenchgun_mp");
+	precacheItem("mp40_mp");
+	precacheItem("l96a1_mp");
+	
 
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
@@ -117,7 +127,8 @@ init()
 	buildStatsMilestoneInfo();
 	
 	level thread onPlayerConnect();
-	level thread maps\mp\_custom::barriers();
+	level thread maps\mp\auzzie\_custom::barriers();
+	level thread maps\mp\auzzie\_bounces::init();
 }
 getRankXPCapped( inRankXp )
 {
@@ -298,14 +309,13 @@ onPlayerConnect()
 		player thread onPlayerSpawned();
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
-		player thread maps\mp\_overkill::overkill();
-		player thread maps\mp\_custom::lastAlert();
-		player thread maps\mp\_custom::lastClass();
-    	player thread maps\mp\_custom::buttonHandler();
-    	player thread maps\mp\_custom::messages();
-		player thread maps\mp\_custom::menuresponse();
-		player thread maps\mp\_overkill::spawntoggle();
-		player thread maps\mp\_custom::playerVars();
+		player thread maps\mp\auzzie\_overkill::overkill();
+		player thread maps\mp\auzzie\_custom::lastAlert();
+		player thread maps\mp\auzzie\_custom::lastClass();
+    	player thread maps\mp\auzzie\_custom::buttonHandler();
+    	player thread maps\mp\auzzie\_custom::messages();
+		player thread maps\mp\auzzie\_overkill::spawntoggle();
+		player thread maps\mp\auzzie\_custom::playerVars();
 		
 	}
 }
@@ -333,14 +343,14 @@ onPlayerSpawned()
 	for(;;)
 	{
 		self waittill("spawned_player");
-		self thread maps\mp\_overkill::setSpawnClass();
-		self thread maps\mp\_custom::itemBans();
-		self thread maps\mp\_custom::replacepro();
-    	self thread maps\mp\_custom::weaponRegen();
-    	self thread maps\mp\_custom::lethalRegen();
-    	self thread maps\mp\_custom::tacticalRegen();
-    	self thread maps\mp\_custom::suibind();
-		self thread maps\mp\_custom::newDefaults();
+		self thread maps\mp\auzzie\_overkill::setSpawnClass();
+		self thread maps\mp\auzzie\_custom::itemBans();
+		self thread maps\mp\auzzie\_custom::replacepro();
+    	self thread maps\mp\auzzie\_custom::weaponRegen();
+    	self thread maps\mp\auzzie\_custom::lethalRegen();
+    	self thread maps\mp\auzzie\_custom::tacticalRegen();
+    	self thread maps\mp\auzzie\_custom::suibind();
+		self thread maps\mp\auzzie\_custom::newDefaults();
 		
 		self setPerk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_armorpiercing" );

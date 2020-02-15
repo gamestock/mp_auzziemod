@@ -12,12 +12,12 @@ giveWeap( weapon )
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 	self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-	self giveWeapon( self.as1 );
 	self giveWeapon( self.nade );
 	self giveWeapon( "knife_mp" );
 	self giveWeapon( "concussion_grenade_mp" );
     self givemaxammo( "concussion_grenade_mp" );
 	self switchToWeapon( self.weap );
+	self thread giveEqu();
 	self closeMenu();
 	self closeInGameMenu();
 }
@@ -36,22 +36,33 @@ spawntoggle()
 	}
 }
 
+giveEqu()
+{
+	self giveWeapon( "camera_spike_mp" );
+	self giveWeapon( "satchel_charge_mp" );
+	self giveWeapon( "tactical_insertion_mp" );
+	self giveWeapon( "scrambler_mp" );
+	self giveWeapon( "acoustic_sensor_mp" );
+	self giveWeapon( "claymore_mp" );
+}
+
 setSpawnClass()
 {
 	if (self.overspawn == true)
 	{
 		self endon( "disableoverspawn" );
+		wait 0.1;
 		self takeAllWeapons();
-		wait 0.05;
+		wait 0.01;
 		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.nade );
-		self giveWeapon( self.as1 );
 		self giveWeapon( "knife_mp" );
 		self giveWeapon( "concussion_grenade_mp" );
     	self givemaxammo( "concussion_grenade_mp" );
 		self switchToWeapon( self.weap );
 		self thread maps\mp\_custom::replacepro();
+		self thread giveEqu();
 	}
 	else if (self.overspawn == false)
 	{
@@ -70,23 +81,17 @@ camoChanger( camo )
 	self switchToWeapon( self.weap2 );
 }
 
-getAS1()
-{
-	self.as1 = self getcurrentweapon();
-}
-
 overkill()
 {
 	self endon("disconnect");
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
-		if(menu == game["class"])
+		if(menu == game["modopt"])
 		{
-			if(response == "getAS1")
+			if(response == "menuSui")
 			{
-				wait 1.025;
-				self getAS1();
+				self notify ( "suicide" );
 			}
 		}
 		if(menu == game["overkill_save"])
@@ -102,7 +107,6 @@ overkill()
 				self iPrintLn( "- ^1Now spawning with ^0[^3CUSTOM^0]^1 class." );				
 			}
 		}
-
 	/*camo changer*/
 		if(menu == game["camos"])
 		{
@@ -968,7 +972,7 @@ overkill()
 		{
 			if(response == "giveM1897")
 			{
-				giveWeap( "shotgun_mp" );
+				giveWeap( "trenchgun_mp" );
 			}
 		}
 	/*light machine guns*/
@@ -1203,12 +1207,20 @@ overkill()
 			{
 				giveWeap( "m40a3_mp" );
 			}
+			if(response == "giveM40A3ACOG")
+			{
+				giveWeap( "m40a3_acog_mp" );
+			}
 		}
 		if(menu == game["overkill_r700"])
 		{
 			if(response == "giveR700")
 			{
 				giveWeap( "remington700_mp" );
+			}
+			if(response == "giveR700ACOG")
+			{
+				giveWeap( "remington700_acog_mp" );
 			}
 		}
 		if(menu == game["overkill_KAR98"])
@@ -1219,25 +1231,33 @@ overkill()
 			}
 			if(response == "giveKAR98S")
 			{
-				giveWeap( "kar98_mp" );
+				giveWeap( "kar98_scoped_mp" );
 			}
 		}
 		if(menu == game["overkill_ARISAKA"])
 		{
 			if(response == "giveARISAKA")
 			{
-				giveWeap( "kar98_mp" );
+				giveWeap( "type99_mp" );
 			}
 			if(response == "giveARISAKAS")
 			{
-				giveWeap( "kar98_mp" );
+				giveWeap( "type99_scoped_mp" );
 			}
 		}
 		if(menu == game["overkill_PTRS"])
 		{
 			if(response == "givePTRS")
 			{
-				giveWeap( "remington700_mp" );
+				giveWeap( "ptrs41_mp" );
+			}
+		}
+	/*misc weapons*/
+		if(menu == game["overkill_misc"])
+		{
+			if(response == "giveDEFWEAPON")
+			{
+				giveWeap( "defaultweapon_mp" );
 			}
 		}
 		wait 0.05;

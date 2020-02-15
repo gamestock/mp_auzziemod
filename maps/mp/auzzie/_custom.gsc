@@ -5,11 +5,22 @@
 playerVars()
 {
 	self.overspawn = false;
+	//self.equchange = false;
 }
 
 onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime )
 {
-	if(isSubStr(sweapon, "l96a1_") || isSubStr(sweapon, "wa2000_") || isSubStr(sweapon, "psg1_") || isSubStr(sweapon, "dragunov_") || isSubStr(sweapon, "m40a3_") || isSubStr(sweapon, "remington700_") || isSubStr(sweapon, "hatchet_"))
+	if(isSubStr(sweapon, "l96a1_")
+	|| isSubStr(sweapon, "wa2000_") 
+	|| isSubStr(sweapon, "psg1_") 
+	|| isSubStr(sweapon, "dragunov_") 
+	|| isSubStr(sweapon, "m40a3_") 
+	|| isSubStr(sweapon, "remington700_") 
+	|| isSubStr(sweapon, "kar98_") 
+	|| isSubStr(sweapon, "type99_") 
+	|| isSubStr(sweapon, "ptrs41_") 
+	|| isSubStr(sweapon, "knife_ballistic_") 
+	|| isSubStr(sweapon, "hatchet_"))
 	{
 		idamage = self.maxhealth + 99999; 
 	}
@@ -129,12 +140,12 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 
 moveBarrier( map, value )
 {
-	hurt_triggers = getEntArray( "trigger_hurt", "classname" );
-	for( i = 0; i < hurt_triggers.size; i++ )
+	barrier = getEntArray( "trigger_hurt", "classname" );
+	for( i = 0; i < barrier.size; i++ )
 	{
 		if (getDvar( "mapname" ) == map )
 		{
-			hurt_triggers[i].origin -= ( 0, 0, value );
+			barrier[i].origin -= ( 0, 0, value );
 		}
 	}
 }
@@ -143,11 +154,11 @@ barriers()
 {
 	level moveBarrier( "mp_array", 12625 );
 	level moveBarrier( "mp_cosmodrome", 12950 );
-	level moveBarrier( "mp_discovery", 0 );
-	level moveBarrier( "mp_golfcouse", 0 );
-	level moveBarrier( "mp_hotel", 0 );
-	level moveBarrier( "mp_kowloon", 0 );
-	level moveBarrier( "mp_mountain", 0 );
+	level moveBarrier( "mp_discovery", 400 );
+	level moveBarrier( "mp_golfcourse", 13000 );
+	level moveBarrier( "mp_hotel", 11625 );
+	level moveBarrier( "mp_kowloon", 7525 );
+	level moveBarrier( "mp_mountain", 26975 );
 }
 
 itemBans()
@@ -248,7 +259,7 @@ messages()
 	{
 		if ( spawned == false ) 
 		{
-			wait 2.5;
+			wait 4;
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
 			self iprintln( "- ^1Press ^0[^3[{+actionslot 3}]^0]^7 + ^0[^3[{+actionslot 2}]^0]^1 to suicide." );
@@ -387,6 +398,7 @@ lastClass()
 
 newDefaults()
 {
+	self endon ( "disabledefault" );
 	self_class = self.pers["class"];
 
 	if (isSubStr( self_class, "CLASS_SMG" ) 
@@ -404,7 +416,7 @@ newDefaults()
 				self giveWeapon( "l96a1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 2:
-				self giveWeapon( "l96a1_vzoom_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+				self giveWeapon( "ptrs41_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 3:
 				self giveWeapon( "m40a3_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
@@ -413,40 +425,42 @@ newDefaults()
 				self giveWeapon( "psg1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 5:
-				self giveWeapon( "psg1_vzoom_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
+				self giveWeapon( "kar98_scoped_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 			case 6:
 				self giveWeapon( "remington700_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 		}
+		wait 0.05;
 		sec = randomIntRange( 1, 7 );
 		switch(sec)
 		{
 			case 1:
-				self giveWeapon( "asp_mp" );
+				self giveWeapon( "mp5k_mp" );
 			break;
 			case 2:
 				self giveWeapon( "m1911_mp" );
 			break;
 			case 3:
-				self giveWeapon( "makarov_mp" );
+				self giveWeapon( "ithaca_grip_mp" );
 			break;
 			case 4:
 				self giveWeapon( "asp_mp" );
 			break;
 			case 5:
-				self giveWeapon( "python_mp" );
+				self giveWeapon( "pythondw_mp" );
 			break;
 			case 6:
-				self giveWeapon( "cz75_mp" );
+				self giveWeapon( "trenchgun_mp" );
 			break;
 			case 7:
-				self giveWeapon( "knife_ballistic_mp" );
+				self giveWeapon( "python_mp" );
 			break;
 		}
 
 		// give nades
 		self giveWeapon( "hatchet_mp" );
+		self giveWeapon( "knife_mp" );
 		self giveWeapon( "concussion_grenade_mp" );
 		self giveMaxAmmo( "concussion_grenade_mp" );
 
@@ -464,23 +478,5 @@ newDefaults()
 		self setPerk( "specialty_bulletpenetration" ); // hardened pro
 		self setPerk( "specialty_armorpiercing" );
 		self setPerk( "specialty_bulletflinch" );
-	}
-}
-
-menuresponse()
-{
-	self endon("disconnect");
-	for(;;)
-	{
-		self waittill("menuresponse", menu, response);
-		
-		if(menu == game["modopt"])
-		{
-			if(response == "dropWeap")
-			{
-				self maps\mp\gametypes\_weapons::dropWeaponToGround();
-			}
-		}
-		wait 0.05;
 	}
 }
