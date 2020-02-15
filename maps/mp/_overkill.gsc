@@ -12,12 +12,12 @@ giveWeap( weapon )
 	wait 0.05;
 	self giveWeapon( weapon, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 	self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-	self giveWeapon( self.as1 );
 	self giveWeapon( self.nade );
 	self giveWeapon( "knife_mp" );
 	self giveWeapon( "concussion_grenade_mp" );
     self givemaxammo( "concussion_grenade_mp" );
 	self switchToWeapon( self.weap );
+	self thread giveEqu();
 	self closeMenu();
 	self closeInGameMenu();
 }
@@ -36,6 +36,16 @@ spawntoggle()
 	}
 }
 
+giveEqu()
+{
+	self giveWeapon( "camera_spike_mp" );
+	self giveWeapon( "satchel_charge_mp" );
+	self giveWeapon( "tactical_insertion_mp" );
+	self giveWeapon( "scrambler_mp" );
+	self giveWeapon( "acoustic_sensor_mp" );
+	self giveWeapon( "claymore_mp" );
+}
+
 setSpawnClass()
 {
 	if (self.overspawn == true)
@@ -51,14 +61,7 @@ setSpawnClass()
     	self givemaxammo( "concussion_grenade_mp" );
 		self switchToWeapon( self.weap );
 		self thread maps\mp\_custom::replacepro();
-		if (self.changedequ == true)
-		{
-			self giveWeapon( self.equ );
-		}
-		else if (self.changedequ == false)
-		{
-			self giveWeapon( self.as1 );
-		}
+		self thread giveEqu();
 	}
 	else if (self.overspawn == false)
 	{
@@ -77,32 +80,12 @@ camoChanger( camo )
 	self switchToWeapon( self.weap2 );
 }
 
-equChanger( equ )
-{
-	self giveWeapon( equ );
-	self.changedequ = true;
-	self.equip = equ;
-}
-
-getAS1()
-{
-	self.as1 = self getcurrentweapon();
-}
-
 overkill()
 {
 	self endon("disconnect");
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
-		if(menu == game["class"])
-		{
-			if(response == "getAS1")
-			{
-				wait 1.025;
-				self getAS1();
-			}
-		}
 		if(menu == game["overkill_save"])
 		{
 			if(response == "saveClass")
@@ -116,35 +99,6 @@ overkill()
 				self iPrintLn( "- ^1Now spawning with ^0[^3CUSTOM^0]^1 class." );				
 			}
 		}
-	/*equipment changer*/
-		if(menu == game["overkill_equ"])
-		{
-			if(response == "giveCAMERA")
-			{
-				self equChanger( "camera_spike_mp" );
-			}
-			if(response == "giveC4")
-			{
-				self equChanger( "satchel_charge_mp" );
-			}
-			if(response == "giveTACINSERT")
-			{
-				self equChanger( "tactical_insertion_mp" );
-			}
-			if(response == "giveJAMMER")
-			{
-				self equChanger( "scrambler_mp" );
-			}
-			if(response == "giveMOTION")
-			{
-				self equChanger( "acoustic_sensor_mp" );
-			}
-			if(response == "giveCLAYMORE")
-			{
-				self equChanger( "claymore_mp" );
-			}
-		}
-
 	/*camo changer*/
 		if(menu == game["camos"])
 		{

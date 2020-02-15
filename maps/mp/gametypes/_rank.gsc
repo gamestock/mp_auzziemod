@@ -20,8 +20,6 @@ init()
 	precacheMenu( game["menu_overkill"] );
 	game["menu_camos"] = "camos";
 	precacheMenu( game["menu_camos"] );
-	game["menu_equ"] = "equ";
-	precacheMenu( game["menu_equ"] );
 	game["menu_overkill_save"] = "overkill_save";
 	precacheMenu( game["menu_overkill_save"] );
 

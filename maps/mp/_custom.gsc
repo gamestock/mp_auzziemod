@@ -5,7 +5,7 @@
 playerVars()
 {
 	self.overspawn = false;
-	self.changedequ = true;
+	//self.equchange = false;
 }
 
 onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime )

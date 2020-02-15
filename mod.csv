@@ -9,7 +9,6 @@ rawfile,maps/mp/mp_discovery.gsc
 // menus
 menufile,ui_mp/scriptmenus/modopt.menu
 menufile,ui_mp/scriptmenus/camos.menu
-menufile,ui_mp/scriptmenus/equ.menu
 menufile,ui_mp/scriptmenus/overkill.menu
 menufile,ui_mp/scriptmenus/overkill_save.menu
 menufile,ui_mp/scriptmenus/class.menu

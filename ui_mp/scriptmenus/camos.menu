@@ -44,6 +44,7 @@
 #define CHOICE_VERTICAL_ALIGN		VERTICAL_ALIGN_CENTER
 
 
+
 {
 	menuDef
 	{
