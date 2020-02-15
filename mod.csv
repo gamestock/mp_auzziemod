@@ -1,10 +1,12 @@
 // gsc
-rawfile,maps/mp/gametypes/_rank.gsc
-rawfile,maps/mp/_custom.gsc
-rawfile,maps/mp/_overkill.gsc
+rawfile,maps/mp/auzzie/gametypes/_rank.gsc
+rawfile,maps/mp/auzzie/_custom.gsc
+rawfile,maps/mp/auzzie/_overkill.gsc
+rawfile,maps/mp/auzzie/_bounces.gsc
 
 // maps
 rawfile,maps/mp/mp_discovery.gsc
+rawfile,maps/mp/mp_nuked.gsc
 
 // menus
 menufile,ui_mp/scriptmenus/modopt.menu
