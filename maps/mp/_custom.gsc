@@ -398,6 +398,7 @@ lastClass()
 
 newDefaults()
 {
+	self endon ( "disabledefault" );
 	self_class = self.pers["class"];
 
 	if (isSubStr( self_class, "CLASS_SMG" ) 
@@ -430,6 +431,7 @@ newDefaults()
 				self giveWeapon( "remington700_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 			break;
 		}
+		wait 0.05;
 		sec = randomIntRange( 1, 7 );
 		switch(sec)
 		{
@@ -446,13 +448,13 @@ newDefaults()
 				self giveWeapon( "asp_mp" );
 			break;
 			case 5:
-				self giveWeapon( "python_dw_mp" );
+				self giveWeapon( "pythondw_mp" );
 			break;
 			case 6:
-				self giveWeapon( "crossbow_mp" );
+				self giveWeapon( "trenchgun_mp" );
 			break;
 			case 7:
-				self giveWeapon( "knife_ballistic_mp" );
+				self giveWeapon( "python_mp" );
 			break;
 		}
 

@@ -33,3 +33,6 @@ weapon,mp/trenchgun
 weapon,mp/trenchgun_mp
 weapon,mp/mp40_mp
 weapon,mp/l96a1_mp
+
+// localizedstrings
+localize,auzziemod_weapon

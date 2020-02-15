@@ -102,6 +102,8 @@
 		FRAME_DVARSLIDER( 8, "@MENU_MOUSE_SENSITIVITY_CAPS", sensitivity, 5, 1, 10, ; )
 		FRAME_DVARSLIDER( 9, "@PLATFORM_FOV_CAPS", cg_fov, 65, 65, 90, ; )
 
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "SUICIDE", "scriptMenuResponse" menuSui; close self;, 1, ; )
+
 		#ifdef PC
 	NEW_FRAME_BACK_BUTTON_ACTION_PC_VIS( ON_ESC , when( !dvarInt( ui_show_friends_list_bg ) ) )
 #else

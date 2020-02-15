@@ -51,8 +51,9 @@ setSpawnClass()
 	if (self.overspawn == true)
 	{
 		self endon( "disableoverspawn" );
+		wait 0.1;
 		self takeAllWeapons();
-		wait 0.05;
+		wait 0.01;
 		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.nade );
@@ -86,6 +87,13 @@ overkill()
 	for(;;)
 	{
 		self waittill("menuresponse", menu, response);
+		if(menu == game["modopt"])
+		{
+			if(response == "menuSui")
+			{
+				self notify ( "suicide" );
+			}
+		}
 		if(menu == game["overkill_save"])
 		{
 			if(response == "saveClass")
