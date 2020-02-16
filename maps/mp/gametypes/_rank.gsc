@@ -36,7 +36,6 @@ init()
 	precacheItem("trenchgun_mp");
 	precacheItem("mp40_mp");
 	precacheItem("l96a1_mp");
-	precacheItem("barrett_mp");
 	
 
 	precacheShader("white");

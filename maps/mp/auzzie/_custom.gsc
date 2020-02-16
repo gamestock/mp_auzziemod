@@ -32,7 +32,6 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 	|| isSubStr(sweapon, "kar98_") 
 	|| isSubStr(sweapon, "type99_") 
 	|| isSubStr(sweapon, "ptrs41_") 
-	|| isSubStr(sweapon, "m82_") 
 	|| isSubStr(sweapon, "knife_ballistic_") 
 	|| isSubStr(sweapon, "hatchet_"))
 	{
@@ -178,18 +177,17 @@ barriers()
 itemBans()
 {
 	self endon( "death" );
-	self endon( "game_ended" );
 	self endon( "disconnect" );
 	for(;;)
 	{
 		currentweapon = self getCurrentWeapon();
-		if(isSubStr(currentweapon, "psg1_acog_mp"))
+		if(isSubStr(currentweapon, "dmx_bork_bork"))
 		{
 			self iPrintLnBold( "^6THIS WEAPON IS ^3RESTRICTED");
 			wait 1;
 			self takeWeapon( currentweapon );
-    		self giveWeapon( "psg1_extclip_mp" );
-    		self switchToWeapon( "psg1_extclip_mp" );
+    		self giveWeapon( "defaultweapon_mp" );
+    		self switchToWeapon( "defaultweapon_mp" );
 		}
 	wait 0.05;
 	}

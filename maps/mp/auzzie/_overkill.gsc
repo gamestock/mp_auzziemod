@@ -1252,13 +1252,6 @@ overkill()
 				giveWeap( "ptrs41_mp" );
 			}
 		}
-		if(menu == game["overkill_BARRETT"])
-		{
-			if(response == "giveBARRETT")
-			{
-				giveWeap( "barrett_mp" );
-			}
-		}
 	/*misc weapons*/
 		if(menu == game["overkill_misc"])
 		{
