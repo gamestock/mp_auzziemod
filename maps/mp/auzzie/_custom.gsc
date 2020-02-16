@@ -5,7 +5,6 @@
 playerVars()
 {
 	self.overspawn = false;
-	//self.equchange = false;
 }
 
 tragic()
@@ -210,7 +209,7 @@ weaponRegen()
 
 lethalRegen()
 {
-	self endon ( "death" );
+	self endon( "death" );
 	self endon( "game_ended" );
 	self endon( "disconnect" );
 	self waittill( "grenade_fire" );
@@ -229,7 +228,7 @@ lethalRegen()
 
 tacticalRegen()
 {
-	self endon ( "death" );
+	self endon( "death" );
 	self endon( "game_ended" );
 	self endon( "disconnect" );
 	self waittill( "grenade_fire" );
@@ -248,7 +247,7 @@ tacticalRegen()
 
 buttonHandler()
 {
-	self endon ( "disconnect" );
+	self endon( "disconnect" );
 	self endon( "game_ended" );
 	for(;;)
 	{
@@ -391,7 +390,7 @@ replacepro()
 
 lastClass()
 {
-   self endon("disconnect");
+   self endon( "disconnect" );
    self endon( "game_ended" );
    for(;;)
    {
@@ -408,7 +407,6 @@ lastClass()
 
 newDefaults()
 {
-	self endon ( "disabledefault" );
 	self_class = self.pers["class"];
 
 	if (isSubStr( self_class, "CLASS_SMG" ) 
