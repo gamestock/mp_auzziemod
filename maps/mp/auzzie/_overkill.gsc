@@ -5,6 +5,8 @@
 
 giveWeap( weapon )
 {
+	self endon("game_ended");
+	self endon("disconnect");
 	self.overweap = weapon;
 	self.weap = self getcurrentweapon();
 	self.nade = self getcurrentoffhand();
@@ -24,6 +26,8 @@ giveWeap( weapon )
 
 spawntoggle()
 {
+	self endon("game_ended");
+	self endon("disconnect");
 	if(self.overspawn == false)
 	{
 		self thread setSpawnClass();
@@ -38,6 +42,8 @@ spawntoggle()
 
 giveEqu()
 {
+	self endon("game_ended");
+	self endon("disconnect");
 	self giveWeapon( "camera_spike_mp" );
 	self giveWeapon( "satchel_charge_mp" );
 	self giveWeapon( "tactical_insertion_mp" );
@@ -48,6 +54,8 @@ giveEqu()
 
 setSpawnClass()
 {
+	self endon("game_ended");
+	self endon("disconnect");
 	if (self.overspawn == true)
 	{
 		self endon( "disableoverspawn" );
@@ -72,6 +80,8 @@ setSpawnClass()
 
 camoChanger( camo )
 {
+	self endon("game_ended");
+	self endon("disconnect");
 	self.weap2 = self getcurrentweapon();
 	self takeWeapon( self.weap2 );
 	wait 0.05;
@@ -81,6 +91,8 @@ camoChanger( camo )
 
 overkill()
 {
+	self endon("game_ended");
+	self endon("disconnect");
 	self endon("disconnect");
 	for(;;)
 	{
@@ -1265,6 +1277,6 @@ overkill()
 				giveWeap( "defaultweapon_mp" );
 			}
 		}
-		wait 0.05;
+		wait 0.1;
 	}
 }

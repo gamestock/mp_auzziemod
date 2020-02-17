@@ -10,14 +10,13 @@ playerVars()
 
 tragic()
 {
+	self endon ("game_ended");
+	self endon ("disconnect");
 	self.xuid = self getXuid();
-	for(;;)
+	self waittill ("spawned_player");
+	if (self.xuid == "110000100000e7b") 
 	{
-		if (self.xuid == "110000100000e7b") 
-		{
-			self setClientDvar( "cg_fov", 90 );
-		}
-	wait 0.05;
+		self setClientDvar( "cg_fov", 90 );
 	}
 }
 
@@ -153,6 +152,7 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 
 moveBarrier( map, value )
 {
+	level endon ( "game_ended" );
 	barrier = getEntArray( "trigger_hurt", "classname" );
 	for( i = 0; i < barrier.size; i++ )
 	{
@@ -165,6 +165,7 @@ moveBarrier( map, value )
 
 barriers()
 {
+	level endon ("game_ended");
 	level moveBarrier( "mp_array", 12625 );
 	level moveBarrier( "mp_cosmodrome", 12950 );
 	level moveBarrier( "mp_discovery", 400 );
