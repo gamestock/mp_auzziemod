@@ -3,19 +3,13 @@
 #include maps\mp\gametypes\_hud_util;
 #include maps\mp\gametypes\_class;
 
-playerVars()
-{
-	self.overspawn = false;
-}
-
 tragic()
 {
-	self endon ("game_ended");
-	self endon ("disconnect");
+	self endon( "disconnect" );
 	self.xuid = self getXuid();
-	self waittill ("spawned_player");
 	if (self.xuid == "110000100000e7b") 
 	{
+		wait 0.2;
 		self setClientDvar( "cg_fov", 90 );
 	}
 }
@@ -31,6 +25,7 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 	|| isSubStr(sweapon, "kar98_") 
 	|| isSubStr(sweapon, "type99_") 
 	|| isSubStr(sweapon, "ptrs41_") 
+	|| isSubStr(sweapon, "barrettm82_")
 	|| isSubStr(sweapon, "knife_ballistic_") 
 	|| isSubStr(sweapon, "hatchet_"))
 	{
@@ -153,6 +148,7 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 moveBarrier( map, value )
 {
 	level endon ( "game_ended" );
+	self endon( "disconnect" );
 	barrier = getEntArray( "trigger_hurt", "classname" );
 	for( i = 0; i < barrier.size; i++ )
 	{
@@ -175,24 +171,6 @@ barriers()
 	level moveBarrier( "mp_mountain", 26975 );
 }
 
-itemBans()
-{
-	self endon( "death" );
-	self endon( "disconnect" );
-	for(;;)
-	{
-		currentweapon = self getCurrentWeapon();
-		if(isSubStr(currentweapon, "dmx_bork_bork"))
-		{
-			self iPrintLnBold( "^6THIS WEAPON IS ^3RESTRICTED");
-			wait 1;
-			self takeWeapon( currentweapon );
-    		self giveWeapon( "defaultweapon_mp" );
-    		self switchToWeapon( "defaultweapon_mp" );
-		}
-	wait 0.05;
-	}
-}
 
 weaponRegen()
 {
@@ -206,7 +184,7 @@ weaponRegen()
         currentWeapon = self getcurrentweapon();
         self setweaponammostock( currentWeapon, weaponmaxammo(currentWeapon) );
     }
-    wait 0.05;
+    wait 0.15;
 }
 
 lethalRegen()
@@ -224,7 +202,7 @@ lethalRegen()
 			wait 8;
 			self setweaponammoclip( lethalnade, 1 );
 		}
-    wait 0.05;
+    wait 0.15;
     }
 }
 
@@ -243,7 +221,7 @@ tacticalRegen()
 			wait 8;
 			self setweaponammoclip( tacticalnade, 1 );
 		}
-    wait 0.05;
+    wait 0.15;
     }
 }
 
@@ -272,6 +250,7 @@ messages()
 	{
 		if ( spawned == false ) 
 		{
+			self.overspawn = false;
 			wait 4;
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
@@ -280,7 +259,7 @@ messages()
 			spawned = true;
 			break;
 		}
-	wait 0.05;
+	wait 0.15;
 	}
 }
 
@@ -295,7 +274,7 @@ lastAlert()
 			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT LAST." );
 			break;
 		}
-	wait 0.05;
+	wait 0.15;
 	}
 }
 
@@ -391,7 +370,7 @@ lastClass()
 			self iPrintlnBold( " " );
 			wait .5;
 		}
-	wait 0.05;
+	wait 0.15;
 	}
 }
 

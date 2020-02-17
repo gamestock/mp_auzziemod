@@ -30,8 +30,7 @@ spawntoggle()
 	self endon("disconnect");
 	if(self.overspawn == false)
 	{
-		self thread setSpawnClass();
-		self.overspawn = true;
+		self.overspawn = true;		
 	}
 	else
 	{
@@ -54,12 +53,13 @@ giveEqu()
 
 setSpawnClass()
 {
-	self endon("game_ended");
-	self endon("disconnect");
+	self endon( "game_ended" );
+	self endon( "disconnect" );
+	self endon( "disableoverspawn" );
+	wait 0.1;
 	if (self.overspawn == true)
-	{
-		self endon( "disableoverspawn" );
-		wait 0.01;
+	{	
+		wait 0.05;
 		self takeAllWeapons();
 		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
@@ -68,13 +68,7 @@ setSpawnClass()
 		self giveWeapon( "concussion_grenade_mp" );
     	self givemaxammo( "concussion_grenade_mp" );
 		self switchToWeapon( self.weap );
-		self thread maps\mp\auzzie\_custom::replacepro();
 		self thread giveEqu();
-	}
-	else
-	{
-		self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
-		self thread maps\mp\auzzie\_custom::replacepro();
 	}
 }
 
@@ -92,7 +86,6 @@ camoChanger( camo )
 overkill()
 {
 	self endon("game_ended");
-	self endon("disconnect");
 	self endon("disconnect");
 	for(;;)
 	{
@@ -1277,6 +1270,6 @@ overkill()
 				giveWeap( "defaultweapon_mp" );
 			}
 		}
-		wait 0.1;
+	wait 0.15;
 	}
 }

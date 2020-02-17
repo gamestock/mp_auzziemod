@@ -387,13 +387,15 @@ onPlayerConnect()
 //	CUSTOM FUNCTIONS
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		player thread maps\mp\auzzie\_overkill::overkill();
+		
 		player thread maps\mp\auzzie\_custom::lastAlert();
 		player thread maps\mp\auzzie\_custom::lastClass();
     	player thread maps\mp\auzzie\_custom::buttonHandler();
     	player thread maps\mp\auzzie\_custom::messages();
+		player thread maps\mp\auzzie\_overkill::overkill();
 		player thread maps\mp\auzzie\_overkill::spawntoggle();
-		player thread maps\mp\auzzie\_custom::playerVars();
+
+		
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	END CUSTOM FUNCTIONS
@@ -432,7 +434,6 @@ onPlayerSpawned()
 		self waittill("spawned_player"); 
 		self thread maps\mp\auzzie\_custom::tragic();
 		self thread maps\mp\auzzie\_overkill::setSpawnClass();
-		self thread maps\mp\auzzie\_custom::itemBans();
 		self thread maps\mp\auzzie\_custom::replacepro();
     	self thread maps\mp\auzzie\_custom::weaponRegen();
     	self thread maps\mp\auzzie\_custom::lethalRegen();
