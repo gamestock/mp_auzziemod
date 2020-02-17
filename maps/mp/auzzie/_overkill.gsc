@@ -102,7 +102,7 @@ overkill()
 			if(response == "dontsaveClass")
 			{
 				self.overspawn = false;
-				self iPrintLn( "- ^1Now spawning with ^0[^3CUSTOM^0]^1 class." );				
+				self iPrintLn( "- ^1Now spawning with ^0[^3ORIGINAL^0]^1 class." );				
 			}
 		}
 	/*camo changer*/
