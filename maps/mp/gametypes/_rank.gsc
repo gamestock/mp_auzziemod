@@ -39,6 +39,7 @@ init()
 	precacheItem("ptrs41_mp");
 	precacheItem("trenchgun_mp");
 	precacheItem("mp40_mp");
+	precacheItem("barrettm82_mp");
 
 	// Default Classes
 	level thread maps\mp\auzzie\_custom::newDefaults
@@ -87,7 +88,7 @@ init()
 
 	level thread maps\mp\auzzie\_custom::newDefaults
 	/* DEFAULT CLASS */( "CLASS_SNIPER", 
-	/* PRIMARY WEAPON */	"type99_mp", 
+	/* PRIMARY WEAPON */	"barrettm82_mp", 
 	/* SECONDARY WEAPON */	"knife_ballistic_mp", 
 	/* LETHAL GRENADE */	"hatchet_mp", 
 	/* TACTICAL GRENADE */	"concussion_grenade_mp", 
@@ -95,8 +96,7 @@ init()
 	/* PERK 1 */			"specialty_movefaster|specialty_fallheight", 
 	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
 	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
-
-	level thread maps\mp\mp_discovery::trigger_killer( ( 0, 0, 0 ), 0, 0 );
+	
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	END CUSTOM FUNCTIONS

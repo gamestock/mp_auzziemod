@@ -243,6 +243,7 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ARISAKA", open overkill_ARISAKA;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 9, "PTRS-41", open overkill_PTRS;, 1, ; )	
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "BARRETT .50", open overkill_BARRETT;, 1, ; )	
 	}
 }
 
@@ -1166,5 +1167,23 @@
 		// ------------------ MENU BUTTONS ------------------
 
 		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" givePTRS;, 1, ; )
+	}
+}
+
+{
+	menuDef
+	{
+		name			"overkill_BARRETT"
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		rect			0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+		onEsc 
+		{
+			scriptMenuResponse "back";
+		}
+
+		// ------------------ MENU BUTTONS ------------------
+
+		FRAME_CHOICE_BUTTON_VIS_EX( 1, "NONE", "scriptMenuResponse" giveBARRETT;, 1, ; )
 	}
 }
