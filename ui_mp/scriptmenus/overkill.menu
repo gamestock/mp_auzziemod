@@ -243,7 +243,7 @@
 		FRAME_CHOICE_BUTTON_VIS_EX( 7, "KAR98", open overkill_KAR98;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 8, "ARISAKA", open overkill_ARISAKA;, 1, ; )
 		FRAME_CHOICE_BUTTON_VIS_EX( 9, "PTRS-41", open overkill_PTRS;, 1, ; )	
-		FRAME_CHOICE_BUTTON_VIS_EX( 10, "BARRETT .50", open overkill_BARRETT;, 1, ; )	
+		FRAME_CHOICE_BUTTON_VIS_EX( 10, "BARRETT M82", open overkill_BARRETT;, 1, ; )	
 	}
 }
 
