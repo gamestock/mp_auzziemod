@@ -1,4 +1,11 @@
 name,file,template,loadspec,secondary,group,vol_min,vol_max,team_vol_mod,dist_min,dist_max,dist_reverb_max,volume_falloff_curve,reverb_falloff_curve,volume_min_falloff_curve,reverb_min_falloff_curve,limit_count,limit_type,entity_limit_count,entity_limit_type,pitch_min,pitch_max,team_pitch_mod,min_priority,max_priority,min_priority_threshold,max_priority_threshold,spatialized,type,loop,randomize_type,probability,start_delay,reverb_send,duck,pan,center_send,envelop_min,envelop_max,envelop_percentage,occlusion_level,occlusion_wet_dry,is_big,distance_lpf,move_type,move_time,real_delay,subtitle,mature,doppler,futz,context_type,context_value,compression,timescale,music,fade_in,fade_out,pc_format,pause,stop_on_death,bus,snapshot
+#AUZZIEMOD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+weap_m40a3sniper_fire_plr,wpn\sniper\m40a3\plr\shot,WPN_RFL_SHOT_PLR,wpn_m40a3,weap_m40a3sniper_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+weap_rem700_fire_plr,wpn\sniper\m40a3\plr\shot,WPN_RFL_SHOT_PLR,wpn_rem700,weap_wpn_rem700_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+weap_type99_fire_plr,wpn\sniper\type99\plr\shot,WPN_RFL_SHOT_PLR,wpn_type99,weap_wpn_type99_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+weap_ptrs_fire_plr,wpn\sniper\ptrs\plr\shot,WPN_RFL_SHOT_PLR,wpn_ptrs,weap_ptrs_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+weap_kar98k_fire_plr,wpn\sniper\kar98k\plr\shot,WPN_RFL_SHOT_PLR,wpn_kar98k,weap_kar98k_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
 #wa2000,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #PLR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #Fire,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -68,14 +75,6 @@ wpn_dragunov_flux_r_plr_pap,wpn\pap\pap_flux_right.wav,WPN_PAP_FLUX_RIGHT,wpn_dr
 wpn_dragunov_fire_npc_pap,wpn\pap\pap_shot_st.wav,WPN_PAP_SHOT_NPC,wpn_dragunov pap,wpn_dragunov_flux_l_npc_pap,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 wpn_dragunov_flux_l_npc_pap,wpn\pap\pap_flux_left.wav,WPN_PAP_FLUX_LEFT,wpn_dragunov pap,wpn_dragunov_flux_r_npc_pap,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 wpn_dragunov_flux_r_npc_pap,wpn\pap\pap_flux_right.wav,WPN_PAP_FLUX_RIGHT,wpn_dragunov pap,wpn_dragunov_fire_npc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#M40A3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#PLR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-#Fire,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-weap_m40a3sniper_fire_plr,wpn\sniper\m40a3\plr\shot,WPN_RFL_SHOT_PLR,wpn_m40a3,weap_m40a3sniper_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-weap_rem700_fire_plr,wpn\sniper\m40a3\plr\shot,WPN_RFL_SHOT_PLR,wpn_rem700,weap_wpn_rem700_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-weap_type99_fire_plr,wpn\sniper\type99\plr\shot,WPN_RFL_SHOT_PLR,wpn_type99,weap_wpn_type99_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-weap_ptrs_fire_plr,wpn\sniper\ptrs\plr\shot,WPN_RFL_SHOT_PLR,wpn_ptrs,weap_ptrs_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-weap_kar98k_fire_plr,wpn\sniper\kar98k\plr\shot,WPN_RFL_SHOT_PLR,wpn_kar98k,weap_kar98k_fire_plr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,sniper_3p_gun_duck,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 #L96A1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #PLR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
