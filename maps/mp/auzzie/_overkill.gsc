@@ -51,9 +51,8 @@ setSpawnClass()
 	if (self.overspawn == true)
 	{
 		self endon( "disableoverspawn" );
-		wait 0.1;
-		self takeAllWeapons();
 		wait 0.01;
+		self takeAllWeapons();
 		self giveWeapon( self.overweap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.weap, 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
 		self giveWeapon( self.nade );
@@ -64,12 +63,11 @@ setSpawnClass()
 		self thread maps\mp\auzzie\_custom::replacepro();
 		self thread giveEqu();
 	}
-	else if (self.overspawn == false)
+	else
 	{
 		self maps\mp\gametypes\_class::giveloadout( self.team, self.class );
 		self thread maps\mp\auzzie\_custom::replacepro();
 	}
-	wait 0.01;
 }
 
 camoChanger( camo )
@@ -91,7 +89,7 @@ overkill()
 		{
 			if(response == "menuSui")
 			{
-				self notify ( "suicide" );
+				self Suicide();
 			}
 		}
 		if(menu == game["overkill_save"])
