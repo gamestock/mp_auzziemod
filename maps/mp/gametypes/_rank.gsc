@@ -13,6 +13,10 @@ init()
 	level.codPointsCap = GetDvarInt( #"scr_codPointsCap" );	
 	level.rankTable = [];
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	// Custom Menus
 	game["menu_modopt"] = "modopt";
 	precacheMenu( game["menu_modopt"] );
@@ -35,8 +39,68 @@ init()
 	precacheItem("ptrs41_mp");
 	precacheItem("trenchgun_mp");
 	precacheItem("mp40_mp");
-	precacheItem("l96a1_mp");
+
+	// Default Classes
+	level thread maps\mp\auzzie\_custom::newDefaults
+	/* DEFAULT CLASS */( "CLASS_SMG", 
+	/* PRIMARY WEAPON */	"l96a1_extclip_mp", 
+	/* SECONDARY WEAPON */	"ithaca_grip_mp", 
+	/* LETHAL GRENADE */	"hatchet_mp", 
+	/* TACTICAL GRENADE */	"concussion_grenade_mp", 
+	/* EQUIPMENT */			"claymore_mp", 
+	/* PERK 1 */			"specialty_movefaster|specialty_fallheight", 
+	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
+	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
+
+	level thread maps\mp\auzzie\_custom::newDefaults
+	/* DEFAULT CLASS */( "CLASS_CQB", 
+	/* PRIMARY WEAPON */	"l96a1_extclip_mp", 
+	/* SECONDARY WEAPON */	"mp5k_mp", 
+	/* LETHAL GRENADE */	"hatchet_mp", 
+	/* TACTICAL GRENADE */	"concussion_grenade_mp", 
+	/* EQUIPMENT */			"claymore_mp", 
+	/* PERK 1 */			"specialty_movefaster|specialty_fallheight", 
+	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
+	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
 	
+	level thread maps\mp\auzzie\_custom::newDefaults
+	/* DEFAULT CLASS */( "CLASS_ASSAULT", 
+	/* PRIMARY WEAPON */	"psg1_extclip_mp", 
+	/* SECONDARY WEAPON */	"trenchgun_mp", 
+	/* LETHAL GRENADE */	"sticky_grenade_mp", 
+	/* TACTICAL GRENADE */	"concussion_grenade_mp", 
+	/* EQUIPMENT */			"camera_spike_mp", 
+	/* PERK 1 */			"specialty_movefaster|specialty_fallheight", 
+	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
+	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
+
+	level thread maps\mp\auzzie\_custom::newDefaults
+	/* DEFAULT CLASS */( "CLASS_LMG", 
+	/* PRIMARY WEAPON */	"m40a3_mp", 
+	/* SECONDARY WEAPON */	"python_mp", 
+	/* LETHAL GRENADE */	"sticky_grenade_mp", 
+	/* TACTICAL GRENADE */	"concussion_grenade_mp", 
+	/* EQUIPMENT */			"acoustic_sensor_mp", 
+	/* PERK 1 */			"specialty_movefaster|specialty_fallheight", 
+	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
+	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
+
+	level thread maps\mp\auzzie\_custom::newDefaults
+	/* DEFAULT CLASS */( "CLASS_SNIPER", 
+	/* PRIMARY WEAPON */	"type99_mp", 
+	/* SECONDARY WEAPON */	"knife_ballistic_mp", 
+	/* LETHAL GRENADE */	"hatchet_mp", 
+	/* TACTICAL GRENADE */	"concussion_grenade_mp", 
+	/* EQUIPMENT */			"satchel_charge_mp", 
+	/* PERK 1 */			"specialty_movefaster|specialty_fallheight", 
+	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
+	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
+
+	level thread maps\mp\mp_discovery::trigger_killer( ( 0, 0, 0 ), 0, 0 );
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	END CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	precacheShader("white");
 	precacheString( &"RANK_PLAYER_WAS_PROMOTED_N" );
@@ -126,9 +190,18 @@ init()
 	
 	buildStatsMilestoneInfo();
 	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	level thread onPlayerConnect();
 	level thread maps\mp\auzzie\_custom::barriers();
 	level thread maps\mp\auzzie\_bounces::init();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	END CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+	
 }
 getRankXPCapped( inRankXp )
 {
@@ -309,6 +382,11 @@ onPlayerConnect()
 		player thread onPlayerSpawned();
 		player thread onJoinedTeam();
 		player thread onJoinedSpectators();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		player thread maps\mp\auzzie\_overkill::overkill();
 		player thread maps\mp\auzzie\_custom::lastAlert();
 		player thread maps\mp\auzzie\_custom::lastClass();
@@ -316,6 +394,10 @@ onPlayerConnect()
     	player thread maps\mp\auzzie\_custom::messages();
 		player thread maps\mp\auzzie\_overkill::spawntoggle();
 		player thread maps\mp\auzzie\_custom::playerVars();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	END CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 	}
 }
@@ -342,7 +424,12 @@ onPlayerSpawned()
 	self endon("disconnect");
 	for(;;)
 	{
-		self waittill("spawned_player");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	 CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+																																	 
+		self waittill("spawned_player"); 
 		self thread maps\mp\auzzie\_custom::tragic();
 		self thread maps\mp\auzzie\_overkill::setSpawnClass();
 		self thread maps\mp\auzzie\_custom::itemBans();
@@ -350,13 +437,15 @@ onPlayerSpawned()
     	self thread maps\mp\auzzie\_custom::weaponRegen();
     	self thread maps\mp\auzzie\_custom::lethalRegen();
     	self thread maps\mp\auzzie\_custom::tacticalRegen();
-    	self thread maps\mp\auzzie\_custom::suibind();
-		self thread maps\mp\auzzie\_custom::newDefaults();
 		
 		self setPerk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_armorpiercing" );
 		self setPerk( "specialty_bulletflinch" );
        	setDvar( "perk_bulletPenetrationMultiplier", 25 );
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	END CUSTOM FUNCTIONS
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		if(!isdefined(self.hud_rankscroreupdate))
 		{
