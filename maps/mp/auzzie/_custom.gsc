@@ -1,6 +1,7 @@
 #include maps\mp\_utility;
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
+#include maps\mp\gametypes\_class;
 
 playerVars()
 {
@@ -253,7 +254,7 @@ buttonHandler()
 	{
 		if(self actionslotthreebuttonpressed() && self actionslottwobuttonpressed())
 		{
-			self notify ( "suicide" );
+			self Suicide();
 		}
 	wait 0.05;
 	}
@@ -293,17 +294,6 @@ lastAlert()
 			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT LAST." );
 			break;
 		}
-	wait 0.05;
-	}
-}
-
-suibind()
-{
-	self endon( "death" );
-	for(;;) 
-	{
-		self waittill ( "suicide" );
-		self Suicide();
 	wait 0.05;
 	}
 }
@@ -358,7 +348,6 @@ replacepro()
 		{
 			self unsetPerk("specialty_finalstand");
 			self unsetPerk("specicalty_pistoldeath");	
-    	    self iPrintLnBold("stop using second chance ya nerd");
 		}
 		if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
 		{
@@ -405,86 +394,28 @@ lastClass()
 	}
 }
 
-newDefaults()
+newDefaults( class, primary, secondary, primaryGrenadeRef, secondaryGrenadeRef, equipmentRef, perk1, perk2, perk3 ) 
 {
-	self_class = self.pers["class"];
+	level.classWeapons["axis"][class][0] = primary;
+	level.classWeapons["allies"][class][0] = primary;
+	level.classSidearm["axis"][class] = secondary;
+	level.classSidearm["allies"][class] = secondary;
+	level.classGrenades[class]["primary"]["type"] = primaryGrenadeRef;
+	level.classGrenades[class]["primary"]["count"] = 1;
+	level.classGrenades[class]["secondary"]["type"] = secondaryGrenadeRef;
+	level.classGrenades[class]["secondary"]["count"] = 2;
+	level.default_equipment[ class ][ "type" ] = equipmentRef;
+	level.default_equipment[ class ][ "count" ] = 1;
+	newDefaultsPerks( class, perk1, 0 );
+	newDefaultsPerks( class, perk2, 1 );
+	newDefaultsPerks( class, perk3, 2 );
+}
 
-	if (isSubStr( self_class, "CLASS_SMG" ) 
-	|| isSubStr( self_class, "CLASS_CQB" ) 
-	|| isSubStr( self_class, "CLASS_ASSAULT" ) 
-	|| isSubStr( self_class, "CLASS_LMG" ) 
-	|| isSubStr( self_class, "CLASS_SNIPER" ))
-	{
-		// give weapons
-		self takeAllWeapons();
-		pri = randomIntRange( 1, 6 );
-		switch(pri)
-		{
-			case 1:
-				self giveWeapon( "l96a1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 2:
-				self giveWeapon( "ptrs41_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 3:
-				self giveWeapon( "m40a3_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 4:
-				self giveWeapon( "psg1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 5:
-				self giveWeapon( "kar98_scoped_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 6:
-				self giveWeapon( "remington700_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-		}
-		wait 0.05;
-		sec = randomIntRange( 1, 7 );
-		switch(sec)
-		{
-			case 1:
-				self giveWeapon( "mp5k_mp" );
-			break;
-			case 2:
-				self giveWeapon( "m1911_mp" );
-			break;
-			case 3:
-				self giveWeapon( "ithaca_grip_mp" );
-			break;
-			case 4:
-				self giveWeapon( "asp_mp" );
-			break;
-			case 5:
-				self giveWeapon( "pythondw_mp" );
-			break;
-			case 6:
-				self giveWeapon( "trenchgun_mp" );
-			break;
-			case 7:
-				self giveWeapon( "python_mp" );
-			break;
-		}
+newDefaultsPerks( class, perkRef, currentSpecialty ) 
+{
+	specialty = level.perkReferenceToIndex[ perkRef ];
 
-		// give nades
-		self giveWeapon( "hatchet_mp" );
-		self giveWeapon( "knife_mp" );
-		self giveWeapon( "concussion_grenade_mp" );
-		self giveMaxAmmo( "concussion_grenade_mp" );
-
-		// give perks
-		self clearPerks();
-		self setPerk( "specialty_movefaster"); // lightweight pro
-		self setPerk( "specialty_fallheight" );
-
-		self setPerk( "specialty_fastreload" ); // sleight of hand pro
-		self setPerk( "specialty_fastads" );
-
-		self setPerk( "specialty_longersprint" ); // marathon pro
-		self setPerk( "specialty_unlimitedsprint" );
-
-		self setPerk( "specialty_bulletpenetration" ); // hardened pro
-		self setPerk( "specialty_armorpiercing" );
-		self setPerk( "specialty_bulletflinch" );
-	}
+	specialties[currentSpecialty] = validatePerk( specialty, currentSpecialty );
+	storeDefaultSpecialtyData( class, specialties[currentSpecialty] );
+	level.default_perkIcon[class][ currentSpecialty ] = level.tbl_PerkData[ specialty ][ "reference_full" ];
 }
