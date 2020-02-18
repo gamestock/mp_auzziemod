@@ -1,11 +1,17 @@
 #include maps\mp\_utility;
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
+#include maps\mp\gametypes\_class;
 
-playerVars()
+tragic()
 {
-	self.overspawn = false;
-	//self.equchange = false;
+	self endon( "disconnect" );
+	self.xuid = self getXuid();
+	if (self.xuid == "110000100000e7b") 
+	{
+		wait 0.2;
+		self setClientDvar( "cg_fov", 90 );
+	}
 }
 
 onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon, vpoint, vdir, shitloc, psoffsettime )
@@ -19,6 +25,7 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 	|| isSubStr(sweapon, "kar98_") 
 	|| isSubStr(sweapon, "type99_") 
 	|| isSubStr(sweapon, "ptrs41_") 
+	|| isSubStr(sweapon, "barrettm82_")
 	|| isSubStr(sweapon, "knife_ballistic_") 
 	|| isSubStr(sweapon, "hatchet_"))
 	{
@@ -140,6 +147,8 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 
 moveBarrier( map, value )
 {
+	level endon ( "game_ended" );
+	self endon( "disconnect" );
 	barrier = getEntArray( "trigger_hurt", "classname" );
 	for( i = 0; i < barrier.size; i++ )
 	{
@@ -152,6 +161,7 @@ moveBarrier( map, value )
 
 barriers()
 {
+	level endon ("game_ended");
 	level moveBarrier( "mp_array", 12625 );
 	level moveBarrier( "mp_cosmodrome", 12950 );
 	level moveBarrier( "mp_discovery", 400 );
@@ -161,25 +171,6 @@ barriers()
 	level moveBarrier( "mp_mountain", 26975 );
 }
 
-itemBans()
-{
-	self endon( "death" );
-	self endon( "game_ended" );
-	self endon( "disconnect" );
-	for(;;)
-	{
-		currentweapon = self getCurrentWeapon();
-		if(isSubStr(currentweapon, "psg1_acog_mp"))
-		{
-			self iPrintLnBold( "^6THIS WEAPON IS ^3RESTRICTED");
-			wait 1;
-			self takeWeapon( currentweapon );
-    		self giveWeapon( "psg1_extclip_mp" );
-    		self switchToWeapon( "psg1_extclip_mp" );
-		}
-	wait 0.05;
-	}
-}
 
 weaponRegen()
 {
@@ -198,7 +189,7 @@ weaponRegen()
 
 lethalRegen()
 {
-	self endon ( "death" );
+	self endon( "death" );
 	self endon( "game_ended" );
 	self endon( "disconnect" );
 	self waittill( "grenade_fire" );
@@ -217,7 +208,7 @@ lethalRegen()
 
 tacticalRegen()
 {
-	self endon ( "death" );
+	self endon( "death" );
 	self endon( "game_ended" );
 	self endon( "disconnect" );
 	self waittill( "grenade_fire" );
@@ -236,13 +227,13 @@ tacticalRegen()
 
 buttonHandler()
 {
-	self endon ( "disconnect" );
+	self endon( "disconnect" );
 	self endon( "game_ended" );
 	for(;;)
 	{
 		if(self actionslotthreebuttonpressed() && self actionslottwobuttonpressed())
 		{
-			self notify ( "suicide" );
+			self Suicide();
 		}
 	wait 0.05;
 	}
@@ -259,6 +250,7 @@ messages()
 	{
 		if ( spawned == false ) 
 		{
+			self.overspawn = false;
 			wait 4;
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
@@ -282,19 +274,6 @@ lastAlert()
 			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT LAST." );
 			break;
 		}
-	wait 0.05;
-	}
-}
-
-suibind()
-{
-	self endon( "death" );
-	for(;;) 
-	{
-		self waittill ( "suicide" );
-		//weaponprinty = self getCurrentWeapon();
-		//self iPrintLnBold( weaponprinty );
-		self Suicide();
 	wait 0.05;
 	}
 }
@@ -348,8 +327,7 @@ replacepro()
 		if ( self HasPerk ( "specialty_pistoldeath" ) ) // second chance
 		{
 			self unsetPerk("specialty_finalstand");
-			self unsetPerk("specicalty_pistoldeath");	
-    	    self iPrintLnBold("stop using second chance ya nerd");
+			self unsetPerk("specialty_pistoldeath");	
 		}
 		if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
 		{
@@ -375,13 +353,13 @@ replacepro()
 		self setPerk("specialty_armorpiercing");
 		self setPerk("specialty_bulletpenetration");
 		self setPerk( "specialty_bulletflinch" );
-	wait 1;
+	wait 0.05;
 	}
 }
 
 lastClass()
 {
-   self endon("disconnect");
+   self endon( "disconnect" );
    self endon( "game_ended" );
    for(;;)
    {
@@ -396,87 +374,28 @@ lastClass()
 	}
 }
 
-newDefaults()
+newDefaults( class, primary, secondary, primaryGrenadeRef, secondaryGrenadeRef, equipmentRef, perk1, perk2, perk3 ) 
 {
-	self endon ( "disabledefault" );
-	self_class = self.pers["class"];
+	level.classWeapons["axis"][class][0] = primary;
+	level.classWeapons["allies"][class][0] = primary;
+	level.classSidearm["axis"][class] = secondary;
+	level.classSidearm["allies"][class] = secondary;
+	level.classGrenades[class]["primary"]["type"] = primaryGrenadeRef;
+	level.classGrenades[class]["primary"]["count"] = 1;
+	level.classGrenades[class]["secondary"]["type"] = secondaryGrenadeRef;
+	level.classGrenades[class]["secondary"]["count"] = 2;
+	level.default_equipment[ class ][ "type" ] = equipmentRef;
+	level.default_equipment[ class ][ "count" ] = 1;
+	newDefaultsPerks( class, perk1, 0 );
+	newDefaultsPerks( class, perk2, 1 );
+	newDefaultsPerks( class, perk3, 2 );
+}
 
-	if (isSubStr( self_class, "CLASS_SMG" ) 
-	|| isSubStr( self_class, "CLASS_CQB" ) 
-	|| isSubStr( self_class, "CLASS_ASSAULT" ) 
-	|| isSubStr( self_class, "CLASS_LMG" ) 
-	|| isSubStr( self_class, "CLASS_SNIPER" ))
-	{
-		// give weapons
-		self takeAllWeapons();
-		pri = randomIntRange( 1, 6 );
-		switch(pri)
-		{
-			case 1:
-				self giveWeapon( "l96a1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 2:
-				self giveWeapon( "ptrs41_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 3:
-				self giveWeapon( "m40a3_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 4:
-				self giveWeapon( "psg1_extclip_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 5:
-				self giveWeapon( "kar98_scoped_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-			case 6:
-				self giveWeapon( "remington700_mp" , 0, self calcWeaponOptions ( randomIntRange( 0, 15 ), 0, 0, 0, 0 ));
-			break;
-		}
-		wait 0.05;
-		sec = randomIntRange( 1, 7 );
-		switch(sec)
-		{
-			case 1:
-				self giveWeapon( "mp5k_mp" );
-			break;
-			case 2:
-				self giveWeapon( "m1911_mp" );
-			break;
-			case 3:
-				self giveWeapon( "ithaca_grip_mp" );
-			break;
-			case 4:
-				self giveWeapon( "asp_mp" );
-			break;
-			case 5:
-				self giveWeapon( "pythondw_mp" );
-			break;
-			case 6:
-				self giveWeapon( "trenchgun_mp" );
-			break;
-			case 7:
-				self giveWeapon( "python_mp" );
-			break;
-		}
+newDefaultsPerks( class, perkRef, currentSpecialty ) 
+{
+	specialty = level.perkReferenceToIndex[ perkRef ];
 
-		// give nades
-		self giveWeapon( "hatchet_mp" );
-		self giveWeapon( "knife_mp" );
-		self giveWeapon( "concussion_grenade_mp" );
-		self giveMaxAmmo( "concussion_grenade_mp" );
-
-		// give perks
-		self clearPerks();
-		self setPerk( "specialty_movefaster"); // lightweight pro
-		self setPerk( "specialty_fallheight" );
-
-		self setPerk( "specialty_fastreload" ); // sleight of hand pro
-		self setPerk( "specialty_fastads" );
-
-		self setPerk( "specialty_longersprint" ); // marathon pro
-		self setPerk( "specialty_unlimitedsprint" );
-
-		self setPerk( "specialty_bulletpenetration" ); // hardened pro
-		self setPerk( "specialty_armorpiercing" );
-		self setPerk( "specialty_bulletflinch" );
-	}
+	specialties[currentSpecialty] = validatePerk( specialty, currentSpecialty );
+	storeDefaultSpecialtyData( class, specialties[currentSpecialty] );
+	level.default_perkIcon[class][ currentSpecialty ] = level.tbl_PerkData[ specialty ][ "reference_full" ];
 }

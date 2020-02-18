@@ -43,7 +43,7 @@ doBounces()
 	
 	while(1)
 	{
-		wait 0.01;
+		wait 0.05;
 		for ( i = 0; i < level.players.size; i++ )
 		{
 			player = level.players[i];

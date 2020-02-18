@@ -1,12 +1,9 @@
 // gsc
-rawfile,maps/mp/auzzie/gametypes/_rank.gsc
+rawfile,maps/mp/gametypes/_rank.gsc
 rawfile,maps/mp/auzzie/_custom.gsc
 rawfile,maps/mp/auzzie/_overkill.gsc
 rawfile,maps/mp/auzzie/_bounces.gsc
-
-// maps
 rawfile,maps/mp/mp_discovery.gsc
-
 // menus
 menufile,ui_mp/scriptmenus/modopt.menu
 menufile,ui_mp/scriptmenus/camos.menu
@@ -14,14 +11,15 @@ menufile,ui_mp/scriptmenus/overkill.menu
 menufile,ui_mp/scriptmenus/overkill_save.menu
 menufile,ui_mp/scriptmenus/class.menu
 menufile,ui_mp/scriptmenus/changeclass.menu
-
-// weapons
+// imported guns
+weapon,mp/barrettm82
+weapon,mp/barrettm82_mp
 weapon,mp/m40a3
-weapon,mp/m40a3_mp
 weapon,mp/m40a3_acog_mp
+weapon,mp/m40a3_mp
 weapon,mp/remington700
-weapon,mp/remington700_mp
 weapon,mp/remington700_acog_mp
+weapon,mp/remington700_mp
 weapon,mp/kar98
 weapon,mp/kar98_mp
 weapon,mp/kar98_scoped_mp
@@ -32,8 +30,8 @@ weapon,mp/type99_mp
 weapon,mp/type99_scoped_mp
 weapon,mp/trenchgun
 weapon,mp/trenchgun_mp
+// stock mod guns
 weapon,mp/mp40_mp
-weapon,mp/l96a1_mp
-
-// localizedstrings
+// mp40 sounds
+sound,auzziemod
 localize,auzziemod_weapon

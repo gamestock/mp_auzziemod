@@ -199,7 +199,7 @@
 											IS_ITEM_LOCKED( FEATURE_CREATE_A_CLASS ), decoration )
 
 											
-		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	6, "RANDOM SNIPER", 
+		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	6, "L96A1 - Stakeout", 
 											scriptMenuResponse "smg_mp,0"; ACTION_COMMON( 1 ), 
 											exec "set ui_class class_smg; set ui_multi_s "HIGH_BOUND"; set ui_multi_dt 0";, 
 											;, 
@@ -212,7 +212,7 @@
 		
 											
 											
-		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	7, "RANDOM SNIPER", 
+		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	7, "L96A1 - MP5K", 
 											scriptMenuResponse "cqb_mp,0"; ACTION_COMMON( 2 ), 
 											exec" set ui_class class_cqb; set ui_multi_s "HIGH_BOUND"; set ui_multi_dt 0";, 
 											;, 
@@ -225,7 +225,7 @@
 		
 											
 
-		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	8, "RANDOM SNIPER", 
+		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	8, "PSG1 - Trench Gun", 
 											scriptMenuResponse "assault_mp,0"; ACTION_COMMON( 3 ), 
 											exec "set ui_class class_assault; set ui_multi_s "HIGH_BOUND"; set ui_multi_dt 0";, 
 											;, 
@@ -237,7 +237,7 @@
 											( !IS_ITEM_LOCKED( FEATURE_PRESTIGE_CLASS_3 ) && ( !IS_ITEM_LOCKED( FEATURE_CREATE_A_CLASS ) ) && IS_ONLINE_GAME ), FOCUS_CHECK( 3 ) )
 		
 
-		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	9, "RANDOM SNIPER", 
+		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	9, "M40A3 - Python", 
 											scriptMenuResponse "lmg_mp,0"; ACTION_COMMON( 4 ), 
 											exec "set ui_class class_lmg; set ui_multi_s "HIGH_BOUND"; set ui_multi_dt 0"; CLEAR_ITEM_NEW( FEATURE_CLOSEASSAULT ), 
 											;, 
@@ -247,7 +247,7 @@
 											exec "set ui_custom_name prestigeclass4; set ui_multi_s 0; set ui_multi_dt "HIGH_BOUND; CLEAR_ITEM_NEW( FEATURE_CLOSEASSAULT ), 
 											;, 
 											( !IS_ITEM_LOCKED( FEATURE_CREATE_A_CLASS ) && !IS_ITEM_LOCKED( FEATURE_PRESTIGE_CLASS_4 ) && IS_ONLINE_GAME ), FOCUS_CHECK( 4 ) )
-		FRAME_CHOICE_DBUTTON_FOCUS_VIS_EX(	9, "RANDOM SNIPER", 
+		FRAME_CHOICE_DBUTTON_FOCUS_VIS_EX(	9, "M40A3 - Python", 
 											;, 
 											;, 
 											( IS_ITEM_LOCKED( FEATURE_CLOSEASSAULT ) && IS_ONLINE_GAME ), decoration FOCUS_CHECK( 4 ) )
@@ -256,7 +256,7 @@
 
 
 		
-		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	10, "RANDOM SNIPER", 
+		FRAME_CHOICE_BUTTON_FOCUS_VIS_EX(	10, "Barrett .50 - Ballistic Knife", 
 											scriptMenuResponse "sniper_mp,0"; ACTION_COMMON( 5 ), 
 											exec" set ui_class class_sniper; set ui_multi_s "HIGH_BOUND"; set ui_multi_dt 0"; CLEAR_ITEM_NEW( FEATURE_SNIPER ), 
 											;, 
@@ -266,7 +266,7 @@
 											exec "set ui_custom_name prestigeclass5; set ui_multi_s 0; set ui_multi_dt "HIGH_BOUND; CLEAR_ITEM_NEW( FEATURE_SNIPER ), 
 											;, 
 											( !IS_ITEM_LOCKED( FEATURE_CREATE_A_CLASS ) && !IS_ITEM_LOCKED( FEATURE_PRESTIGE_CLASS_5 ) && IS_ONLINE_GAME ), FOCUS_CHECK( 5 ) )
-		FRAME_CHOICE_DBUTTON_FOCUS_VIS_EX(	10, "RANDOM SNIPER", 
+		FRAME_CHOICE_DBUTTON_FOCUS_VIS_EX(	10, "Barrett .50 - Ballistic Knife", 
 											;, 
 											;, 
 											( IS_ITEM_LOCKED( FEATURE_SNIPER ) && IS_ONLINE_GAME ), decoration FOCUS_CHECK( 5 ) )
