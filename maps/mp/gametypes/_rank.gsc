@@ -1,6 +1,16 @@
 #include common_scripts\utility;
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
+doThreads()
+{
+	self thread playerVars();
+}
+
+playerVars()
+{
+	self.overspawn = false;
+}
+
 init()
 {
 	level.onplayerdamage = maps\mp\auzzie\_custom::onplayerdamage;
@@ -26,6 +36,49 @@ init()
 	precacheMenu( game["menu_camos"] );
 	game["menu_overkill_save"] = "overkill_save";
 	precacheMenu( game["menu_overkill_save"] );
+
+	// Custom Weapon Menus
+	game["menu_overkill_mp5k"] = "overkill_mp5k";
+	game["menu_overkill_skorpion"] = "overkill_skorpion";
+	game["menu_overkill_mac11"] = "overkill_mac11";
+	game["menu_overkill_ak74u"] = "overkill_ak74u";
+	game["menu_overkill_uzi"] = "overkill_uzi";
+	game["menu_overkill_pm63"] = "overkill_pm63";
+	game["menu_overkill_mpl"] = "overkill_mpl";
+	game["menu_overkill_spectre"] = "overkill_spectre";
+	game["menu_overkill_kiparis"] = "overkill_kiparis";
+	game["menu_overkill_mp40"] = "overkill_mp40";
+	game["menu_overkill_M16"] = "overkill_M16";
+	game["menu_overkill_ENFIELD"] = "overkill_ENFIELD";
+	game["menu_overkill_M14"] = "overkill_M14";
+	game["menu_overkill_FAMAS"] = "overkill_FAMAS";
+	game["menu_overkill_GALIL"] = "overkill_GALIL";
+	game["menu_overkill_AUG"] = "overkill_AUG";
+	game["menu_overkill_FNFAL"] = "overkill_FNFAL";
+	game["menu_overkill_AK47"] = "overkill_AK47";
+	game["menu_overkill_COMMANDO"] = "overkill_COMMANDO";
+	game["menu_overkill_G11"] = "overkill_G11";
+	
+	game["menu_overkill_OLYMPIA"] = "overkill_OLYMPIA";
+	game["menu_overkill_STAKEOUT"] = "overkill_STAKEOUT";
+	game["menu_overkill_SPAS-12"] = "overkill_SPAS-12";
+	game["menu_overkill_HS10"] = "overkill_HS10";
+	game["menu_overkill_M1897"] = "overkill_M1897";
+	game["menu_overkill_HK21"] = "overkill_HK21";
+	game["menu_overkill_RPK"] = "overkill_RPK";
+	game["menu_overkill_M60"] = "overkill_M60";
+	game["menu_overkill_STONER63"] = "overkill_STONER63";
+	game["menu_overkill_DRAGUNOV"] = "overkill_DRAGUNOV";
+	game["menu_overkill_WA2000"] = "overkill_WA2000";
+	game["menu_overkill_L96A1"] = "overkill_L96A1";
+	game["menu_overkill_PSG1"] = "overkill_PSG1";
+	game["menu_overkill_M40A3"] = "overkill_M40A3";
+	game["menu_overkill_R700"] = "overkill_R700";
+	game["menu_overkill_KAR98"] = "overkill_KAR98";
+	game["menu_overkill_ARISAKA"] = "overkill_ARISAKA";
+	game["menu_overkill_PTRS"] = "overkill_PTRS";
+	game["menu_overkill_BARRETT"] = "overkill_BARRETT";
+	game["menu_overkill_misc"] = "overkill_misc";
 
 	// Custom Weapons
 	precacheItem("m40a3_mp");
@@ -387,15 +440,12 @@ onPlayerConnect()
 //	CUSTOM FUNCTIONS
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		
 		player thread maps\mp\auzzie\_custom::lastAlert();
 		player thread maps\mp\auzzie\_custom::lastClass();
     	player thread maps\mp\auzzie\_custom::buttonHandler();
     	player thread maps\mp\auzzie\_custom::messages();
-		player thread maps\mp\auzzie\_overkill::overkill();
-		player thread maps\mp\auzzie\_overkill::spawntoggle();
-
-		
+		player thread maps\mp\auzzie\_overkill::menuCont();
+		//player thread maps\mp\auzzie\_overkill::spawntoggle();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	END CUSTOM FUNCTIONS

@@ -184,7 +184,7 @@ weaponRegen()
         currentWeapon = self getcurrentweapon();
         self setweaponammostock( currentWeapon, weaponmaxammo(currentWeapon) );
     }
-    wait 0.15;
+    wait 0.05;
 }
 
 lethalRegen()
@@ -202,7 +202,7 @@ lethalRegen()
 			wait 8;
 			self setweaponammoclip( lethalnade, 1 );
 		}
-    wait 0.15;
+    wait 0.05;
     }
 }
 
@@ -221,7 +221,7 @@ tacticalRegen()
 			wait 8;
 			self setweaponammoclip( tacticalnade, 1 );
 		}
-    wait 0.15;
+    wait 0.05;
     }
 }
 
@@ -259,7 +259,7 @@ messages()
 			spawned = true;
 			break;
 		}
-	wait 0.15;
+	wait 0.05;
 	}
 }
 
@@ -274,7 +274,7 @@ lastAlert()
 			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT LAST." );
 			break;
 		}
-	wait 0.15;
+	wait 0.05;
 	}
 }
 
@@ -327,7 +327,7 @@ replacepro()
 		if ( self HasPerk ( "specialty_pistoldeath" ) ) // second chance
 		{
 			self unsetPerk("specialty_finalstand");
-			self unsetPerk("specicalty_pistoldeath");	
+			self unsetPerk("specialty_pistoldeath");	
 		}
 		if ( self HasPerk ( "specialty_twoattach" ) ) // warlord
 		{
@@ -353,7 +353,7 @@ replacepro()
 		self setPerk("specialty_armorpiercing");
 		self setPerk("specialty_bulletpenetration");
 		self setPerk( "specialty_bulletflinch" );
-	wait 1;
+	wait 0.05;
 	}
 }
 
@@ -370,7 +370,7 @@ lastClass()
 			self iPrintlnBold( " " );
 			wait .5;
 		}
-	wait 0.15;
+	wait 0.05;
 	}
 }
 
