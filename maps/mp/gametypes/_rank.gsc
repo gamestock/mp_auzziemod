@@ -1,16 +1,6 @@
 #include common_scripts\utility;
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
-doThreads()
-{
-	self thread playerVars();
-}
-
-playerVars()
-{
-	self.overspawn = false;
-}
-
 init()
 {
 	level.onplayerdamage = maps\mp\auzzie\_custom::onplayerdamage;
@@ -39,7 +29,9 @@ init()
 
 	// Custom Weapon Menus
 	game["menu_overkill_mp5k"] = "overkill_mp5k";
+	precacheMenu( game["menu_overkill_mp5k"] );
 	game["menu_overkill_skorpion"] = "overkill_skorpion";
+	precacheMenu( game["menu_overkill_skorpion"] );
 	game["menu_overkill_mac11"] = "overkill_mac11";
 	game["menu_overkill_ak74u"] = "overkill_ak74u";
 	game["menu_overkill_uzi"] = "overkill_uzi";
@@ -445,7 +437,7 @@ onPlayerConnect()
     	player thread maps\mp\auzzie\_custom::buttonHandler();
     	player thread maps\mp\auzzie\_custom::messages();
 		player thread maps\mp\auzzie\_overkill::menuCont();
-		//player thread maps\mp\auzzie\_overkill::spawntoggle();
+		player thread maps\mp\auzzie\_custom::playerVars();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	END CUSTOM FUNCTIONS

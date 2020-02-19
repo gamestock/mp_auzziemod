@@ -24,22 +24,6 @@ giveWeap( weapon )
 	self closeInGameMenu();
 }
 
-spawntoggle()
-{
-	self endon("game_ended");
-	self endon("disconnect");
-	self waittill("spawned_player");
-	if(self.overspawn == false)
-	{
-		self.overspawn = true;		
-	}
-	else
-	{
-		self notify( "disableoverspawn" );
-		self.overspawn = false;
-	}
-}
-
 giveEqu()
 {
 	self endon("game_ended");
@@ -58,7 +42,7 @@ setSpawnClass()
 	self endon( "disconnect" );
 	self endon( "disableoverspawn" );
 	wait 0.1;
-	if (self.overspawn == true)
+	if (self.pers["overspawn"] == true)
 	{	
 		wait 0.05;
 		self takeAllWeapons();
@@ -106,11 +90,12 @@ menuCont()
 				switch( response )
 				{
 					case "saveClass":
-						self.overspawn = true;
+						self.pers["overspawn"] = true;
 						self iPrintLn( "- ^1Now spawning with ^0[^3OVERKILL^0]^1 class." );
 						break;
 					case "dontsaveClass":
-						self.overspawn = false;
+						self.pers["overspawn"] = false;
+						self notify( "disableoverspawn" );
 						self iPrintLn( "- ^1Now spawning with ^0[^3ORIGINAL^0]^1 class." );
 						break;
 				}

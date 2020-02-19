@@ -3,6 +3,12 @@
 #include maps\mp\gametypes\_hud_util;
 #include maps\mp\gametypes\_class;
 
+playerVars()
+{
+	self endon("disconnect");
+	if ( !isDefined( self.pers["overspawn"] ))
+		self.pers["overspawn"] = "false";
+}
 tragic()
 {
 	self endon( "disconnect" );
@@ -245,12 +251,11 @@ messages()
 	self endon( "game_ended" );
 	self waittill( "spawned_player" );
 	spawned = false;
-
 	for(;;)
 	{
 		if ( spawned == false ) 
 		{
-			self.overspawn = false;
+			self.pers["overspawn"] = false;	
 			wait 4;
 			self iprintln( "^1auzziemod T5 ^0[^31.0^0]" );
 			self iprintln( "^1Join the Discord at ^0[^3discord.io/aupluto^0]." );
