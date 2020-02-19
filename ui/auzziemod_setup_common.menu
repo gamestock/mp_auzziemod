@@ -1,0 +1,98 @@
+// button bg when not highlighted
+#define AUZZIEMOD_BUTTON_BG( itemIndex, buttonName, visArg, extraArgs ) \
+		itemDef \
+		{ \
+			name buttonName \
+			style WINDOW_STYLE_SHADER \
+			rect CHOICE_RECT( itemIndex ) \
+			forecolor BG_BACKCOLOR \
+			background "white" \
+			visible visArg \
+			decoration \
+			extraArgs \
+		}
+// button bg when highlighted
+#define AUZZIEMOD_HIGHLIGHT_SOLID_EX( itemIndex, buttonName, colorArg, visArg, extraArgs ) \
+		itemDef \
+		{ \
+			name			buttonName \
+			style			WINDOW_STYLE_SHADER \
+			rect			CHOICE_RECT( itemIndex ) \
+			forecolor		colorArg \
+			background		"white" \
+			visible			when( MenuHasFocus() && localVarInt( "ui_highlight" ) == itemIndex && localVarString( "ui_choicegroup" ) == CHOICE_GROUP && visArg ) \
+			decoration \
+			extraArgs \
+		} \
+		CHOICE_ACCEPT_HINT( itemIndex, visArg )
+
+// button text will go black when highlighted
+#define AUZZIEMOD_TEMP_BUTTON_HIGHLIGHT_TEXT( itemIndex, buttonName, textArg, focusedColorArg, visArg ) \
+		PREPROC_TEXT_DRAW_VIS( CHOICE_RECT( itemIndex ), 0 0, textArg, CHOICE_TEXTSIZE, CHOICE_TEXT_OFFSET_X, 0, CHOICE_TEXTALIGN, focusedColorArg, when( MenuHasFocus() && localVarInt( "ui_highlight" ) == itemIndex && localVarString( "ui_choicegroup" ) == CHOICE_GROUP && visArg ); )
+
+// start auzziemod new buttons
+
+#define AUZZIEMOD_BUTTON( itemIndex, buttonName, textArg, actionArg ) \
+		AUZZIEMOD_BUTTON_VIS( itemIndex, buttonName, textArg, actionArg, 1 )
+
+#define AUZZIEMOD_BUTTON_NOHI( itemIndex, buttonName, textArg, actionArg ) \
+		AUZZIEMOD_BUTTON_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, 1 )
+
+#define AUZZIEMOD_BUTTON_VIS( itemIndex, buttonName, textArg, actionArg, visArg ) \
+		AUZZIEMOD_BUTTON_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, visArg )
+		
+#define AUZZIEMOD_BUTTON_VIS_ADV( itemIndex, buttonName, textArg, actionArg, visArg, vis ) \
+		AUZZIEMOD_BUTTON_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, visArg )
+
+#define AUZZIEMOD_BUTTON_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, visArg ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, ;, ;, visArg )
+
+#define AUZZIEMOD_BUTTON_FOCUS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg ) \
+		AUZZIEMOD_BUTTON_FOCUS_VIS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, 1 )
+
+#define AUZZIEMOD_BUTTON_FOCUS_NOHI( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, 1 )
+
+#define AUZZIEMOD_BUTTON_FOCUS_VIS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg )
+		
+#define AUZZIEMOD_BUTTON_FOCUS_VIS_ADV( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, vis ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg )
+
+#define AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, ; )
+
+#define AUZZIEMOD_BUTTON_EX( itemIndex, buttonName, textArg, actionArg, extraArgs ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, ;, ;, 1, extraArgs )
+
+#define AUZZIEMOD_BUTTON_EX_VIS( itemIndex, buttonName, textArg, actionArg, visArg, extraArgs ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, ;, ;, visArg, extraArgs )
+
+#define AUZZIEMOD_BUTTON_FOCUS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, extraArgs ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, 1, extraArgs )
+
+#define AUZZIEMOD_BUTTON_FOCUS_VIS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, extraArgs ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, extraArgs )
+		
+#define AUZZIEMOD_BUTTON_FOCUS_VIS_ADV_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, extraArgs, vis ) \
+		AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, extraArgs )
+
+#define AUZZIEMOD_BUTTON_FOCUS_NOHI_VIS_EX( itemIndex, buttonName, textArg, actionArg, onFocusArg, leaveFocusArg, visArg, extraArgs ) \
+		AUZZIEMOD_BUTTON_BG( itemIndex, buttonName, visArg, extraArgs ) \
+		AUZZIEMOD_HIGHLIGHT_SOLID_EX( itemIndex, buttonName, BG_HL_COLOR, visArg, extraArgs ) \
+		itemDef \
+		{ \
+			name buttonName \
+			type ITEM_TYPE_BUTTON \
+			rect CHOICE_RECT( itemIndex ) \
+			textfont CHOICE_TEXTFONT \
+			textscale CHOICE_TEXTSIZE \
+			textstyle CHOICE_TEXTSTYLE \
+			textAlign CHOICE_TEXTALIGN \
+			textAlignX CHOICE_TEXT_OFFSET_X \
+			exp text( textArg ) \
+			visible visArg \
+			extraArgs \
+			CHOICE_SCRIPTS_ALL( itemIndex, actionArg, onFocusArg, leaveFocusArg ) \
+		} \
+		AUZZIEMOD_TEMP_BUTTON_HIGHLIGHT_TEXT( itemIndex, buttonName, textArg, TEXT_COLOR_HL, visArg )

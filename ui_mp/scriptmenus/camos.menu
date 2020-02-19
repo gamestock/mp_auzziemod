@@ -17,9 +17,6 @@
 	#define	PC_INGAME //for background in overlaybg.inc
 #endif
 
-#define SINGLE_PLAYER	1
-#include "ui_mp/ingamebg.inc"
-
 #include "ui_mp/menustyle.inc"
 #include "ui/choices_setup_common.menu"
 #include "ui_mp/overlaybg.inc"
