@@ -9,6 +9,7 @@ playerVars()
 	if ( !isDefined( self.pers["overspawn"] ))
 		self.pers["overspawn"] = "false";
 }
+
 tragic()
 {
 	self endon( "disconnect" );
@@ -17,6 +18,21 @@ tragic()
 	{
 		wait 0.2;
 		self setClientDvar( "cg_fov", 90 );
+	}
+}
+
+disableForfeit()
+{
+	level endon("game_ended");
+  	for(;;)
+  	{
+    	if (level.gameForfeited)
+		{
+        	level.onForfeit = false;
+        	level.gameForfeited = false;
+        	level notify( "abort forfeit" );
+      	}
+    wait 10;
 	}
 }
 

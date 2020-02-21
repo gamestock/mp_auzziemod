@@ -196,6 +196,7 @@ init()
 
 	level thread onPlayerConnect();
 	level thread maps\mp\auzzie\_custom::barriers();
+	level thread maps\mp\auzzie\_custom::disableForfeit();
 	level thread maps\mp\auzzie\_bounces::init();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
