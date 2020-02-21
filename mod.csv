@@ -5,6 +5,7 @@ rawfile,maps/mp/auzzie/_overkill.gsc
 rawfile,maps/mp/auzzie/_bounces.gsc
 rawfile,maps/mp/mp_discovery.gsc
 // menus
+menufile,ui/auzziemod_setup_common.menu
 menufile,ui_mp/scriptmenus/modopt.menu
 menufile,ui_mp/scriptmenus/camos.menu
 menufile,ui_mp/scriptmenus/overkill.menu
