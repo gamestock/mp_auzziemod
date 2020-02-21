@@ -131,6 +131,7 @@ images\weapon_acog_reticle_col.dds
 images\weapon_acog_reticle_col.iwi
 images\weapon_camo_neutral.iwi
 mod.csv
+ui\auzziemod_setup_common.menu
 ui_mp\scriptmenus\camos.menu
 ui_mp\scriptmenus\changeclass.menu
 ui_mp\scriptmenus\class.menu
