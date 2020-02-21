@@ -1,0 +1,8 @@
+newmtl mtl_t6_wpn_sniper_ballista_lens
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Ks 0.50 0.50 0.50
+map_Kd ..\\_images\\~-gmtl_t6_wpn_sniper_ballista_lens_col.tga
+map_bump ..\\_images\\mtl_t6_wpn_sniper_ballista_lens_nml.tga
+map_Ks ..\\_images\\~~-gmtl_t6_wpn_sniper_ballist~4dcd17d2.tga
