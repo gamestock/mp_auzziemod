@@ -1,0 +1,8 @@
+newmtl mtl_weapon_bullet
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Ks 0.50 0.50 0.50
+map_Kd ..\\_images\\weapon_bullet_col.png
+map_bump ..\\_images\\$identitynormalmap.png
+map_Ks ..\\_images\\~weapon_bullet_spc-r-87g-87b-~7fcd185c.png

@@ -1,0 +1,37 @@
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Strings used in the weapon settings go in this file."
+
+REFERENCE           M40A3_MP
+LANG_ENGLISH        "M40A3"
+
+REFERENCE           M40A3_ACOG_MP
+LANG_ENGLISH        "M40A3 ACOG"
+
+REFERENCE           REMINGTON700_MP
+LANG_ENGLISH        "R700"
+
+REFERENCE           REMINGTON700_ACOG_MP
+LANG_ENGLISH        "R700 ACOG"
+
+REFERENCE           KAR98_MP
+LANG_ENGLISH        "KAR98K"
+
+REFERENCE           KAR98_SCOPED_MP
+LANG_ENGLISH        "KAR98K SCOPED"
+
+REFERENCE           TYPE99_MP
+LANG_ENGLISH        "ARISAKA"
+
+REFERENCE           TYPE99_SCOPED_MP
+LANG_ENGLISH        "ARISAKA SCOPED"
+
+REFERENCE           PTRS_MP
+LANG_ENGLISH        "PTRS-41"
+
+REFERENCE           TRENCHGUN_MP
+LANG_ENGLISH        "Trench Gun"
+
+REFERENCE          BARRETTM82_MP
+LANG_ENGLISH       "Barrett M82"
+ENDMARKER
