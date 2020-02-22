@@ -17,6 +17,8 @@ init()
 //	CUSTOM FUNCTIONS
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	setDvar( "maxbots", 5 );
+
 	// Custom Menus
 	game["menu_modopt"] = "modopt";
 	precacheMenu( game["menu_modopt"] );
@@ -198,6 +200,7 @@ init()
 	level thread maps\mp\auzzie\_custom::barriers();
 	level thread maps\mp\auzzie\_custom::disableForfeit();
 	level thread maps\mp\auzzie\_bounces::init();
+	level thread maps\mp\auzzie\_custom::handleBots();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //	END CUSTOM FUNCTIONS

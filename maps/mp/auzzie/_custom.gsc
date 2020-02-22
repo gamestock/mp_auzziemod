@@ -420,3 +420,28 @@ newDefaultsPerks( class, perkRef, currentSpecialty )
 	storeDefaultSpecialtyData( class, specialties[currentSpecialty] );
 	level.default_perkIcon[class][ currentSpecialty ] = level.tbl_PerkData[ specialty ][ "reference_full" ];
 }
+
+handleBots()
+{
+	level endon( "game_ended" );
+	for(;;)
+	{
+		if( level.players.size < getDvarInt( "maxbots" ) ) 
+		{
+			level thread maps\mp\bots\_bot::spawn_bot("autoassign");
+		}
+		if ( level.players.size > getDvarInt( "maxbots" ) ) 
+		{
+			for ( i = 0; i < level.players.size; i++ )
+			{
+            	player = level.players[i];
+				if ( self isTestClient() ) 
+				{
+					kick ( self getEntityNumber() );
+					break;
+				}
+			}
+		}
+	wait 0.05;
+	}
+}
