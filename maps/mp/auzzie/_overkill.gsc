@@ -85,7 +85,7 @@ menuCont()
 						self Suicide();
 						break;
 				}
-/* overkill spawn settings */
+/* popups */
 			case "overkill_save":
 				switch( response )
 				{
@@ -97,6 +97,22 @@ menuCont()
 						self.pers["overspawn"] = false;
 						self notify( "disableoverspawn" );
 						self iPrintLn( "- ^1Now spawning with ^0[^3ORIGINAL^0]^1 class." );
+						break;
+				}
+			case "modopt_reset":
+				switch( response )
+				{
+					case "doReset":
+						self.pointstowin = 0;
+						self.score = 0;
+						self.kills = 0;
+						self.deaths = 0;
+						self.headshots = 0;
+						self.pers["pointstowin"] = 0;
+						self.pers["score"] = 0;
+						self.pers["kills"] = 0;
+						self.pers["deaths"] = 0;
+						self.pers["headshots"] = 0;
 						break;
 				}
 /* camo changer */

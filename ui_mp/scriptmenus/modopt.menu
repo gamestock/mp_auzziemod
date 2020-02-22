@@ -105,7 +105,8 @@
 		FRAME_DVARSLIDER( 8, "@MENU_MOUSE_SENSITIVITY_CAPS", sensitivity, 5, 1, 10, ; )
 		FRAME_DVARSLIDER( 9, "@PLATFORM_FOV_CAPS", cg_fov, 65, 65, 90, ; )
 
-		FRAME_CHOICE_BUTTON_VIS_EX( 11, "SUICIDE", "scriptMenuResponse" menuSui; close self;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 11, "RESET SCORE", open modopt_reset;, 1, ; )
+		FRAME_CHOICE_BUTTON_VIS_EX( 12, "SUICIDE", "scriptMenuResponse" menuSui; close self;, 1, ; )
 
 		#ifdef PC
 	NEW_FRAME_BACK_BUTTON_ACTION_PC_VIS( ON_ESC , when( !dvarInt( ui_show_friends_list_bg ) ) )
@@ -115,4 +116,25 @@
 #endif // PC
 
 	}
+}
+
+{
+
+	#define CHOICE_SEP_OFFSET_Y		-2
+	#define CHOICE_SEP_1			3
+
+	#include "ui_mp/popupstyle.inc"
+	#include "ui/choices_setup_popmenu.menu"
+	{
+
+		menuDef
+		{
+			name			"modopt_reset"
+			SYSTEM_POPUP_SETUP_VIS( modopt_reset, setfocus dontReset, ;, 1 )
+			SYSTEM_POPUP_TITLE_VIS( "Do you want to reset your score?", 1 )
+
+			FRAME_CHOICE_BUTTON_VIS_EX( 1, "Reset Score",	"scriptMenuResponse" doReset; close self;,	1, name doReset						)
+			FRAME_CHOICE_BUTTON_VIS_EX( 2, "Close",	close self;,	1, name dontReset						)
+	    }
+	}	
 }

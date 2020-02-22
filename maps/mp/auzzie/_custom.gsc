@@ -157,6 +157,7 @@ onPlayerDamage( einflictor, eattacker, idamage, idflags, smeansofdeath, sweapon,
 		|| isSubStr(sweapon, "syrette_")
 		|| isSubStr(sweapon, "tabun_")
 		|| isSubStr(sweapon, "tow_")
+		|| isSubStr(sweapon, "trenchgun_")
 		|| isSubStr(sweapon, "turret_")
 		|| isSubStr(sweapon, "uzi_")
 		|| isSubStr(sweapon, "willy_")
@@ -283,6 +284,7 @@ messages()
 	wait 0.05;
 	}
 }
+
 
 lastAlert()
 {

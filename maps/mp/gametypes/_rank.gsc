@@ -17,15 +17,26 @@ init()
 //	CUSTOM FUNCTIONS
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+	setDvar( "maxbots", 7 );
+
 	// Custom Menus
 	game["menu_modopt"] = "modopt";
 	precacheMenu( game["menu_modopt"] );
+
+	game["menu_modopt_reset"] = "modopt_reset";
+	precacheMenu( game["menu_modopt_reset"] );
+
 	game["menu_overkill"] = "overkill";
 	precacheMenu( game["menu_overkill"] );
+
 	game["menu_camos"] = "camos";
 	precacheMenu( game["menu_camos"] );
+
 	game["menu_overkill_save"] = "overkill_save";
 	precacheMenu( game["menu_overkill_save"] );
+
+	// Custom Models
+	//precacheModel("plr_big_smoke");
 
 	// Custom Weapons
 	precacheItem("m40a3_mp");
