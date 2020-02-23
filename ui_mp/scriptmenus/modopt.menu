@@ -131,7 +131,7 @@
 		{
 			name			"modopt_reset"
 			SYSTEM_POPUP_SETUP_VIS( modopt_reset, setfocus dontReset, ;, 1 )
-			SYSTEM_POPUP_TITLE_VIS( "Do you want to reset your score?", 1 )
+			SYSTEM_POPUP_TITLE_VIS( "Do you want to reset your score? This can only be done once.", 1 )
 
 			FRAME_CHOICE_BUTTON_VIS_EX( 1, "Reset Score",	"scriptMenuResponse" doReset; close self;,	1, name doReset						)
 			FRAME_CHOICE_BUTTON_VIS_EX( 2, "Close",	close self;,	1, name dontReset						)

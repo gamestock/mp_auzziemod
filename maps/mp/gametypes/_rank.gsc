@@ -1,9 +1,15 @@
 #include common_scripts\utility;
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
+#include maps\mp\auzzie\_custom;
+#include maps\mp\auzzie\_defaults;
+#include maps\mp\auzzie\_overkill;
+#include maps\mp\auzzie\_response;
+#include maps\mp\auzzie\_weap;
+
 init()
 {
-	level.onplayerdamage = maps\mp\auzzie\_custom::onplayerdamage;
+	level.onplayerdamage = maps\mp\auzzie\_weap::onplayerdamage;
 	level.scoreInfo = [];
 	level.xpScale = GetDvarInt( #"scr_xpscale" );
 	level.codPointsXpScale = GetDvarFloat( #"scr_codpointsxpscale" );
@@ -17,7 +23,8 @@ init()
 //	CUSTOM FUNCTIONS
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	setDvar( "maxbots", 7 );
+	// Custom Dvars
+	//setDvar( "maxbots", 7 );
 
 	// Custom Menus
 	game["menu_modopt"] = "modopt";
@@ -53,7 +60,7 @@ init()
 	precacheItem("barrettm82_mp");
 
 	// Default Classes
-	level thread maps\mp\auzzie\_custom::newDefaults
+	level thread maps\mp\auzzie\_defaults::newDefaults
 	/* DEFAULT CLASS */( "CLASS_SMG", 
 	/* PRIMARY WEAPON */	"l96a1_extclip_mp", 
 	/* SECONDARY WEAPON */	"ithaca_grip_mp", 
@@ -64,7 +71,7 @@ init()
 	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
 	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
 
-	level thread maps\mp\auzzie\_custom::newDefaults
+	level thread maps\mp\auzzie\_defaults::newDefaults
 	/* DEFAULT CLASS */( "CLASS_CQB", 
 	/* PRIMARY WEAPON */	"l96a1_extclip_mp", 
 	/* SECONDARY WEAPON */	"mp5k_mp", 
@@ -75,7 +82,7 @@ init()
 	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
 	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
 	
-	level thread maps\mp\auzzie\_custom::newDefaults
+	level thread maps\mp\auzzie\_defaults::newDefaults
 	/* DEFAULT CLASS */( "CLASS_ASSAULT", 
 	/* PRIMARY WEAPON */	"psg1_extclip_mp", 
 	/* SECONDARY WEAPON */	"trenchgun_mp", 
@@ -86,7 +93,7 @@ init()
 	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
 	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
 
-	level thread maps\mp\auzzie\_custom::newDefaults
+	level thread maps\mp\auzzie\_defaults::newDefaults
 	/* DEFAULT CLASS */( "CLASS_LMG", 
 	/* PRIMARY WEAPON */	"m40a3_mp", 
 	/* SECONDARY WEAPON */	"python_mp", 
@@ -97,7 +104,7 @@ init()
 	/* PERK 2 */			"specialty_fastreload|specialty_fastads", 
 	/* PERK 3 */			"specialty_longersprint|specialty_unlimitedsprint" );
 
-	level thread maps\mp\auzzie\_custom::newDefaults
+	level thread maps\mp\auzzie\_defaults::newDefaults
 	/* DEFAULT CLASS */( "CLASS_SNIPER", 
 	/* PRIMARY WEAPON */	"barrettm82_mp", 
 	/* SECONDARY WEAPON */	"knife_ballistic_mp", 
@@ -403,7 +410,7 @@ onPlayerConnect()
 		player thread maps\mp\auzzie\_custom::lastClass();
     	player thread maps\mp\auzzie\_custom::buttonHandler();
     	player thread maps\mp\auzzie\_custom::messages();
-		player thread maps\mp\auzzie\_overkill::menuCont();
+		player thread maps\mp\auzzie\_response::menuCont();
 		player thread maps\mp\auzzie\_custom::playerVars();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -443,10 +450,10 @@ onPlayerSpawned()
 		self waittill("spawned_player"); 
 		self thread maps\mp\auzzie\_custom::tragic();
 		self thread maps\mp\auzzie\_overkill::setSpawnClass();
-		self thread maps\mp\auzzie\_custom::replacepro();
-    	self thread maps\mp\auzzie\_custom::weaponRegen();
-    	self thread maps\mp\auzzie\_custom::lethalRegen();
-    	self thread maps\mp\auzzie\_custom::tacticalRegen();
+		self thread maps\mp\auzzie\_defaults::replacepro();
+    	self thread maps\mp\auzzie\_weap::weaponRegen();
+    	self thread maps\mp\auzzie\_weap::lethalRegen();
+    	self thread maps\mp\auzzie\_weap::tacticalRegen();
 		
 		self setPerk( "specialty_bulletpenetration" );
 		self setPerk( "specialty_armorpiercing" );

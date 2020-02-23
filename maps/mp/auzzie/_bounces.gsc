@@ -40,6 +40,11 @@ _Changing a multiplier/radius
 #include common_scripts\utility;
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
+#include maps\mp\auzzie\_custom;
+#include maps\mp\auzzie\_defaults;
+#include maps\mp\auzzie\_overkill;
+#include maps\mp\auzzie\_response;
+#include maps\mp\auzzie\_weap;
 
 init()
 {
