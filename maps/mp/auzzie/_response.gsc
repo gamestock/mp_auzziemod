@@ -21,6 +21,8 @@ menuCont()
 				switch( response )
 				{
 					case "menuSui":
+						//self.xuid = self getXuid();
+						//self iPrintLnBold( self.xuid );
 						self Suicide();
 						break;
 				}

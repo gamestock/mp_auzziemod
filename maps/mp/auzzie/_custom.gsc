@@ -10,7 +10,7 @@
 playerVars()
 {
 	self endon("disconnect");
-
+	
 	if ( !isDefined( self.pers["overspawn"] ))
 		self.pers["overspawn"] = "false";
 	
@@ -34,13 +34,13 @@ disableForfeit()
 	level endon("game_ended");
   	for(;;)
   	{
-    	if (level.gameForfeited)
+    	if ( level.gameForfeited )
 		{
         	level.onForfeit = false;
         	level.gameForfeited = false;
         	level notify( "abort forfeit" );
       	}
-    wait 10;
+    wait 15;
 	}
 }
 
@@ -113,9 +113,9 @@ lastAlert()
 	self endon( "game_ended" );
     for(;;)
     {
-    	if (self.pers["kills"] == 29 )
+    	if (self.pers["kills"] == 19 )
     	{
-			self iPrintlnBold( "^1YOU'RE AT 29. ^3TRICKSHOT LAST." );
+			self iPrintlnBold( "^1YOU'RE AT 19. ^3TRICKSHOT LAST." );
 			break;
 		}
 	wait 0.05;
@@ -128,7 +128,7 @@ lastClass()
    self endon( "game_ended" );
    for(;;)
    {
-   		if (self.pers["kills"] == 29 )
+   		if (self.pers["kills"] == 19 )
     	{
 			self waittill( "changed_class" );
 			self giveloadout( self.team, self.class );
