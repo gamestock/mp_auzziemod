@@ -1,3 +1,13 @@
+/*
+=============================================
+
+	Auzziemod T5. 
+	by tragic and reaaL.
+	github.com/simonlfc/mp_auzziemod
+
+=============================================
+*/
+
 #include maps\mp\_utility;
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;

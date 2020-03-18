@@ -1,3 +1,13 @@
+/*
+=============================================
+
+	Auzziemod T5. 
+	by tragic and reaaL.
+	github.com/simonlfc/mp_auzziemod
+
+=============================================
+*/
+
 #include common_scripts\utility;
 #include maps\mp\_utility;
 #include maps\mp\gametypes\_hud_util;
@@ -448,7 +458,6 @@ onPlayerSpawned()
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 																																	 
 		self waittill("spawned_player"); 
-		self thread maps\mp\auzzie\_custom::tragic();
 		self thread maps\mp\auzzie\_overkill::setSpawnClass();
 		self thread maps\mp\auzzie\_defaults::replacepro();
     	self thread maps\mp\auzzie\_weap::weaponRegen();

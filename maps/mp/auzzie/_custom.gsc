@@ -1,3 +1,13 @@
+/*
+=============================================
+
+	Auzziemod T5. 
+	by tragic and reaaL.
+	github.com/simonlfc/mp_auzziemod
+
+=============================================
+*/
+
 #include maps\mp\_utility;
 #include common_scripts\utility;
 #include maps\mp\gametypes\_hud_util;
@@ -16,17 +26,6 @@ playerVars()
 	
 	if ( !isDefined( self.pers["canreset"] ))
 		self.pers["canreset"] = "true";
-}
-
-tragic()
-{
-	self endon( "disconnect" );
-	self.xuid = self getXuid();
-	if (self.xuid == "110000100000e7b") 
-	{
-		wait 0.05;
-		self setClientDvar( "cg_fov", 90 );
-	}
 }
 
 disableForfeit()
